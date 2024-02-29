@@ -1,0 +1,31 @@
+{
+  "packageName": "femsa",
+  "generateSourceCodeOnly": "false",
+  "artifactVersion": "6.0.4",
+  "packageUrl": "https://developers.femsa.com/",
+  "projectName": "femsa-php",
+  "appDescriptionV2" : "Femsa PHP Library",
+  "useOneOfDiscriminatorLookup" : true,
+  "nonCompliantUseDiscriminatorIfCompositionFails" : false,
+  "httpUserAgent": "Femsa/v2 PhpBindings/6.0.4",
+  "packageAuthors" : "engineering@femsa.com",
+  "files": {
+    "/local/CODE_OF_CONDUCT.md" : {},
+    "/local/CONTRIBUTING.md" : {},
+    "/local/LICENSE" : {},
+    "VERSION.mustache" : {
+      "templateType": "SupportingFiles",
+      "destinationFilename": "VERSION"
+    },
+    "/local/ssl_data/ca_bundle.crt": {
+      "destinationFilename": "lib/ssl_data/ca_bundle.crt"
+    }
+  },
+  "gitUserId": "femsa",
+  "gitRepoId": "femsa-php",
+  "modern" : true,
+  "disallowAdditionalPropertiesIfNotPresent" : true,
+  "invokerPackage" : "Femsa",
+  "templateDir": "/local/templates/php",
+  "legacyDiscriminatorBehavior" : false
+}

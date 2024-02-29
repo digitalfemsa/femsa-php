@@ -1,0 +1,51 @@
+name: CI
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  phpunit:
+    name: PHPUnit
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version:
+          - "7.4"
+          - "8.0"
+        dependency-versions:
+          - "lowest"
+          - "highest"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+          coverage: none
+
+      - name: Install composer dependencies
+        uses: ramsey/composer-install@v2
+        with:
+          dependency-versions: ${{ matrix.dependency-versions }}
+      - name: phpstan
+        uses: php-actions/phpstan@v3
+        with:
+          path: lib/
+          php_version: ${{ matrix.php-version }}
+          command: --version
+          level: 2
+          php_extensions: xdebug
+      - name: Run Mockoon CLI
+        uses: mockoon/cli-action@v1
+        with:
+          version: 'latest'
+          data-file: 'https://raw.githubusercontent.com/conekta/femsa-openapi/main/mocks/femsa_api.json'
+          port: 3000
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit
+        env:
+          BASE_PATH: localhost:3000
