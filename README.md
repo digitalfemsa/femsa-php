@@ -2,7 +2,7 @@
 
 Femsa sdk
 
-For more information, please visit [https://github.com/femsa/femsa-openapi/issues](https://github.com/femsa/femsa-openapi/issues).
+For more information, please visit [https://github.com/digitalfemsa/openapi/issues](https://github.com/digitalfemsa/openapi/issues).
 
 ## Installation & Usage
 
@@ -74,7 +74,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://api.conekta.io*
+All URIs are relative to *https://api.digitalfemsa.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
