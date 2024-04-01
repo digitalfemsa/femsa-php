@@ -8,7 +8,7 @@ php:
 	rm -rf lib/Api && \
 	docker run --rm \
 	-v ${PWD}:/local openapitools/openapi-generator-cli:v7.2.0 generate \
-		-i https://raw.githubusercontent.com/digitalfemsa/openapi/main/_build/api.yaml?token=GHSAT0AAAAAACLYM2GZOY6XPDCHMITMCA4OZQLDGTA \
+		-i https://raw.githubusercontent.com/digitalfemsa/openapi/main/_build/api.yaml \
 		-g php \
 		-o /local \
 		-c /local/config-php.json \
