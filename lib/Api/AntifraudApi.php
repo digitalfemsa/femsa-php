@@ -465,7 +465,7 @@ class AntifraudApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -888,7 +888,7 @@ class AntifraudApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -1335,7 +1335,7 @@ class AntifraudApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -1810,7 +1810,7 @@ class AntifraudApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -2185,7 +2185,7 @@ class AntifraudApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -2595,7 +2595,7 @@ class AntifraudApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
