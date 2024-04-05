@@ -527,7 +527,7 @@ class DiscountsApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -1029,7 +1029,7 @@ class DiscountsApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -1524,7 +1524,7 @@ class DiscountsApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -1995,7 +1995,7 @@ class DiscountsApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
@@ -2502,7 +2502,7 @@ class DiscountsApi
 
 
         $headers = $this->headerSelector->selectHeaders(
-            ['application/vnd.conekta-v2.1.0+json', ],
+            ['application/vnd.app-v2.1.0+json', ],
             $contentType,
             $multipart
         );
