@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **currency** | **string** | The currency of the transfer. It uses the 3-letter code of the [International Standard ISO 4217.](https://es.wikipedia.org/wiki/ISO_4217) | [optional]
 **id** | **string** | Unique identifier of the transfer. | [optional]
 **livemode** | **bool** | Indicates whether the transfer was created in live mode or test mode. | [optional]
-**destination** | [**\Femsa\Model\TransferDestinationResponse**](TransferDestinationResponse.md) |  | [optional]
+**destination** | [**\DigitalFemsa\Model\TransferDestinationResponse**](TransferDestinationResponse.md) |  | [optional]
 **object** | **string** | Object name, which is transfer. | [optional]
 **statement_description** | **string** | Description of the transfer. | [optional]
 **statement_reference** | **string** | Reference number of the transfer. | [optional]

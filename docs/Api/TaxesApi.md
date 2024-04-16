@@ -1,4 +1,4 @@
-# Femsa\TaxesApi
+# DigitalFemsa\TaxesApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `ordersCreateTaxes()`
 
 ```php
-ordersCreateTaxes($id, $order_tax_request, $accept_language, $x_child_company_id): \Femsa\Model\UpdateOrderTaxResponse
+ordersCreateTaxes($id, $order_tax_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\UpdateOrderTaxResponse
 ```
 
 Create Tax
@@ -27,17 +27,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\TaxesApi(
+$apiInstance = new DigitalFemsa\Api\TaxesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$order_tax_request = new \Femsa\Model\OrderTaxRequest(); // \Femsa\Model\OrderTaxRequest | requested field for a taxes
+$order_tax_request = new \DigitalFemsa\Model\OrderTaxRequest(); // \DigitalFemsa\Model\OrderTaxRequest | requested field for a taxes
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -54,13 +54,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **order_tax_request** | [**\Femsa\Model\OrderTaxRequest**](../Model/OrderTaxRequest.md)| requested field for a taxes | |
+| **order_tax_request** | [**\DigitalFemsa\Model\OrderTaxRequest**](../Model/OrderTaxRequest.md)| requested field for a taxes | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\UpdateOrderTaxResponse**](../Model/UpdateOrderTaxResponse.md)
+[**\DigitalFemsa\Model\UpdateOrderTaxResponse**](../Model/UpdateOrderTaxResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `ordersDeleteTaxes()`
 
 ```php
-ordersDeleteTaxes($id, $tax_id, $accept_language, $x_child_company_id): \Femsa\Model\UpdateOrderTaxResponse
+ordersDeleteTaxes($id, $tax_id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\UpdateOrderTaxResponse
 ```
 
 Delete Tax
@@ -93,10 +93,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\TaxesApi(
+$apiInstance = new DigitalFemsa\Api\TaxesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\UpdateOrderTaxResponse**](../Model/UpdateOrderTaxResponse.md)
+[**\DigitalFemsa\Model\UpdateOrderTaxResponse**](../Model/UpdateOrderTaxResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `ordersUpdateTaxes()`
 
 ```php
-ordersUpdateTaxes($id, $tax_id, $update_order_tax_request, $accept_language, $x_child_company_id): \Femsa\Model\UpdateOrderTaxResponse
+ordersUpdateTaxes($id, $tax_id, $update_order_tax_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\UpdateOrderTaxResponse
 ```
 
 Update Tax
@@ -159,10 +159,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\TaxesApi(
+$apiInstance = new DigitalFemsa\Api\TaxesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,7 +170,7 @@ $apiInstance = new Femsa\Api\TaxesApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $tax_id = tax_lin_2tQ974hSHcsdeSZHG; // string | identifier
-$update_order_tax_request = new \Femsa\Model\UpdateOrderTaxRequest(); // \Femsa\Model\UpdateOrderTaxRequest | requested field for taxes
+$update_order_tax_request = new \DigitalFemsa\Model\UpdateOrderTaxRequest(); // \DigitalFemsa\Model\UpdateOrderTaxRequest | requested field for taxes
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -188,13 +188,13 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **tax_id** | **string**| identifier | |
-| **update_order_tax_request** | [**\Femsa\Model\UpdateOrderTaxRequest**](../Model/UpdateOrderTaxRequest.md)| requested field for taxes | |
+| **update_order_tax_request** | [**\DigitalFemsa\Model\UpdateOrderTaxRequest**](../Model/UpdateOrderTaxRequest.md)| requested field for taxes | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\UpdateOrderTaxResponse**](../Model/UpdateOrderTaxResponse.md)
+[**\DigitalFemsa\Model\UpdateOrderTaxResponse**](../Model/UpdateOrderTaxResponse.md)
 
 ### Authorization
 

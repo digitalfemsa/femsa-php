@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CustomerResponse Class Doc Comment
  *
  * @category Class
  * @description customer response
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'antifraud_info' => '\Femsa\Model\CustomerAntifraudInfoResponse',
+        'antifraud_info' => '\DigitalFemsa\Model\CustomerAntifraudInfoResponse',
         'corporate' => 'bool',
         'created_at' => 'int',
         'custom_reference' => 'string',
@@ -67,15 +67,15 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'default_shipping_contact_id' => 'string',
         'default_payment_source_id' => 'string',
         'email' => 'string',
-        'fiscal_entities' => '\Femsa\Model\CustomerFiscalEntitiesResponse',
+        'fiscal_entities' => '\DigitalFemsa\Model\CustomerFiscalEntitiesResponse',
         'id' => 'string',
         'livemode' => 'bool',
         'name' => 'string',
         'metadata' => 'array<string,mixed>',
         'object' => 'string',
-        'payment_sources' => '\Femsa\Model\CustomerPaymentMethodsResponse',
+        'payment_sources' => '\DigitalFemsa\Model\CustomerPaymentMethodsResponse',
         'phone' => 'string',
-        'shipping_contacts' => '\Femsa\Model\CustomerResponseShippingContacts'
+        'shipping_contacts' => '\DigitalFemsa\Model\CustomerResponseShippingContacts'
     ];
 
     /**
@@ -425,7 +425,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets antifraud_info
      *
-     * @return \Femsa\Model\CustomerAntifraudInfoResponse|null
+     * @return \DigitalFemsa\Model\CustomerAntifraudInfoResponse|null
      */
     public function getAntifraudInfo()
     {
@@ -435,7 +435,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets antifraud_info
      *
-     * @param \Femsa\Model\CustomerAntifraudInfoResponse|null $antifraud_info antifraud_info
+     * @param \DigitalFemsa\Model\CustomerAntifraudInfoResponse|null $antifraud_info antifraud_info
      *
      * @return self
      */
@@ -662,7 +662,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fiscal_entities
      *
-     * @return \Femsa\Model\CustomerFiscalEntitiesResponse|null
+     * @return \DigitalFemsa\Model\CustomerFiscalEntitiesResponse|null
      */
     public function getFiscalEntities()
     {
@@ -672,7 +672,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fiscal_entities
      *
-     * @param \Femsa\Model\CustomerFiscalEntitiesResponse|null $fiscal_entities fiscal_entities
+     * @param \DigitalFemsa\Model\CustomerFiscalEntitiesResponse|null $fiscal_entities fiscal_entities
      *
      * @return self
      */
@@ -828,7 +828,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_sources
      *
-     * @return \Femsa\Model\CustomerPaymentMethodsResponse|null
+     * @return \DigitalFemsa\Model\CustomerPaymentMethodsResponse|null
      */
     public function getPaymentSources()
     {
@@ -838,7 +838,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_sources
      *
-     * @param \Femsa\Model\CustomerPaymentMethodsResponse|null $payment_sources payment_sources
+     * @param \DigitalFemsa\Model\CustomerPaymentMethodsResponse|null $payment_sources payment_sources
      *
      * @return self
      */
@@ -882,7 +882,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets shipping_contacts
      *
-     * @return \Femsa\Model\CustomerResponseShippingContacts|null
+     * @return \DigitalFemsa\Model\CustomerResponseShippingContacts|null
      */
     public function getShippingContacts()
     {
@@ -892,7 +892,7 @@ class CustomerResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets shipping_contacts
      *
-     * @param \Femsa\Model\CustomerResponseShippingContacts|null $shipping_contacts shipping_contacts
+     * @param \DigitalFemsa\Model\CustomerResponseShippingContacts|null $shipping_contacts shipping_contacts
      *
      * @return self
      */

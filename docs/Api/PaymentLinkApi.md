@@ -1,4 +1,4 @@
-# Femsa\PaymentLinkApi
+# DigitalFemsa\PaymentLinkApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `cancelCheckout()`
 
 ```php
-cancelCheckout($id, $accept_language, $x_child_company_id): \Femsa\Model\CheckoutResponse
+cancelCheckout($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CheckoutResponse
 ```
 
 Cancel Payment Link
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentLinkApi(
+$apiInstance = new DigitalFemsa\Api\PaymentLinkApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
+[**\DigitalFemsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `createCheckout()`
 
 ```php
-createCheckout($checkout, $accept_language, $x_child_company_id): \Femsa\Model\CheckoutResponse
+createCheckout($checkout, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CheckoutResponse
 ```
 
 Create Unique Payment Link
@@ -90,16 +90,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentLinkApi(
+$apiInstance = new DigitalFemsa\Api\PaymentLinkApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$checkout = new \Femsa\Model\Checkout(); // \Femsa\Model\Checkout | requested field for checkout
+$checkout = new \DigitalFemsa\Model\Checkout(); // \DigitalFemsa\Model\Checkout | requested field for checkout
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -115,13 +115,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **checkout** | [**\Femsa\Model\Checkout**](../Model/Checkout.md)| requested field for checkout | |
+| **checkout** | [**\DigitalFemsa\Model\Checkout**](../Model/Checkout.md)| requested field for checkout | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
+[**\DigitalFemsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ try {
 ## `emailCheckout()`
 
 ```php
-emailCheckout($id, $email_checkout_request, $accept_language, $x_child_company_id): \Femsa\Model\CheckoutResponse
+emailCheckout($id, $email_checkout_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CheckoutResponse
 ```
 
 Send an email
@@ -152,17 +152,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentLinkApi(
+$apiInstance = new DigitalFemsa\Api\PaymentLinkApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$email_checkout_request = new \Femsa\Model\EmailCheckoutRequest(); // \Femsa\Model\EmailCheckoutRequest | requested field for sms checkout
+$email_checkout_request = new \DigitalFemsa\Model\EmailCheckoutRequest(); // \DigitalFemsa\Model\EmailCheckoutRequest | requested field for sms checkout
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -179,13 +179,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **email_checkout_request** | [**\Femsa\Model\EmailCheckoutRequest**](../Model/EmailCheckoutRequest.md)| requested field for sms checkout | |
+| **email_checkout_request** | [**\DigitalFemsa\Model\EmailCheckoutRequest**](../Model/EmailCheckoutRequest.md)| requested field for sms checkout | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
+[**\DigitalFemsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ try {
 ## `getCheckout()`
 
 ```php
-getCheckout($id, $accept_language, $x_child_company_id): \Femsa\Model\CheckoutResponse
+getCheckout($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CheckoutResponse
 ```
 
 Get a payment link by ID
@@ -216,10 +216,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentLinkApi(
+$apiInstance = new DigitalFemsa\Api\PaymentLinkApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -247,7 +247,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
+[**\DigitalFemsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ try {
 ## `getCheckouts()`
 
 ```php
-getCheckouts($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\CheckoutsResponse
+getCheckouts($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\CheckoutsResponse
 ```
 
 Get a list of payment links
@@ -280,10 +280,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentLinkApi(
+$apiInstance = new DigitalFemsa\Api\PaymentLinkApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -317,7 +317,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\CheckoutsResponse**](../Model/CheckoutsResponse.md)
+[**\DigitalFemsa\Model\CheckoutsResponse**](../Model/CheckoutsResponse.md)
 
 ### Authorization
 
@@ -335,7 +335,7 @@ try {
 ## `smsCheckout()`
 
 ```php
-smsCheckout($id, $sms_checkout_request, $accept_language, $x_child_company_id): \Femsa\Model\CheckoutResponse
+smsCheckout($id, $sms_checkout_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CheckoutResponse
 ```
 
 Send an sms
@@ -348,17 +348,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentLinkApi(
+$apiInstance = new DigitalFemsa\Api\PaymentLinkApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$sms_checkout_request = new \Femsa\Model\SmsCheckoutRequest(); // \Femsa\Model\SmsCheckoutRequest | requested field for sms checkout
+$sms_checkout_request = new \DigitalFemsa\Model\SmsCheckoutRequest(); // \DigitalFemsa\Model\SmsCheckoutRequest | requested field for sms checkout
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -375,13 +375,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **sms_checkout_request** | [**\Femsa\Model\SmsCheckoutRequest**](../Model/SmsCheckoutRequest.md)| requested field for sms checkout | |
+| **sms_checkout_request** | [**\DigitalFemsa\Model\SmsCheckoutRequest**](../Model/SmsCheckoutRequest.md)| requested field for sms checkout | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
+[**\DigitalFemsa\Model\CheckoutResponse**](../Model/CheckoutResponse.md)
 
 ### Authorization
 

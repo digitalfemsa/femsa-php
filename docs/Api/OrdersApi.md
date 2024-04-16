@@ -1,4 +1,4 @@
-# Femsa\OrdersApi
+# DigitalFemsa\OrdersApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `cancelOrder()`
 
 ```php
-cancelOrder($id, $accept_language, $x_child_company_id): \Femsa\Model\OrderResponse
+cancelOrder($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\OrderResponse
 ```
 
 Cancel Order
@@ -32,10 +32,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\OrdersApi(
+$apiInstance = new DigitalFemsa\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -63,7 +63,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\OrderResponse**](../Model/OrderResponse.md)
+[**\DigitalFemsa\Model\OrderResponse**](../Model/OrderResponse.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ try {
 ## `createOrder()`
 
 ```php
-createOrder($order_request, $accept_language, $x_child_company_id): \Femsa\Model\OrderResponse
+createOrder($order_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\OrderResponse
 ```
 
 Create order
@@ -96,16 +96,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\OrdersApi(
+$apiInstance = new DigitalFemsa\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$order_request = new \Femsa\Model\OrderRequest(); // \Femsa\Model\OrderRequest | requested field for order
+$order_request = new \DigitalFemsa\Model\OrderRequest(); // \DigitalFemsa\Model\OrderRequest | requested field for order
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -121,13 +121,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **order_request** | [**\Femsa\Model\OrderRequest**](../Model/OrderRequest.md)| requested field for order | |
+| **order_request** | [**\DigitalFemsa\Model\OrderRequest**](../Model/OrderRequest.md)| requested field for order | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\OrderResponse**](../Model/OrderResponse.md)
+[**\DigitalFemsa\Model\OrderResponse**](../Model/OrderResponse.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ try {
 ## `getOrderById()`
 
 ```php
-getOrderById($id, $accept_language, $x_child_company_id): \Femsa\Model\OrderResponse
+getOrderById($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\OrderResponse
 ```
 
 Get Order
@@ -160,10 +160,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\OrdersApi(
+$apiInstance = new DigitalFemsa\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -191,7 +191,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\OrderResponse**](../Model/OrderResponse.md)
+[**\DigitalFemsa\Model\OrderResponse**](../Model/OrderResponse.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ try {
 ## `getOrders()`
 
 ```php
-getOrders($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\GetOrdersResponse
+getOrders($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\GetOrdersResponse
 ```
 
 Get a list of Orders
@@ -224,10 +224,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\OrdersApi(
+$apiInstance = new DigitalFemsa\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -261,7 +261,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetOrdersResponse**](../Model/GetOrdersResponse.md)
+[**\DigitalFemsa\Model\GetOrdersResponse**](../Model/GetOrdersResponse.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ try {
 ## `orderCancelRefund()`
 
 ```php
-orderCancelRefund($id, $refund_id, $accept_language, $x_child_company_id): \Femsa\Model\OrderResponse
+orderCancelRefund($id, $refund_id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\OrderResponse
 ```
 
 Cancel Refund
@@ -294,10 +294,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\OrdersApi(
+$apiInstance = new DigitalFemsa\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -327,7 +327,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\OrderResponse**](../Model/OrderResponse.md)
+[**\DigitalFemsa\Model\OrderResponse**](../Model/OrderResponse.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ try {
 ## `orderRefund()`
 
 ```php
-orderRefund($id, $order_refund_request, $accept_language, $x_child_company_id): \Femsa\Model\OrderResponse
+orderRefund($id, $order_refund_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\OrderResponse
 ```
 
 Refund Order
@@ -360,17 +360,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\OrdersApi(
+$apiInstance = new DigitalFemsa\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$order_refund_request = new \Femsa\Model\OrderRefundRequest(); // \Femsa\Model\OrderRefundRequest | requested field for a refund
+$order_refund_request = new \DigitalFemsa\Model\OrderRefundRequest(); // \DigitalFemsa\Model\OrderRefundRequest | requested field for a refund
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -387,13 +387,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **order_refund_request** | [**\Femsa\Model\OrderRefundRequest**](../Model/OrderRefundRequest.md)| requested field for a refund | |
+| **order_refund_request** | [**\DigitalFemsa\Model\OrderRefundRequest**](../Model/OrderRefundRequest.md)| requested field for a refund | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\OrderResponse**](../Model/OrderResponse.md)
+[**\DigitalFemsa\Model\OrderResponse**](../Model/OrderResponse.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ try {
 ## `ordersCreateCapture()`
 
 ```php
-ordersCreateCapture($id, $accept_language, $x_child_company_id, $order_capture_request): \Femsa\Model\OrderResponse
+ordersCreateCapture($id, $accept_language, $x_child_company_id, $order_capture_request): \DigitalFemsa\Model\OrderResponse
 ```
 
 Capture Order
@@ -426,10 +426,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\OrdersApi(
+$apiInstance = new DigitalFemsa\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -438,7 +438,7 @@ $apiInstance = new Femsa\Api\OrdersApi(
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
-$order_capture_request = new \Femsa\Model\OrderCaptureRequest(); // \Femsa\Model\OrderCaptureRequest | requested fields for capture order
+$order_capture_request = new \DigitalFemsa\Model\OrderCaptureRequest(); // \DigitalFemsa\Model\OrderCaptureRequest | requested fields for capture order
 
 try {
     $result = $apiInstance->ordersCreateCapture($id, $accept_language, $x_child_company_id, $order_capture_request);
@@ -455,11 +455,11 @@ try {
 | **id** | **string**| Identifier of the resource | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
-| **order_capture_request** | [**\Femsa\Model\OrderCaptureRequest**](../Model/OrderCaptureRequest.md)| requested fields for capture order | [optional] |
+| **order_capture_request** | [**\DigitalFemsa\Model\OrderCaptureRequest**](../Model/OrderCaptureRequest.md)| requested fields for capture order | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\OrderResponse**](../Model/OrderResponse.md)
+[**\DigitalFemsa\Model\OrderResponse**](../Model/OrderResponse.md)
 
 ### Authorization
 
@@ -477,7 +477,7 @@ try {
 ## `updateOrder()`
 
 ```php
-updateOrder($id, $order_update_request, $accept_language): \Femsa\Model\OrderResponse
+updateOrder($id, $order_update_request, $accept_language): \DigitalFemsa\Model\OrderResponse
 ```
 
 Update Order
@@ -492,17 +492,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\OrdersApi(
+$apiInstance = new DigitalFemsa\Api\OrdersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$order_update_request = new \Femsa\Model\OrderUpdateRequest(); // \Femsa\Model\OrderUpdateRequest | requested field for an order
+$order_update_request = new \DigitalFemsa\Model\OrderUpdateRequest(); // \DigitalFemsa\Model\OrderUpdateRequest | requested field for an order
 $accept_language = es; // string | Use for knowing which language to use
 
 try {
@@ -518,12 +518,12 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **order_update_request** | [**\Femsa\Model\OrderUpdateRequest**](../Model/OrderUpdateRequest.md)| requested field for an order | |
+| **order_update_request** | [**\DigitalFemsa\Model\OrderUpdateRequest**](../Model/OrderUpdateRequest.md)| requested field for an order | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 
 ### Return type
 
-[**\Femsa\Model\OrderResponse**](../Model/OrderResponse.md)
+[**\DigitalFemsa\Model\OrderResponse**](../Model/OrderResponse.md)
 
 ### Authorization
 

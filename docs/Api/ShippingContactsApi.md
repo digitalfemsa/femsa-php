@@ -1,4 +1,4 @@
-# Femsa\ShippingContactsApi
+# DigitalFemsa\ShippingContactsApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `createCustomerShippingContacts()`
 
 ```php
-createCustomerShippingContacts($id, $customer_shipping_contacts, $accept_language, $x_child_company_id): \Femsa\Model\CustomerShippingContactsResponse
+createCustomerShippingContacts($id, $customer_shipping_contacts, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CustomerShippingContactsResponse
 ```
 
 Create a shipping contacts
@@ -27,17 +27,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ShippingContactsApi(
+$apiInstance = new DigitalFemsa\Api\ShippingContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$customer_shipping_contacts = new \Femsa\Model\CustomerShippingContacts(); // \Femsa\Model\CustomerShippingContacts | requested field for customer shippings contacts
+$customer_shipping_contacts = new \DigitalFemsa\Model\CustomerShippingContacts(); // \DigitalFemsa\Model\CustomerShippingContacts | requested field for customer shippings contacts
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -54,13 +54,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **customer_shipping_contacts** | [**\Femsa\Model\CustomerShippingContacts**](../Model/CustomerShippingContacts.md)| requested field for customer shippings contacts | |
+| **customer_shipping_contacts** | [**\DigitalFemsa\Model\CustomerShippingContacts**](../Model/CustomerShippingContacts.md)| requested field for customer shippings contacts | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CustomerShippingContactsResponse**](../Model/CustomerShippingContactsResponse.md)
+[**\DigitalFemsa\Model\CustomerShippingContactsResponse**](../Model/CustomerShippingContactsResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `deleteCustomerShippingContacts()`
 
 ```php
-deleteCustomerShippingContacts($id, $shipping_contacts_id, $accept_language, $x_child_company_id): \Femsa\Model\CustomerShippingContactsResponse
+deleteCustomerShippingContacts($id, $shipping_contacts_id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CustomerShippingContactsResponse
 ```
 
 Delete shipping contacts
@@ -93,10 +93,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ShippingContactsApi(
+$apiInstance = new DigitalFemsa\Api\ShippingContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\CustomerShippingContactsResponse**](../Model/CustomerShippingContactsResponse.md)
+[**\DigitalFemsa\Model\CustomerShippingContactsResponse**](../Model/CustomerShippingContactsResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `updateCustomerShippingContacts()`
 
 ```php
-updateCustomerShippingContacts($id, $shipping_contacts_id, $customer_update_shipping_contacts, $accept_language, $x_child_company_id): \Femsa\Model\CustomerShippingContactsResponse
+updateCustomerShippingContacts($id, $shipping_contacts_id, $customer_update_shipping_contacts, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CustomerShippingContactsResponse
 ```
 
 Update shipping contacts
@@ -159,10 +159,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ShippingContactsApi(
+$apiInstance = new DigitalFemsa\Api\ShippingContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,7 +170,7 @@ $apiInstance = new Femsa\Api\ShippingContactsApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $shipping_contacts_id = 6307a60c41de27127515a575; // string | identifier
-$customer_update_shipping_contacts = new \Femsa\Model\CustomerUpdateShippingContacts(); // \Femsa\Model\CustomerUpdateShippingContacts | requested field for customer update shippings contacts
+$customer_update_shipping_contacts = new \DigitalFemsa\Model\CustomerUpdateShippingContacts(); // \DigitalFemsa\Model\CustomerUpdateShippingContacts | requested field for customer update shippings contacts
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -188,13 +188,13 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **shipping_contacts_id** | **string**| identifier | |
-| **customer_update_shipping_contacts** | [**\Femsa\Model\CustomerUpdateShippingContacts**](../Model/CustomerUpdateShippingContacts.md)| requested field for customer update shippings contacts | |
+| **customer_update_shipping_contacts** | [**\DigitalFemsa\Model\CustomerUpdateShippingContacts**](../Model/CustomerUpdateShippingContacts.md)| requested field for customer update shippings contacts | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CustomerShippingContactsResponse**](../Model/CustomerShippingContactsResponse.md)
+[**\DigitalFemsa\Model\CustomerShippingContactsResponse**](../Model/CustomerShippingContactsResponse.md)
 
 ### Authorization
 

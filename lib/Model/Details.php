@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * Details Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class Details implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'details' => '\Femsa\Model\DetailsError[]'
+        'details' => '\DigitalFemsa\Model\DetailsError[]'
     ];
 
     /**
@@ -293,7 +293,7 @@ class Details implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets details
      *
-     * @return \Femsa\Model\DetailsError[]|null
+     * @return \DigitalFemsa\Model\DetailsError[]|null
      */
     public function getDetails()
     {
@@ -303,7 +303,7 @@ class Details implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets details
      *
-     * @param \Femsa\Model\DetailsError[]|null $details details
+     * @param \DigitalFemsa\Model\DetailsError[]|null $details details
      *
      * @return self
      */

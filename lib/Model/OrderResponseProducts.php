@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * OrderResponseProducts Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class OrderResponseProducts implements ModelInterface, ArrayAccess, \JsonSeriali
         'object' => 'string',
         'next_page_url' => 'string',
         'previous_page_url' => 'string',
-        'data' => '\Femsa\Model\ProductDataResponse[]'
+        'data' => '\DigitalFemsa\Model\ProductDataResponse[]'
     ];
 
     /**
@@ -449,7 +449,7 @@ class OrderResponseProducts implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets data
      *
-     * @return \Femsa\Model\ProductDataResponse[]|null
+     * @return \DigitalFemsa\Model\ProductDataResponse[]|null
      */
     public function getData()
     {
@@ -459,7 +459,7 @@ class OrderResponseProducts implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets data
      *
-     * @param \Femsa\Model\ProductDataResponse[]|null $data data
+     * @param \DigitalFemsa\Model\ProductDataResponse[]|null $data data
      *
      * @return self
      */

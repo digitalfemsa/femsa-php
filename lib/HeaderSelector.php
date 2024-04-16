@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,13 +26,13 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa;
+namespace DigitalFemsa;
 
 /**
  * HeaderSelector Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -262,10 +262,10 @@ class HeaderSelector
        $uname = $uname_disabled ? '(disabled)' : \php_uname();
 
       $userAgent = [
-        'bindings_version' => "6.0.4",
+        'bindings_version' => "1.0.0",
         'lang'             => 'php',
         'lang_version'     => phpversion(),
-        'publisher'        => 'femsa',
+        'publisher'        => 'digitalfemsa',
         'uname'            => $uname,
       ];
        $headers = [];

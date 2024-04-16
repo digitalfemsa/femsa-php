@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * TransferResponse Class Doc Comment
  *
  * @category Class
  * @description A transfer represents the action of sending an amount to a business bank account including the status, amount and method used to make the transfer.
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class TransferResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'currency' => 'string',
         'id' => 'string',
         'livemode' => 'bool',
-        'destination' => '\Femsa\Model\TransferDestinationResponse',
+        'destination' => '\DigitalFemsa\Model\TransferDestinationResponse',
         'object' => 'string',
         'statement_description' => 'string',
         'statement_reference' => 'string',
@@ -500,7 +500,7 @@ class TransferResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets destination
      *
-     * @return \Femsa\Model\TransferDestinationResponse|null
+     * @return \DigitalFemsa\Model\TransferDestinationResponse|null
      */
     public function getDestination()
     {
@@ -510,7 +510,7 @@ class TransferResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets destination
      *
-     * @param \Femsa\Model\TransferDestinationResponse|null $destination destination
+     * @param \DigitalFemsa\Model\TransferDestinationResponse|null $destination destination
      *
      * @return self
      */

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * AntifraudApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,13 +143,13 @@ class AntifraudApi
      *
      * Create blacklisted rule
      *
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleBlacklist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\BlacklistRuleResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\BlacklistRuleResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function createRuleBlacklist($create_risk_rules_data, $accept_language = 'es', string $contentType = self::contentTypes['createRuleBlacklist'][0])
     {
@@ -162,13 +162,13 @@ class AntifraudApi
      *
      * Create blacklisted rule
      *
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleBlacklist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\BlacklistRuleResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\BlacklistRuleResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRuleBlacklistWithHttpInfo($create_risk_rules_data, $accept_language = 'es', string $contentType = self::contentTypes['createRuleBlacklist'][0])
     {
@@ -211,11 +211,11 @@ class AntifraudApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\BlacklistRuleResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\BlacklistRuleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\BlacklistRuleResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\BlacklistRuleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,16 +233,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\BlacklistRuleResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\BlacklistRuleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -260,16 +260,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -287,13 +287,13 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\BlacklistRuleResponse';
+            $returnType = '\DigitalFemsa\Model\BlacklistRuleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -326,7 +326,7 @@ class AntifraudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\BlacklistRuleResponse',
+                        '\DigitalFemsa\Model\BlacklistRuleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -334,7 +334,7 @@ class AntifraudApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -342,7 +342,7 @@ class AntifraudApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -357,7 +357,7 @@ class AntifraudApi
      *
      * Create blacklisted rule
      *
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleBlacklist'] to see the possible values for this operation
      *
@@ -379,7 +379,7 @@ class AntifraudApi
      *
      * Create blacklisted rule
      *
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleBlacklist'] to see the possible values for this operation
      *
@@ -388,7 +388,7 @@ class AntifraudApi
      */
     public function createRuleBlacklistAsyncWithHttpInfo($create_risk_rules_data, $accept_language = 'es', string $contentType = self::contentTypes['createRuleBlacklist'][0])
     {
-        $returnType = '\Femsa\Model\BlacklistRuleResponse';
+        $returnType = '\DigitalFemsa\Model\BlacklistRuleResponse';
         $request = $this->createRuleBlacklistRequest($create_risk_rules_data, $accept_language, $contentType);
 
         return $this->client
@@ -430,7 +430,7 @@ class AntifraudApi
     /**
      * Create request for operation 'createRuleBlacklist'
      *
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data requested field for blacklist rule (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleBlacklist'] to see the possible values for this operation
      *
@@ -538,12 +538,12 @@ class AntifraudApi
      * Create whitelisted rule
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data create_risk_rules_data (optional)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data create_risk_rules_data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleWhitelist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WhitelistlistRuleResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WhitelistlistRuleResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function createRuleWhitelist($accept_language = 'es', $create_risk_rules_data = null, string $contentType = self::contentTypes['createRuleWhitelist'][0])
     {
@@ -557,12 +557,12 @@ class AntifraudApi
      * Create whitelisted rule
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data (optional)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleWhitelist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WhitelistlistRuleResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WhitelistlistRuleResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRuleWhitelistWithHttpInfo($accept_language = 'es', $create_risk_rules_data = null, string $contentType = self::contentTypes['createRuleWhitelist'][0])
     {
@@ -605,11 +605,11 @@ class AntifraudApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WhitelistlistRuleResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WhitelistlistRuleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WhitelistlistRuleResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WhitelistlistRuleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -627,16 +627,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WhitelistlistRuleResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WhitelistlistRuleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -654,16 +654,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -681,16 +681,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -708,13 +708,13 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WhitelistlistRuleResponse';
+            $returnType = '\DigitalFemsa\Model\WhitelistlistRuleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -747,7 +747,7 @@ class AntifraudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WhitelistlistRuleResponse',
+                        '\DigitalFemsa\Model\WhitelistlistRuleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,7 +755,7 @@ class AntifraudApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -763,7 +763,7 @@ class AntifraudApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -771,7 +771,7 @@ class AntifraudApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -787,7 +787,7 @@ class AntifraudApi
      * Create whitelisted rule
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data (optional)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleWhitelist'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -809,7 +809,7 @@ class AntifraudApi
      * Create whitelisted rule
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data (optional)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleWhitelist'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -817,7 +817,7 @@ class AntifraudApi
      */
     public function createRuleWhitelistAsyncWithHttpInfo($accept_language = 'es', $create_risk_rules_data = null, string $contentType = self::contentTypes['createRuleWhitelist'][0])
     {
-        $returnType = '\Femsa\Model\WhitelistlistRuleResponse';
+        $returnType = '\DigitalFemsa\Model\WhitelistlistRuleResponse';
         $request = $this->createRuleWhitelistRequest($accept_language, $create_risk_rules_data, $contentType);
 
         return $this->client
@@ -860,7 +860,7 @@ class AntifraudApi
      * Create request for operation 'createRuleWhitelist'
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\CreateRiskRulesData $create_risk_rules_data (optional)
+     * @param  \DigitalFemsa\Model\CreateRiskRulesData $create_risk_rules_data (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createRuleWhitelist'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -965,9 +965,9 @@ class AntifraudApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRuleBlacklist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\DeletedBlacklistRuleResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\DeletedBlacklistRuleResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function deleteRuleBlacklist($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteRuleBlacklist'][0])
     {
@@ -985,9 +985,9 @@ class AntifraudApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRuleBlacklist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\DeletedBlacklistRuleResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\DeletedBlacklistRuleResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteRuleBlacklistWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteRuleBlacklist'][0])
     {
@@ -1030,11 +1030,11 @@ class AntifraudApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\DeletedBlacklistRuleResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\DeletedBlacklistRuleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\DeletedBlacklistRuleResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\DeletedBlacklistRuleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1052,16 +1052,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\DeletedBlacklistRuleResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\DeletedBlacklistRuleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1079,16 +1079,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1106,16 +1106,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1133,13 +1133,13 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\DeletedBlacklistRuleResponse';
+            $returnType = '\DigitalFemsa\Model\DeletedBlacklistRuleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1172,7 +1172,7 @@ class AntifraudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\DeletedBlacklistRuleResponse',
+                        '\DigitalFemsa\Model\DeletedBlacklistRuleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1180,7 +1180,7 @@ class AntifraudApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1188,7 +1188,7 @@ class AntifraudApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1196,7 +1196,7 @@ class AntifraudApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1244,7 +1244,7 @@ class AntifraudApi
      */
     public function deleteRuleBlacklistAsyncWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteRuleBlacklist'][0])
     {
-        $returnType = '\Femsa\Model\DeletedBlacklistRuleResponse';
+        $returnType = '\DigitalFemsa\Model\DeletedBlacklistRuleResponse';
         $request = $this->deleteRuleBlacklistRequest($id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1405,9 +1405,9 @@ class AntifraudApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRuleWhitelist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\DeletedWhitelistRuleResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\DeletedWhitelistRuleResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function deleteRuleWhitelist($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteRuleWhitelist'][0])
     {
@@ -1425,9 +1425,9 @@ class AntifraudApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteRuleWhitelist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\DeletedWhitelistRuleResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\DeletedWhitelistRuleResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteRuleWhitelistWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteRuleWhitelist'][0])
     {
@@ -1470,11 +1470,11 @@ class AntifraudApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\DeletedWhitelistRuleResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\DeletedWhitelistRuleResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\DeletedWhitelistRuleResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\DeletedWhitelistRuleResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1492,16 +1492,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\DeletedWhitelistRuleResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\DeletedWhitelistRuleResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1519,16 +1519,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1546,16 +1546,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1573,16 +1573,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1600,13 +1600,13 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\DeletedWhitelistRuleResponse';
+            $returnType = '\DigitalFemsa\Model\DeletedWhitelistRuleResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1639,7 +1639,7 @@ class AntifraudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\DeletedWhitelistRuleResponse',
+                        '\DigitalFemsa\Model\DeletedWhitelistRuleResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1647,7 +1647,7 @@ class AntifraudApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1655,7 +1655,7 @@ class AntifraudApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1663,7 +1663,7 @@ class AntifraudApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1671,7 +1671,7 @@ class AntifraudApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1719,7 +1719,7 @@ class AntifraudApi
      */
     public function deleteRuleWhitelistAsyncWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteRuleWhitelist'][0])
     {
-        $returnType = '\Femsa\Model\DeletedWhitelistRuleResponse';
+        $returnType = '\DigitalFemsa\Model\DeletedWhitelistRuleResponse';
         $request = $this->deleteRuleWhitelistRequest($id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1878,9 +1878,9 @@ class AntifraudApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRuleBlacklist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\RiskRulesList|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\RiskRulesList|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getRuleBlacklist($accept_language = 'es', string $contentType = self::contentTypes['getRuleBlacklist'][0])
     {
@@ -1896,9 +1896,9 @@ class AntifraudApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRuleBlacklist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\RiskRulesList|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\RiskRulesList|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRuleBlacklistWithHttpInfo($accept_language = 'es', string $contentType = self::contentTypes['getRuleBlacklist'][0])
     {
@@ -1941,11 +1941,11 @@ class AntifraudApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\RiskRulesList' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\RiskRulesList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\RiskRulesList' !== 'string') {
+                        if ('\DigitalFemsa\Model\RiskRulesList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1963,16 +1963,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\RiskRulesList', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\RiskRulesList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1990,16 +1990,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2017,13 +2017,13 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\RiskRulesList';
+            $returnType = '\DigitalFemsa\Model\RiskRulesList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2056,7 +2056,7 @@ class AntifraudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\RiskRulesList',
+                        '\DigitalFemsa\Model\RiskRulesList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2064,7 +2064,7 @@ class AntifraudApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2072,7 +2072,7 @@ class AntifraudApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2116,7 +2116,7 @@ class AntifraudApi
      */
     public function getRuleBlacklistAsyncWithHttpInfo($accept_language = 'es', string $contentType = self::contentTypes['getRuleBlacklist'][0])
     {
-        $returnType = '\Femsa\Model\RiskRulesList';
+        $returnType = '\DigitalFemsa\Model\RiskRulesList';
         $request = $this->getRuleBlacklistRequest($accept_language, $contentType);
 
         return $this->client
@@ -2253,9 +2253,9 @@ class AntifraudApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRuleWhitelist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\RiskRulesList|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\RiskRulesList|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getRuleWhitelist($accept_language = 'es', string $contentType = self::contentTypes['getRuleWhitelist'][0])
     {
@@ -2271,9 +2271,9 @@ class AntifraudApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRuleWhitelist'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\RiskRulesList|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\RiskRulesList|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRuleWhitelistWithHttpInfo($accept_language = 'es', string $contentType = self::contentTypes['getRuleWhitelist'][0])
     {
@@ -2316,11 +2316,11 @@ class AntifraudApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\RiskRulesList' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\RiskRulesList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\RiskRulesList' !== 'string') {
+                        if ('\DigitalFemsa\Model\RiskRulesList' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2338,16 +2338,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\RiskRulesList', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\RiskRulesList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2365,16 +2365,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 403:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2392,16 +2392,16 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2419,13 +2419,13 @@ class AntifraudApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\RiskRulesList';
+            $returnType = '\DigitalFemsa\Model\RiskRulesList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2458,7 +2458,7 @@ class AntifraudApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\RiskRulesList',
+                        '\DigitalFemsa\Model\RiskRulesList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2466,7 +2466,7 @@ class AntifraudApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2474,7 +2474,7 @@ class AntifraudApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2482,7 +2482,7 @@ class AntifraudApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2526,7 +2526,7 @@ class AntifraudApi
      */
     public function getRuleWhitelistAsyncWithHttpInfo($accept_language = 'es', string $contentType = self::contentTypes['getRuleWhitelist'][0])
     {
-        $returnType = '\Femsa\Model\RiskRulesList';
+        $returnType = '\DigitalFemsa\Model\RiskRulesList';
         $request = $this->getRuleWhitelistRequest($accept_language, $contentType);
 
         return $this->client

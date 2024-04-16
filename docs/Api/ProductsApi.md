@@ -1,4 +1,4 @@
-# Femsa\ProductsApi
+# DigitalFemsa\ProductsApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `ordersCreateProduct()`
 
 ```php
-ordersCreateProduct($id, $product, $accept_language, $x_child_company_id): \Femsa\Model\ProductOrderResponse
+ordersCreateProduct($id, $product, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ProductOrderResponse
 ```
 
 Create Product
@@ -27,17 +27,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ProductsApi(
+$apiInstance = new DigitalFemsa\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$product = new \Femsa\Model\Product(); // \Femsa\Model\Product | requested field for a product
+$product = new \DigitalFemsa\Model\Product(); // \DigitalFemsa\Model\Product | requested field for a product
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -54,13 +54,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **product** | [**\Femsa\Model\Product**](../Model/Product.md)| requested field for a product | |
+| **product** | [**\DigitalFemsa\Model\Product**](../Model/Product.md)| requested field for a product | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\ProductOrderResponse**](../Model/ProductOrderResponse.md)
+[**\DigitalFemsa\Model\ProductOrderResponse**](../Model/ProductOrderResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `ordersDeleteProduct()`
 
 ```php
-ordersDeleteProduct($id, $line_item_id, $accept_language, $x_child_company_id): \Femsa\Model\ProductOrderResponse
+ordersDeleteProduct($id, $line_item_id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ProductOrderResponse
 ```
 
 Delete Product
@@ -93,10 +93,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ProductsApi(
+$apiInstance = new DigitalFemsa\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\ProductOrderResponse**](../Model/ProductOrderResponse.md)
+[**\DigitalFemsa\Model\ProductOrderResponse**](../Model/ProductOrderResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `ordersUpdateProduct()`
 
 ```php
-ordersUpdateProduct($id, $line_item_id, $update_product, $accept_language, $x_child_company_id): \Femsa\Model\ProductOrderResponse
+ordersUpdateProduct($id, $line_item_id, $update_product, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ProductOrderResponse
 ```
 
 Update Product
@@ -159,10 +159,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ProductsApi(
+$apiInstance = new DigitalFemsa\Api\ProductsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,7 +170,7 @@ $apiInstance = new Femsa\Api\ProductsApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $line_item_id = line_item_2tQ8HkkfbauaKP9Ho; // string | identifier
-$update_product = new \Femsa\Model\UpdateProduct(); // \Femsa\Model\UpdateProduct | requested field for products
+$update_product = new \DigitalFemsa\Model\UpdateProduct(); // \DigitalFemsa\Model\UpdateProduct | requested field for products
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -188,13 +188,13 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **line_item_id** | **string**| identifier | |
-| **update_product** | [**\Femsa\Model\UpdateProduct**](../Model/UpdateProduct.md)| requested field for products | |
+| **update_product** | [**\DigitalFemsa\Model\UpdateProduct**](../Model/UpdateProduct.md)| requested field for products | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\ProductOrderResponse**](../Model/ProductOrderResponse.md)
+[**\DigitalFemsa\Model\ProductOrderResponse**](../Model/ProductOrderResponse.md)
 
 ### Authorization
 

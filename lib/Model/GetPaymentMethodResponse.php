@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * GetPaymentMethodResponse Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class GetPaymentMethodResponse implements ModelInterface, ArrayAccess, \JsonSeri
         'object' => 'string',
         'next_page_url' => 'string',
         'previous_page_url' => 'string',
-        'data' => '\Femsa\Model\GetCustomerPaymentMethodDataResponse[]'
+        'data' => '\DigitalFemsa\Model\GetCustomerPaymentMethodDataResponse[]'
     ];
 
     /**
@@ -449,7 +449,7 @@ class GetPaymentMethodResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets data
      *
-     * @return \Femsa\Model\GetCustomerPaymentMethodDataResponse[]|null
+     * @return \DigitalFemsa\Model\GetCustomerPaymentMethodDataResponse[]|null
      */
     public function getData()
     {
@@ -459,7 +459,7 @@ class GetPaymentMethodResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets data
      *
-     * @param \Femsa\Model\GetCustomerPaymentMethodDataResponse[]|null $data data
+     * @param \DigitalFemsa\Model\GetCustomerPaymentMethodDataResponse[]|null $data data
      *
      * @return self
      */

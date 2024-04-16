@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\Femsa\Model\OrderFiscalEntityAddressResponse**](OrderFiscalEntityAddressResponse.md) |  |
+**address** | [**\DigitalFemsa\Model\OrderFiscalEntityAddressResponse**](OrderFiscalEntityAddressResponse.md) |  |
 **email** | **string** | Email of the fiscal entity | [optional]
 **metadata** | **array<string,mixed>** | Metadata associated with the fiscal entity | [optional]
 **name** | **string** | Name of the fiscal entity | [optional]

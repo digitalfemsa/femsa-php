@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **amount** | **int** |  | [optional]
-**channel** | [**\Femsa\Model\ChargeResponseChannel**](ChargeResponseChannel.md) |  | [optional]
+**channel** | [**\DigitalFemsa\Model\ChargeResponseChannel**](ChargeResponseChannel.md) |  | [optional]
 **created_at** | **int** |  | [optional]
 **currency** | **string** |  | [optional]
 **customer_id** | **string** |  | [optional]
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **object** | **string** |  | [optional]
 **order_id** | **string** |  | [optional]
 **paid_at** | **int** |  | [optional]
-**payment_method** | [**\Femsa\Model\ChargeOrderResponsePaymentMethod**](ChargeOrderResponsePaymentMethod.md) |  | [optional]
+**payment_method** | [**\DigitalFemsa\Model\ChargeOrderResponsePaymentMethod**](ChargeOrderResponsePaymentMethod.md) |  | [optional]
 **reference_id** | **string** | Reference ID of the charge | [optional]
 **refunds** | **object[]** |  | [optional]
 **status** | **string** |  | [optional]

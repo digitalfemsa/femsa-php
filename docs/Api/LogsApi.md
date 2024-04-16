@@ -1,4 +1,4 @@
-# Femsa\LogsApi
+# DigitalFemsa\LogsApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `getLogById()`
 
 ```php
-getLogById($id, $accept_language, $x_child_company_id): \Femsa\Model\LogResponse
+getLogById($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\LogResponse
 ```
 
 Get Log
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\LogsApi(
+$apiInstance = new DigitalFemsa\Api\LogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\LogResponse**](../Model/LogResponse.md)
+[**\DigitalFemsa\Model\LogResponse**](../Model/LogResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `getLogs()`
 
 ```php
-getLogs($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\LogsResponse
+getLogs($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\LogsResponse
 ```
 
 Get List Of Logs
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\LogsApi(
+$apiInstance = new DigitalFemsa\Api\LogsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\LogsResponse**](../Model/LogsResponse.md)
+[**\DigitalFemsa\Model\LogsResponse**](../Model/LogsResponse.md)
 
 ### Authorization
 

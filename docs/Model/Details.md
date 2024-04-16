@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**details** | [**\Femsa\Model\DetailsError[]**](DetailsError.md) |  | [optional]
+**details** | [**\DigitalFemsa\Model\DetailsError[]**](DetailsError.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

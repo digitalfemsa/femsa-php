@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,14 +26,14 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa;
+namespace DigitalFemsa;
 
 /**
  * Configuration Class Doc Comment
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -452,11 +452,11 @@ class Configuration
     {
         $uname_disabled = self::_isDisabled(\ini_get('disable_functions'), 'php_uname');
         $uname = $uname_disabled ? '(disabled)' : \php_uname();
-        $report  = 'PHP SDK (Femsa) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (DigitalFemsa) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . $uname . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    The version of the OpenAPI document: 2.1.0' . PHP_EOL;
-        $report .= '    SDK Package Version: 6.0.4' . PHP_EOL;
+        $report .= '    SDK Package Version: 1.0.0' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

@@ -1,4 +1,4 @@
-# Femsa\WebhooksApi
+# DigitalFemsa\WebhooksApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `createWebhook()`
 
 ```php
-createWebhook($webhook_request, $accept_language): \Femsa\Model\WebhookResponse
+createWebhook($webhook_request, $accept_language): \DigitalFemsa\Model\WebhookResponse
 ```
 
 Create Webhook
@@ -30,16 +30,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhooksApi(
+$apiInstance = new DigitalFemsa\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$webhook_request = new \Femsa\Model\WebhookRequest(); // \Femsa\Model\WebhookRequest | requested field for webhook
+$webhook_request = new \DigitalFemsa\Model\WebhookRequest(); // \DigitalFemsa\Model\WebhookRequest | requested field for webhook
 $accept_language = es; // string | Use for knowing which language to use
 
 try {
@@ -54,12 +54,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **webhook_request** | [**\Femsa\Model\WebhookRequest**](../Model/WebhookRequest.md)| requested field for webhook | |
+| **webhook_request** | [**\DigitalFemsa\Model\WebhookRequest**](../Model/WebhookRequest.md)| requested field for webhook | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 
 ### Return type
 
-[**\Femsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
+[**\DigitalFemsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `deleteWebhook()`
 
 ```php
-deleteWebhook($id, $accept_language): \Femsa\Model\WebhookResponse
+deleteWebhook($id, $accept_language): \DigitalFemsa\Model\WebhookResponse
 ```
 
 Delete Webhook
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhooksApi(
+$apiInstance = new DigitalFemsa\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
+[**\DigitalFemsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ try {
 ## `getWebhook()`
 
 ```php
-getWebhook($id, $accept_language, $x_child_company_id): \Femsa\Model\WebhookResponse
+getWebhook($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\WebhookResponse
 ```
 
 Get Webhook
@@ -150,10 +150,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhooksApi(
+$apiInstance = new DigitalFemsa\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -181,7 +181,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
+[**\DigitalFemsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ try {
 ## `getWebhooks()`
 
 ```php
-getWebhooks($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\GetWebhooksResponse
+getWebhooks($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\GetWebhooksResponse
 ```
 
 Get List of Webhooks
@@ -214,10 +214,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhooksApi(
+$apiInstance = new DigitalFemsa\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -251,7 +251,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetWebhooksResponse**](../Model/GetWebhooksResponse.md)
+[**\DigitalFemsa\Model\GetWebhooksResponse**](../Model/GetWebhooksResponse.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ try {
 ## `testWebhook()`
 
 ```php
-testWebhook($id, $accept_language): \Femsa\Model\WebhookResponse
+testWebhook($id, $accept_language): \DigitalFemsa\Model\WebhookResponse
 ```
 
 Test Webhook
@@ -284,10 +284,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhooksApi(
+$apiInstance = new DigitalFemsa\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -313,7 +313,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
+[**\DigitalFemsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
 
 ### Authorization
 
@@ -331,7 +331,7 @@ try {
 ## `updateWebhook()`
 
 ```php
-updateWebhook($id, $webhook_update_request, $accept_language, $x_child_company_id): \Femsa\Model\WebhookResponse
+updateWebhook($id, $webhook_update_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\WebhookResponse
 ```
 
 Update Webhook
@@ -346,17 +346,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhooksApi(
+$apiInstance = new DigitalFemsa\Api\WebhooksApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$webhook_update_request = new \Femsa\Model\WebhookUpdateRequest(); // \Femsa\Model\WebhookUpdateRequest | requested fields in order to update a webhook
+$webhook_update_request = new \DigitalFemsa\Model\WebhookUpdateRequest(); // \DigitalFemsa\Model\WebhookUpdateRequest | requested fields in order to update a webhook
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -373,13 +373,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **webhook_update_request** | [**\Femsa\Model\WebhookUpdateRequest**](../Model/WebhookUpdateRequest.md)| requested fields in order to update a webhook | |
+| **webhook_update_request** | [**\DigitalFemsa\Model\WebhookUpdateRequest**](../Model/WebhookUpdateRequest.md)| requested fields in order to update a webhook | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
+[**\DigitalFemsa\Model\WebhookResponse**](../Model/WebhookResponse.md)
 
 ### Authorization
 

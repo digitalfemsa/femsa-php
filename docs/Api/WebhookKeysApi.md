@@ -1,4 +1,4 @@
-# Femsa\WebhookKeysApi
+# DigitalFemsa\WebhookKeysApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `createWebhookKey()`
 
 ```php
-createWebhookKey($accept_language, $webhook_key_request): \Femsa\Model\WebhookKeyCreateResponse
+createWebhookKey($accept_language, $webhook_key_request): \DigitalFemsa\Model\WebhookKeyCreateResponse
 ```
 
 Create Webhook Key
@@ -29,17 +29,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhookKeysApi(
+$apiInstance = new DigitalFemsa\Api\WebhookKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $accept_language = es; // string | Use for knowing which language to use
-$webhook_key_request = new \Femsa\Model\WebhookKeyRequest(); // \Femsa\Model\WebhookKeyRequest
+$webhook_key_request = new \DigitalFemsa\Model\WebhookKeyRequest(); // \DigitalFemsa\Model\WebhookKeyRequest
 
 try {
     $result = $apiInstance->createWebhookKey($accept_language, $webhook_key_request);
@@ -54,11 +54,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
-| **webhook_key_request** | [**\Femsa\Model\WebhookKeyRequest**](../Model/WebhookKeyRequest.md)|  | [optional] |
+| **webhook_key_request** | [**\DigitalFemsa\Model\WebhookKeyRequest**](../Model/WebhookKeyRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\WebhookKeyCreateResponse**](../Model/WebhookKeyCreateResponse.md)
+[**\DigitalFemsa\Model\WebhookKeyCreateResponse**](../Model/WebhookKeyCreateResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `deleteWebhookKey()`
 
 ```php
-deleteWebhookKey($id, $accept_language): \Femsa\Model\WebhookKeyDeleteResponse
+deleteWebhookKey($id, $accept_language): \DigitalFemsa\Model\WebhookKeyDeleteResponse
 ```
 
 Delete Webhook key
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhookKeysApi(
+$apiInstance = new DigitalFemsa\Api\WebhookKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\WebhookKeyDeleteResponse**](../Model/WebhookKeyDeleteResponse.md)
+[**\DigitalFemsa\Model\WebhookKeyDeleteResponse**](../Model/WebhookKeyDeleteResponse.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ try {
 ## `getWebhookKey()`
 
 ```php
-getWebhookKey($id, $accept_language, $x_child_company_id): \Femsa\Model\WebhookKeyResponse
+getWebhookKey($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\WebhookKeyResponse
 ```
 
 Get Webhook Key
@@ -149,10 +149,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhookKeysApi(
+$apiInstance = new DigitalFemsa\Api\WebhookKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -180,7 +180,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\WebhookKeyResponse**](../Model/WebhookKeyResponse.md)
+[**\DigitalFemsa\Model\WebhookKeyResponse**](../Model/WebhookKeyResponse.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ try {
 ## `getWebhookKeys()`
 
 ```php
-getWebhookKeys($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\GetWebhookKeysResponse
+getWebhookKeys($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\GetWebhookKeysResponse
 ```
 
 Get List of Webhook Keys
@@ -213,10 +213,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhookKeysApi(
+$apiInstance = new DigitalFemsa\Api\WebhookKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -250,7 +250,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetWebhookKeysResponse**](../Model/GetWebhookKeysResponse.md)
+[**\DigitalFemsa\Model\GetWebhookKeysResponse**](../Model/GetWebhookKeysResponse.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ try {
 ## `updateWebhookKey()`
 
 ```php
-updateWebhookKey($id, $accept_language, $webhook_key_update_request): \Femsa\Model\WebhookKeyResponse
+updateWebhookKey($id, $accept_language, $webhook_key_update_request): \DigitalFemsa\Model\WebhookKeyResponse
 ```
 
 Update Webhook Key
@@ -283,10 +283,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\WebhookKeysApi(
+$apiInstance = new DigitalFemsa\Api\WebhookKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -294,7 +294,7 @@ $apiInstance = new Femsa\Api\WebhookKeysApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $accept_language = es; // string | Use for knowing which language to use
-$webhook_key_update_request = new \Femsa\Model\WebhookKeyUpdateRequest(); // \Femsa\Model\WebhookKeyUpdateRequest
+$webhook_key_update_request = new \DigitalFemsa\Model\WebhookKeyUpdateRequest(); // \DigitalFemsa\Model\WebhookKeyUpdateRequest
 
 try {
     $result = $apiInstance->updateWebhookKey($id, $accept_language, $webhook_key_update_request);
@@ -310,11 +310,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
-| **webhook_key_update_request** | [**\Femsa\Model\WebhookKeyUpdateRequest**](../Model/WebhookKeyUpdateRequest.md)|  | [optional] |
+| **webhook_key_update_request** | [**\DigitalFemsa\Model\WebhookKeyUpdateRequest**](../Model/WebhookKeyUpdateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\WebhookKeyResponse**](../Model/WebhookKeyResponse.md)
+[**\DigitalFemsa\Model\WebhookKeyResponse**](../Model/WebhookKeyResponse.md)
 
 ### Authorization
 

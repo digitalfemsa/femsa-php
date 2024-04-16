@@ -1,4 +1,4 @@
-# Femsa\PaymentMethodsApi
+# DigitalFemsa\PaymentMethodsApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -13,7 +13,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `createCustomerPaymentMethods()`
 
 ```php
-createCustomerPaymentMethods($id, $create_customer_payment_methods_request, $accept_language, $x_child_company_id): \Femsa\Model\CreateCustomerPaymentMethodsResponse
+createCustomerPaymentMethods($id, $create_customer_payment_methods_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse
 ```
 
 Create Payment Method
@@ -28,17 +28,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentMethodsApi(
+$apiInstance = new DigitalFemsa\Api\PaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$create_customer_payment_methods_request = {"type":"oxxo_recurrent","expires_at":1553273553}; // \Femsa\Model\CreateCustomerPaymentMethodsRequest | requested field for customer payment methods
+$create_customer_payment_methods_request = {"type":"oxxo_recurrent","expires_at":1553273553}; // \DigitalFemsa\Model\CreateCustomerPaymentMethodsRequest | requested field for customer payment methods
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -55,13 +55,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **create_customer_payment_methods_request** | [**\Femsa\Model\CreateCustomerPaymentMethodsRequest**](../Model/CreateCustomerPaymentMethodsRequest.md)| requested field for customer payment methods | |
+| **create_customer_payment_methods_request** | [**\DigitalFemsa\Model\CreateCustomerPaymentMethodsRequest**](../Model/CreateCustomerPaymentMethodsRequest.md)| requested field for customer payment methods | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CreateCustomerPaymentMethodsResponse**](../Model/CreateCustomerPaymentMethodsResponse.md)
+[**\DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse**](../Model/CreateCustomerPaymentMethodsResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ try {
 ## `deleteCustomerPaymentMethods()`
 
 ```php
-deleteCustomerPaymentMethods($id, $payment_method_id, $accept_language, $x_child_company_id): \Femsa\Model\UpdateCustomerPaymentMethodsResponse
+deleteCustomerPaymentMethods($id, $payment_method_id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse
 ```
 
 Delete Payment Method
@@ -94,10 +94,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentMethodsApi(
+$apiInstance = new DigitalFemsa\Api\PaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\UpdateCustomerPaymentMethodsResponse**](../Model/UpdateCustomerPaymentMethodsResponse.md)
+[**\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse**](../Model/UpdateCustomerPaymentMethodsResponse.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ try {
 ## `getCustomerPaymentMethods()`
 
 ```php
-getCustomerPaymentMethods($id, $accept_language, $x_child_company_id, $limit, $next, $previous, $search): \Femsa\Model\GetPaymentMethodResponse
+getCustomerPaymentMethods($id, $accept_language, $x_child_company_id, $limit, $next, $previous, $search): \DigitalFemsa\Model\GetPaymentMethodResponse
 ```
 
 Get Payment Methods
@@ -160,10 +160,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentMethodsApi(
+$apiInstance = new DigitalFemsa\Api\PaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -199,7 +199,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetPaymentMethodResponse**](../Model/GetPaymentMethodResponse.md)
+[**\DigitalFemsa\Model\GetPaymentMethodResponse**](../Model/GetPaymentMethodResponse.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ try {
 ## `updateCustomerPaymentMethods()`
 
 ```php
-updateCustomerPaymentMethods($id, $payment_method_id, $update_payment_methods, $accept_language, $x_child_company_id): \Femsa\Model\UpdateCustomerPaymentMethodsResponse
+updateCustomerPaymentMethods($id, $payment_method_id, $update_payment_methods, $accept_language, $x_child_company_id): \DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse
 ```
 
 Update Payment Method
@@ -232,10 +232,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\PaymentMethodsApi(
+$apiInstance = new DigitalFemsa\Api\PaymentMethodsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -243,7 +243,7 @@ $apiInstance = new Femsa\Api\PaymentMethodsApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $payment_method_id = src_2tQ974hSHcsdeSZHG; // string | Identifier of the payment method
-$update_payment_methods = new \Femsa\Model\UpdatePaymentMethods(); // \Femsa\Model\UpdatePaymentMethods | requested field for customer payment methods
+$update_payment_methods = new \DigitalFemsa\Model\UpdatePaymentMethods(); // \DigitalFemsa\Model\UpdatePaymentMethods | requested field for customer payment methods
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -261,13 +261,13 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **payment_method_id** | **string**| Identifier of the payment method | |
-| **update_payment_methods** | [**\Femsa\Model\UpdatePaymentMethods**](../Model/UpdatePaymentMethods.md)| requested field for customer payment methods | |
+| **update_payment_methods** | [**\DigitalFemsa\Model\UpdatePaymentMethods**](../Model/UpdatePaymentMethods.md)| requested field for customer payment methods | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\UpdateCustomerPaymentMethodsResponse**](../Model/UpdateCustomerPaymentMethodsResponse.md)
+[**\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse**](../Model/UpdateCustomerPaymentMethodsResponse.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# Femsa\ApiKeysApi
+# DigitalFemsa\ApiKeysApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `createApiKey()`
 
 ```php
-createApiKey($api_key_request, $accept_language, $x_child_company_id): \Femsa\Model\ApiKeyCreateResponse
+createApiKey($api_key_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ApiKeyCreateResponse
 ```
 
 Create Api Key
@@ -29,16 +29,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ApiKeysApi(
+$apiInstance = new DigitalFemsa\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$api_key_request = new \Femsa\Model\ApiKeyRequest(); // \Femsa\Model\ApiKeyRequest | requested field for a api keys
+$api_key_request = new \DigitalFemsa\Model\ApiKeyRequest(); // \DigitalFemsa\Model\ApiKeyRequest | requested field for a api keys
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -54,13 +54,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **api_key_request** | [**\Femsa\Model\ApiKeyRequest**](../Model/ApiKeyRequest.md)| requested field for a api keys | |
+| **api_key_request** | [**\DigitalFemsa\Model\ApiKeyRequest**](../Model/ApiKeyRequest.md)| requested field for a api keys | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\ApiKeyCreateResponse**](../Model/ApiKeyCreateResponse.md)
+[**\DigitalFemsa\Model\ApiKeyCreateResponse**](../Model/ApiKeyCreateResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `deleteApiKey()`
 
 ```php
-deleteApiKey($id, $accept_language): \Femsa\Model\DeleteApiKeysResponse
+deleteApiKey($id, $accept_language): \DigitalFemsa\Model\DeleteApiKeysResponse
 ```
 
 Delete Api Key
@@ -93,10 +93,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ApiKeysApi(
+$apiInstance = new DigitalFemsa\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -122,7 +122,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\DeleteApiKeysResponse**](../Model/DeleteApiKeysResponse.md)
+[**\DigitalFemsa\Model\DeleteApiKeysResponse**](../Model/DeleteApiKeysResponse.md)
 
 ### Authorization
 
@@ -140,7 +140,7 @@ try {
 ## `getApiKey()`
 
 ```php
-getApiKey($id, $accept_language, $x_child_company_id): \Femsa\Model\ApiKeyResponse
+getApiKey($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ApiKeyResponse
 ```
 
 Get Api Key
@@ -155,10 +155,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ApiKeysApi(
+$apiInstance = new DigitalFemsa\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\ApiKeyResponse**](../Model/ApiKeyResponse.md)
+[**\DigitalFemsa\Model\ApiKeyResponse**](../Model/ApiKeyResponse.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ try {
 ## `getApiKeys()`
 
 ```php
-getApiKeys($accept_language, $x_child_company_id, $limit, $next, $previous, $search): \Femsa\Model\GetApiKeysResponse
+getApiKeys($accept_language, $x_child_company_id, $limit, $next, $previous, $search): \DigitalFemsa\Model\GetApiKeysResponse
 ```
 
 Get list of Api Keys
@@ -219,10 +219,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ApiKeysApi(
+$apiInstance = new DigitalFemsa\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetApiKeysResponse**](../Model/GetApiKeysResponse.md)
+[**\DigitalFemsa\Model\GetApiKeysResponse**](../Model/GetApiKeysResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ try {
 ## `updateApiKey()`
 
 ```php
-updateApiKey($id, $accept_language, $api_key_update_request): \Femsa\Model\ApiKeyResponse
+updateApiKey($id, $accept_language, $api_key_update_request): \DigitalFemsa\Model\ApiKeyResponse
 ```
 
 Update Api Key
@@ -289,10 +289,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ApiKeysApi(
+$apiInstance = new DigitalFemsa\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -300,7 +300,7 @@ $apiInstance = new Femsa\Api\ApiKeysApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $accept_language = es; // string | Use for knowing which language to use
-$api_key_update_request = new \Femsa\Model\ApiKeyUpdateRequest(); // \Femsa\Model\ApiKeyUpdateRequest
+$api_key_update_request = new \DigitalFemsa\Model\ApiKeyUpdateRequest(); // \DigitalFemsa\Model\ApiKeyUpdateRequest
 
 try {
     $result = $apiInstance->updateApiKey($id, $accept_language, $api_key_update_request);
@@ -316,11 +316,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
-| **api_key_update_request** | [**\Femsa\Model\ApiKeyUpdateRequest**](../Model/ApiKeyUpdateRequest.md)|  | [optional] |
+| **api_key_update_request** | [**\DigitalFemsa\Model\ApiKeyUpdateRequest**](../Model/ApiKeyUpdateRequest.md)|  | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\ApiKeyResponse**](../Model/ApiKeyResponse.md)
+[**\DigitalFemsa\Model\ApiKeyResponse**](../Model/ApiKeyResponse.md)
 
 ### Authorization
 

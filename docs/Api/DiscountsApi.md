@@ -1,4 +1,4 @@
-# Femsa\DiscountsApi
+# DigitalFemsa\DiscountsApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -14,7 +14,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `ordersCreateDiscountLine()`
 
 ```php
-ordersCreateDiscountLine($id, $order_discount_lines_request, $accept_language, $x_child_company_id): \Femsa\Model\DiscountLinesResponse
+ordersCreateDiscountLine($id, $order_discount_lines_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\DiscountLinesResponse
 ```
 
 Create Discount
@@ -29,17 +29,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\DiscountsApi(
+$apiInstance = new DigitalFemsa\Api\DiscountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$order_discount_lines_request = new \Femsa\Model\OrderDiscountLinesRequest(); // \Femsa\Model\OrderDiscountLinesRequest | requested field for a discount lines
+$order_discount_lines_request = new \DigitalFemsa\Model\OrderDiscountLinesRequest(); // \DigitalFemsa\Model\OrderDiscountLinesRequest | requested field for a discount lines
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -56,13 +56,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **order_discount_lines_request** | [**\Femsa\Model\OrderDiscountLinesRequest**](../Model/OrderDiscountLinesRequest.md)| requested field for a discount lines | |
+| **order_discount_lines_request** | [**\DigitalFemsa\Model\OrderDiscountLinesRequest**](../Model/OrderDiscountLinesRequest.md)| requested field for a discount lines | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\DiscountLinesResponse**](../Model/DiscountLinesResponse.md)
+[**\DigitalFemsa\Model\DiscountLinesResponse**](../Model/DiscountLinesResponse.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ try {
 ## `ordersDeleteDiscountLines()`
 
 ```php
-ordersDeleteDiscountLines($id, $discount_lines_id, $accept_language, $x_child_company_id): \Femsa\Model\DiscountLinesResponse
+ordersDeleteDiscountLines($id, $discount_lines_id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\DiscountLinesResponse
 ```
 
 Delete Discount
@@ -95,10 +95,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\DiscountsApi(
+$apiInstance = new DigitalFemsa\Api\DiscountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -128,7 +128,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\DiscountLinesResponse**](../Model/DiscountLinesResponse.md)
+[**\DigitalFemsa\Model\DiscountLinesResponse**](../Model/DiscountLinesResponse.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ try {
 ## `ordersGetDiscountLine()`
 
 ```php
-ordersGetDiscountLine($id, $discount_lines_id, $accept_language, $x_child_company_id): \Femsa\Model\DiscountLinesResponse
+ordersGetDiscountLine($id, $discount_lines_id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\DiscountLinesResponse
 ```
 
 Get Discount
@@ -161,10 +161,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\DiscountsApi(
+$apiInstance = new DigitalFemsa\Api\DiscountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -194,7 +194,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\DiscountLinesResponse**](../Model/DiscountLinesResponse.md)
+[**\DigitalFemsa\Model\DiscountLinesResponse**](../Model/DiscountLinesResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ try {
 ## `ordersGetDiscountLines()`
 
 ```php
-ordersGetDiscountLines($id, $accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\GetOrderDiscountLinesResponse
+ordersGetDiscountLines($id, $accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\GetOrderDiscountLinesResponse
 ```
 
 Get a List of Discount
@@ -227,10 +227,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\DiscountsApi(
+$apiInstance = new DigitalFemsa\Api\DiscountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -266,7 +266,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetOrderDiscountLinesResponse**](../Model/GetOrderDiscountLinesResponse.md)
+[**\DigitalFemsa\Model\GetOrderDiscountLinesResponse**](../Model/GetOrderDiscountLinesResponse.md)
 
 ### Authorization
 
@@ -284,7 +284,7 @@ try {
 ## `ordersUpdateDiscountLines()`
 
 ```php
-ordersUpdateDiscountLines($id, $discount_lines_id, $update_order_discount_lines_request, $accept_language, $x_child_company_id): \Femsa\Model\DiscountLinesResponse
+ordersUpdateDiscountLines($id, $discount_lines_id, $update_order_discount_lines_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\DiscountLinesResponse
 ```
 
 Update Discount
@@ -299,10 +299,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\DiscountsApi(
+$apiInstance = new DigitalFemsa\Api\DiscountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -310,7 +310,7 @@ $apiInstance = new Femsa\Api\DiscountsApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $discount_lines_id = dis_lin_2tQ974hSHcsdeSZHG; // string | discount line id identifier
-$update_order_discount_lines_request = new \Femsa\Model\UpdateOrderDiscountLinesRequest(); // \Femsa\Model\UpdateOrderDiscountLinesRequest | requested field for a discount lines
+$update_order_discount_lines_request = new \DigitalFemsa\Model\UpdateOrderDiscountLinesRequest(); // \DigitalFemsa\Model\UpdateOrderDiscountLinesRequest | requested field for a discount lines
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -328,13 +328,13 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **discount_lines_id** | **string**| discount line id identifier | |
-| **update_order_discount_lines_request** | [**\Femsa\Model\UpdateOrderDiscountLinesRequest**](../Model/UpdateOrderDiscountLinesRequest.md)| requested field for a discount lines | |
+| **update_order_discount_lines_request** | [**\DigitalFemsa\Model\UpdateOrderDiscountLinesRequest**](../Model/UpdateOrderDiscountLinesRequest.md)| requested field for a discount lines | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\DiscountLinesResponse**](../Model/DiscountLinesResponse.md)
+[**\DigitalFemsa\Model\DiscountLinesResponse**](../Model/DiscountLinesResponse.md)
 
 ### Authorization
 

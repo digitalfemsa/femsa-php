@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * GetTransfersResponse Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class GetTransfersResponse implements ModelInterface, ArrayAccess, \JsonSerializ
         'object' => 'string',
         'next_page_url' => 'string',
         'previous_page_url' => 'string',
-        'data' => '\Femsa\Model\TransfersResponse[]'
+        'data' => '\DigitalFemsa\Model\TransfersResponse[]'
     ];
 
     /**
@@ -449,7 +449,7 @@ class GetTransfersResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets data
      *
-     * @return \Femsa\Model\TransfersResponse[]|null
+     * @return \DigitalFemsa\Model\TransfersResponse[]|null
      */
     public function getData()
     {
@@ -459,7 +459,7 @@ class GetTransfersResponse implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets data
      *
-     * @param \Femsa\Model\TransfersResponse[]|null $data Transfers
+     * @param \DigitalFemsa\Model\TransfersResponse[]|null $data Transfers
      *
      * @return self
      */

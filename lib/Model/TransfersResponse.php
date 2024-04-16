@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * TransfersResponse Class Doc Comment
  *
  * @category Class
  * @description A transfer represents the action of sending an amount to a business bank account including the status, amount and method used to make the transfer.
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class TransfersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
         'currency' => 'string',
         'id' => 'string',
         'livemode' => 'bool',
-        'method' => '\Femsa\Model\TransferMethodResponse',
+        'method' => '\DigitalFemsa\Model\TransferMethodResponse',
         'object' => 'string',
         'statement_description' => 'string',
         'statement_reference' => 'string',
@@ -500,7 +500,7 @@ class TransfersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets method
      *
-     * @return \Femsa\Model\TransferMethodResponse|null
+     * @return \DigitalFemsa\Model\TransferMethodResponse|null
      */
     public function getMethod()
     {
@@ -510,7 +510,7 @@ class TransfersResponse implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets method
      *
-     * @param \Femsa\Model\TransferMethodResponse|null $method method
+     * @param \DigitalFemsa\Model\TransferMethodResponse|null $method method
      *
      * @return self
      */

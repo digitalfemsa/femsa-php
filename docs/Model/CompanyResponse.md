@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **object** | **string** | The resource&#39;s type | [optional]
 **parent_company_id** | **string** | Id of the parent company | [optional]
 **use_parent_fiscal_data** | **bool** | Whether the parent company&#39;s fiscal data is to be used for liquidation and tax purposes | [optional]
-**payout_destination** | [**\Femsa\Model\CompanyPayoutDestinationResponse**](CompanyPayoutDestinationResponse.md) |  | [optional]
-**fiscal_info** | [**\Femsa\Model\CompanyFiscalInfoResponse**](CompanyFiscalInfoResponse.md) |  | [optional]
+**payout_destination** | [**\DigitalFemsa\Model\CompanyPayoutDestinationResponse**](CompanyPayoutDestinationResponse.md) |  | [optional]
+**fiscal_info** | [**\DigitalFemsa\Model\CompanyFiscalInfoResponse**](CompanyFiscalInfoResponse.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

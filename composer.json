@@ -1,7 +1,7 @@
 {
-    "name": "femsa/femsa-php",
-    "version": "6.0.4",
-    "description": "Femsa PHP Library",
+    "name": "digitalfemsa/femsa-php",
+    "version": "1.0.0",
+    "description": "DigitalFemsa PHP Library",
     "type": "library",
     "keywords": [
         "php",
@@ -14,8 +14,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "engineering@femsa.com",
-            "homepage": "https://github.com/femsa/femsa-php/contributors"
+            "name": "engineering@digitalfemsa.io",
+            "homepage": "https://github.com/digitalfemsa/femsa-php/contributors"
         }
     ],
     "require": {
@@ -32,9 +32,9 @@
         "phpstan/phpstan": "1.10.47"
     },
     "autoload": {
-        "psr-4": { "Femsa\\" : "lib/" }
+        "psr-4": { "DigitalFemsa\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Femsa\\Test\\" : "test/" }
+        "psr-4": { "DigitalFemsa\\Test\\" : "test/" }
     }
 }

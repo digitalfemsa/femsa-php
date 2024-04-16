@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Femsa\Model\OrderResponse[]**](OrderResponse.md) |  |
+**data** | [**\DigitalFemsa\Model\OrderResponse[]**](OrderResponse.md) |  |
 **has_more** | **bool** | Indicates if there are more pages to be requested |
 **object** | **string** | Object type, in this case is list |
 **next_page_url** | **string** | URL of the next page. | [optional]

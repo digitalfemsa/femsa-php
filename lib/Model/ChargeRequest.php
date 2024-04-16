@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * ChargeRequest Class Doc Comment
  *
  * @category Class
  * @description The charges to be made
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class ChargeRequest implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'amount' => 'int',
-        'payment_method' => '\Femsa\Model\ChargeRequestPaymentMethod',
+        'payment_method' => '\DigitalFemsa\Model\ChargeRequestPaymentMethod',
         'reference_id' => 'string'
     ];
 
@@ -338,7 +338,7 @@ class ChargeRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_method
      *
-     * @return \Femsa\Model\ChargeRequestPaymentMethod
+     * @return \DigitalFemsa\Model\ChargeRequestPaymentMethod
      */
     public function getPaymentMethod()
     {
@@ -348,7 +348,7 @@ class ChargeRequest implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_method
      *
-     * @param \Femsa\Model\ChargeRequestPaymentMethod $payment_method payment_method
+     * @param \DigitalFemsa\Model\ChargeRequestPaymentMethod $payment_method payment_method
      *
      * @return self
      */

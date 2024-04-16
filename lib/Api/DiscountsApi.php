@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * DiscountsApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,14 +141,14 @@ class DiscountsApi
      * Create Discount
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateDiscountLine'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\DiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\DiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function ordersCreateDiscountLine($id, $order_discount_lines_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersCreateDiscountLine'][0])
     {
@@ -162,14 +162,14 @@ class DiscountsApi
      * Create Discount
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateDiscountLine'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\DiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\DiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersCreateDiscountLineWithHttpInfo($id, $order_discount_lines_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersCreateDiscountLine'][0])
     {
@@ -212,11 +212,11 @@ class DiscountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\DiscountLinesResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\DiscountLinesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\DiscountLinesResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\DiscountLinesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -234,16 +234,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\DiscountLinesResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\DiscountLinesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -261,16 +261,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -288,16 +288,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -315,13 +315,13 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\DiscountLinesResponse';
+            $returnType = '\DigitalFemsa\Model\DiscountLinesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -354,7 +354,7 @@ class DiscountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\DiscountLinesResponse',
+                        '\DigitalFemsa\Model\DiscountLinesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -362,7 +362,7 @@ class DiscountsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -370,7 +370,7 @@ class DiscountsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -378,7 +378,7 @@ class DiscountsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -394,7 +394,7 @@ class DiscountsApi
      * Create Discount
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateDiscountLine'] to see the possible values for this operation
@@ -418,7 +418,7 @@ class DiscountsApi
      * Create Discount
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateDiscountLine'] to see the possible values for this operation
@@ -428,7 +428,7 @@ class DiscountsApi
      */
     public function ordersCreateDiscountLineAsyncWithHttpInfo($id, $order_discount_lines_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersCreateDiscountLine'][0])
     {
-        $returnType = '\Femsa\Model\DiscountLinesResponse';
+        $returnType = '\DigitalFemsa\Model\DiscountLinesResponse';
         $request = $this->ordersCreateDiscountLineRequest($id, $order_discount_lines_request, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -471,7 +471,7 @@ class DiscountsApi
      * Create request for operation 'ordersCreateDiscountLine'
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\OrderDiscountLinesRequest $order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateDiscountLine'] to see the possible values for this operation
@@ -605,9 +605,9 @@ class DiscountsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersDeleteDiscountLines'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\DiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\DiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function ordersDeleteDiscountLines($id, $discount_lines_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersDeleteDiscountLines'][0])
     {
@@ -626,9 +626,9 @@ class DiscountsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersDeleteDiscountLines'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\DiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\DiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersDeleteDiscountLinesWithHttpInfo($id, $discount_lines_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersDeleteDiscountLines'][0])
     {
@@ -671,11 +671,11 @@ class DiscountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\DiscountLinesResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\DiscountLinesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\DiscountLinesResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\DiscountLinesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -693,16 +693,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\DiscountLinesResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\DiscountLinesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -720,16 +720,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -747,16 +747,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -774,16 +774,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -801,13 +801,13 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\DiscountLinesResponse';
+            $returnType = '\DigitalFemsa\Model\DiscountLinesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -840,7 +840,7 @@ class DiscountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\DiscountLinesResponse',
+                        '\DigitalFemsa\Model\DiscountLinesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -848,7 +848,7 @@ class DiscountsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -856,7 +856,7 @@ class DiscountsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -864,7 +864,7 @@ class DiscountsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -872,7 +872,7 @@ class DiscountsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -922,7 +922,7 @@ class DiscountsApi
      */
     public function ordersDeleteDiscountLinesAsyncWithHttpInfo($id, $discount_lines_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersDeleteDiscountLines'][0])
     {
-        $returnType = '\Femsa\Model\DiscountLinesResponse';
+        $returnType = '\DigitalFemsa\Model\DiscountLinesResponse';
         $request = $this->ordersDeleteDiscountLinesRequest($id, $discount_lines_id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1100,9 +1100,9 @@ class DiscountsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersGetDiscountLine'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\DiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\DiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function ordersGetDiscountLine($id, $discount_lines_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersGetDiscountLine'][0])
     {
@@ -1121,9 +1121,9 @@ class DiscountsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersGetDiscountLine'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\DiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\DiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersGetDiscountLineWithHttpInfo($id, $discount_lines_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersGetDiscountLine'][0])
     {
@@ -1166,11 +1166,11 @@ class DiscountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\DiscountLinesResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\DiscountLinesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\DiscountLinesResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\DiscountLinesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1188,16 +1188,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\DiscountLinesResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\DiscountLinesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1215,16 +1215,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1242,16 +1242,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1269,16 +1269,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1296,13 +1296,13 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\DiscountLinesResponse';
+            $returnType = '\DigitalFemsa\Model\DiscountLinesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1335,7 +1335,7 @@ class DiscountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\DiscountLinesResponse',
+                        '\DigitalFemsa\Model\DiscountLinesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1343,7 +1343,7 @@ class DiscountsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1351,7 +1351,7 @@ class DiscountsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1359,7 +1359,7 @@ class DiscountsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1367,7 +1367,7 @@ class DiscountsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1417,7 +1417,7 @@ class DiscountsApi
      */
     public function ordersGetDiscountLineAsyncWithHttpInfo($id, $discount_lines_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersGetDiscountLine'][0])
     {
-        $returnType = '\Femsa\Model\DiscountLinesResponse';
+        $returnType = '\DigitalFemsa\Model\DiscountLinesResponse';
         $request = $this->ordersGetDiscountLineRequest($id, $discount_lines_id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1598,9 +1598,9 @@ class DiscountsApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersGetDiscountLines'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\GetOrderDiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\GetOrderDiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function ordersGetDiscountLines($id, $accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['ordersGetDiscountLines'][0])
     {
@@ -1622,9 +1622,9 @@ class DiscountsApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersGetDiscountLines'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\GetOrderDiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\GetOrderDiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersGetDiscountLinesWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['ordersGetDiscountLines'][0])
     {
@@ -1667,11 +1667,11 @@ class DiscountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\GetOrderDiscountLinesResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\GetOrderDiscountLinesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\GetOrderDiscountLinesResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\GetOrderDiscountLinesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1689,16 +1689,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\GetOrderDiscountLinesResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\GetOrderDiscountLinesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1716,16 +1716,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1743,13 +1743,13 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\GetOrderDiscountLinesResponse';
+            $returnType = '\DigitalFemsa\Model\GetOrderDiscountLinesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1782,7 +1782,7 @@ class DiscountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\GetOrderDiscountLinesResponse',
+                        '\DigitalFemsa\Model\GetOrderDiscountLinesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1790,7 +1790,7 @@ class DiscountsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1798,7 +1798,7 @@ class DiscountsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1854,7 +1854,7 @@ class DiscountsApi
      */
     public function ordersGetDiscountLinesAsyncWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['ordersGetDiscountLines'][0])
     {
-        $returnType = '\Femsa\Model\GetOrderDiscountLinesResponse';
+        $returnType = '\DigitalFemsa\Model\GetOrderDiscountLinesResponse';
         $request = $this->ordersGetDiscountLinesRequest($id, $accept_language, $x_child_company_id, $limit, $search, $next, $previous, $contentType);
 
         return $this->client
@@ -2062,14 +2062,14 @@ class DiscountsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $discount_lines_id discount line id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateDiscountLines'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\DiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\DiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function ordersUpdateDiscountLines($id, $discount_lines_id, $update_order_discount_lines_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersUpdateDiscountLines'][0])
     {
@@ -2084,14 +2084,14 @@ class DiscountsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $discount_lines_id discount line id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateDiscountLines'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\DiscountLinesResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\DiscountLinesResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersUpdateDiscountLinesWithHttpInfo($id, $discount_lines_id, $update_order_discount_lines_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersUpdateDiscountLines'][0])
     {
@@ -2134,11 +2134,11 @@ class DiscountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\DiscountLinesResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\DiscountLinesResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\DiscountLinesResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\DiscountLinesResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2156,16 +2156,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\DiscountLinesResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\DiscountLinesResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2183,16 +2183,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2210,16 +2210,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2237,16 +2237,16 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2264,13 +2264,13 @@ class DiscountsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\DiscountLinesResponse';
+            $returnType = '\DigitalFemsa\Model\DiscountLinesResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2303,7 +2303,7 @@ class DiscountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\DiscountLinesResponse',
+                        '\DigitalFemsa\Model\DiscountLinesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2311,7 +2311,7 @@ class DiscountsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2319,7 +2319,7 @@ class DiscountsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2327,7 +2327,7 @@ class DiscountsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2335,7 +2335,7 @@ class DiscountsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2352,7 +2352,7 @@ class DiscountsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $discount_lines_id discount line id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateDiscountLines'] to see the possible values for this operation
@@ -2377,7 +2377,7 @@ class DiscountsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $discount_lines_id discount line id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateDiscountLines'] to see the possible values for this operation
@@ -2387,7 +2387,7 @@ class DiscountsApi
      */
     public function ordersUpdateDiscountLinesAsyncWithHttpInfo($id, $discount_lines_id, $update_order_discount_lines_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersUpdateDiscountLines'][0])
     {
-        $returnType = '\Femsa\Model\DiscountLinesResponse';
+        $returnType = '\DigitalFemsa\Model\DiscountLinesResponse';
         $request = $this->ordersUpdateDiscountLinesRequest($id, $discount_lines_id, $update_order_discount_lines_request, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -2431,7 +2431,7 @@ class DiscountsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $discount_lines_id discount line id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderDiscountLinesRequest $update_order_discount_lines_request requested field for a discount lines (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateDiscountLines'] to see the possible values for this operation

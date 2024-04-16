@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * TaxesApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,14 +135,14 @@ class TaxesApi
      * Create Tax
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
+     * @param  \DigitalFemsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateTaxes'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\UpdateOrderTaxResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\UpdateOrderTaxResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function ordersCreateTaxes($id, $order_tax_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersCreateTaxes'][0])
     {
@@ -156,14 +156,14 @@ class TaxesApi
      * Create Tax
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
+     * @param  \DigitalFemsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateTaxes'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\UpdateOrderTaxResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\UpdateOrderTaxResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersCreateTaxesWithHttpInfo($id, $order_tax_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersCreateTaxes'][0])
     {
@@ -206,11 +206,11 @@ class TaxesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\UpdateOrderTaxResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\UpdateOrderTaxResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\UpdateOrderTaxResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\UpdateOrderTaxResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -228,16 +228,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\UpdateOrderTaxResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\UpdateOrderTaxResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -255,16 +255,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -282,16 +282,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -309,13 +309,13 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\UpdateOrderTaxResponse';
+            $returnType = '\DigitalFemsa\Model\UpdateOrderTaxResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -348,7 +348,7 @@ class TaxesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\UpdateOrderTaxResponse',
+                        '\DigitalFemsa\Model\UpdateOrderTaxResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -356,7 +356,7 @@ class TaxesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -364,7 +364,7 @@ class TaxesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -372,7 +372,7 @@ class TaxesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -388,7 +388,7 @@ class TaxesApi
      * Create Tax
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
+     * @param  \DigitalFemsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateTaxes'] to see the possible values for this operation
@@ -412,7 +412,7 @@ class TaxesApi
      * Create Tax
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
+     * @param  \DigitalFemsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateTaxes'] to see the possible values for this operation
@@ -422,7 +422,7 @@ class TaxesApi
      */
     public function ordersCreateTaxesAsyncWithHttpInfo($id, $order_tax_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersCreateTaxes'][0])
     {
-        $returnType = '\Femsa\Model\UpdateOrderTaxResponse';
+        $returnType = '\DigitalFemsa\Model\UpdateOrderTaxResponse';
         $request = $this->ordersCreateTaxesRequest($id, $order_tax_request, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -465,7 +465,7 @@ class TaxesApi
      * Create request for operation 'ordersCreateTaxes'
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
+     * @param  \DigitalFemsa\Model\OrderTaxRequest $order_tax_request requested field for a taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersCreateTaxes'] to see the possible values for this operation
@@ -599,9 +599,9 @@ class TaxesApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersDeleteTaxes'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\UpdateOrderTaxResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\UpdateOrderTaxResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function ordersDeleteTaxes($id, $tax_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersDeleteTaxes'][0])
     {
@@ -620,9 +620,9 @@ class TaxesApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersDeleteTaxes'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\UpdateOrderTaxResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\UpdateOrderTaxResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersDeleteTaxesWithHttpInfo($id, $tax_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersDeleteTaxes'][0])
     {
@@ -665,11 +665,11 @@ class TaxesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\UpdateOrderTaxResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\UpdateOrderTaxResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\UpdateOrderTaxResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\UpdateOrderTaxResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -687,16 +687,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\UpdateOrderTaxResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\UpdateOrderTaxResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -714,16 +714,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -741,16 +741,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -768,16 +768,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -795,13 +795,13 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\UpdateOrderTaxResponse';
+            $returnType = '\DigitalFemsa\Model\UpdateOrderTaxResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -834,7 +834,7 @@ class TaxesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\UpdateOrderTaxResponse',
+                        '\DigitalFemsa\Model\UpdateOrderTaxResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -842,7 +842,7 @@ class TaxesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -850,7 +850,7 @@ class TaxesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -858,7 +858,7 @@ class TaxesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -866,7 +866,7 @@ class TaxesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -916,7 +916,7 @@ class TaxesApi
      */
     public function ordersDeleteTaxesAsyncWithHttpInfo($id, $tax_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersDeleteTaxes'][0])
     {
-        $returnType = '\Femsa\Model\UpdateOrderTaxResponse';
+        $returnType = '\DigitalFemsa\Model\UpdateOrderTaxResponse';
         $request = $this->ordersDeleteTaxesRequest($id, $tax_id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1090,14 +1090,14 @@ class TaxesApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $tax_id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateTaxes'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\UpdateOrderTaxResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\UpdateOrderTaxResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function ordersUpdateTaxes($id, $tax_id, $update_order_tax_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersUpdateTaxes'][0])
     {
@@ -1112,14 +1112,14 @@ class TaxesApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $tax_id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateTaxes'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\UpdateOrderTaxResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\UpdateOrderTaxResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function ordersUpdateTaxesWithHttpInfo($id, $tax_id, $update_order_tax_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersUpdateTaxes'][0])
     {
@@ -1162,11 +1162,11 @@ class TaxesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\UpdateOrderTaxResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\UpdateOrderTaxResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\UpdateOrderTaxResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\UpdateOrderTaxResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1184,16 +1184,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\UpdateOrderTaxResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\UpdateOrderTaxResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1211,16 +1211,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1238,16 +1238,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1265,16 +1265,16 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1292,13 +1292,13 @@ class TaxesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\UpdateOrderTaxResponse';
+            $returnType = '\DigitalFemsa\Model\UpdateOrderTaxResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1331,7 +1331,7 @@ class TaxesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\UpdateOrderTaxResponse',
+                        '\DigitalFemsa\Model\UpdateOrderTaxResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1339,7 +1339,7 @@ class TaxesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1347,7 +1347,7 @@ class TaxesApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1355,7 +1355,7 @@ class TaxesApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1363,7 +1363,7 @@ class TaxesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1380,7 +1380,7 @@ class TaxesApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $tax_id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateTaxes'] to see the possible values for this operation
@@ -1405,7 +1405,7 @@ class TaxesApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $tax_id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateTaxes'] to see the possible values for this operation
@@ -1415,7 +1415,7 @@ class TaxesApi
      */
     public function ordersUpdateTaxesAsyncWithHttpInfo($id, $tax_id, $update_order_tax_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['ordersUpdateTaxes'][0])
     {
-        $returnType = '\Femsa\Model\UpdateOrderTaxResponse';
+        $returnType = '\DigitalFemsa\Model\UpdateOrderTaxResponse';
         $request = $this->ordersUpdateTaxesRequest($id, $tax_id, $update_order_tax_request, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1459,7 +1459,7 @@ class TaxesApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $tax_id identifier (required)
-     * @param  \Femsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
+     * @param  \DigitalFemsa\Model\UpdateOrderTaxRequest $update_order_tax_request requested field for taxes (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['ordersUpdateTaxes'] to see the possible values for this operation

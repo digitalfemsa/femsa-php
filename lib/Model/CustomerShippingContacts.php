@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CustomerShippingContacts Class Doc Comment
  *
  * @category Class
  * @description [Shipping](https://developers.femsa.com/v2.1.0/reference/createcustomershippingcontacts) details, required in case of sending a shipping. If we do not receive a shipping_contact on the order, the default shipping_contact of the customer will be used.
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class CustomerShippingContacts implements ModelInterface, ArrayAccess, \JsonSeri
         'phone' => 'string',
         'receiver' => 'string',
         'between_streets' => 'string',
-        'address' => '\Femsa\Model\CustomerShippingContactsAddress',
+        'address' => '\DigitalFemsa\Model\CustomerShippingContactsAddress',
         'parent_id' => 'string',
         'default' => 'bool',
         'deleted' => 'bool',
@@ -431,7 +431,7 @@ class CustomerShippingContacts implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets address
      *
-     * @return \Femsa\Model\CustomerShippingContactsAddress
+     * @return \DigitalFemsa\Model\CustomerShippingContactsAddress
      */
     public function getAddress()
     {
@@ -441,7 +441,7 @@ class CustomerShippingContacts implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets address
      *
-     * @param \Femsa\Model\CustomerShippingContactsAddress $address address
+     * @param \DigitalFemsa\Model\CustomerShippingContactsAddress $address address
      *
      * @return self
      */

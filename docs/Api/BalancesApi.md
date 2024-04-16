@@ -1,4 +1,4 @@
-# Femsa\BalancesApi
+# DigitalFemsa\BalancesApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `getBalance()`
 
 ```php
-getBalance($accept_language): \Femsa\Model\BalanceResponse
+getBalance($accept_language): \DigitalFemsa\Model\BalanceResponse
 ```
 
 Get a company's balance
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\BalancesApi(
+$apiInstance = new DigitalFemsa\Api\BalancesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\BalanceResponse**](../Model/BalanceResponse.md)
+[**\DigitalFemsa\Model\BalanceResponse**](../Model/BalanceResponse.md)
 
 ### Authorization
 

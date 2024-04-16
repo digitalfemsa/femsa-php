@@ -1,4 +1,4 @@
-# Femsa\CompaniesApi
+# DigitalFemsa\CompaniesApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `getCompanies()`
 
 ```php
-getCompanies($accept_language, $limit, $search, $next, $previous): \Femsa\Model\GetCompaniesResponse
+getCompanies($accept_language, $limit, $search, $next, $previous): \DigitalFemsa\Model\GetCompaniesResponse
 ```
 
 Get List of Companies
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CompaniesApi(
+$apiInstance = new DigitalFemsa\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -61,7 +61,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetCompaniesResponse**](../Model/GetCompaniesResponse.md)
+[**\DigitalFemsa\Model\GetCompaniesResponse**](../Model/GetCompaniesResponse.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ try {
 ## `getCompany()`
 
 ```php
-getCompany($id, $accept_language): \Femsa\Model\CompanyResponse
+getCompany($id, $accept_language): \DigitalFemsa\Model\CompanyResponse
 ```
 
 Get Company
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CompaniesApi(
+$apiInstance = new DigitalFemsa\Api\CompaniesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -121,7 +121,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\CompanyResponse**](../Model/CompanyResponse.md)
+[**\DigitalFemsa\Model\CompanyResponse**](../Model/CompanyResponse.md)
 
 ### Authorization
 

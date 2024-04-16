@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * WebhookKeysApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -141,12 +141,12 @@ class WebhookKeysApi
      * Create Webhook Key
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyRequest $webhook_key_request webhook_key_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyRequest $webhook_key_request webhook_key_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhookKey'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookKeyCreateResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookKeyCreateResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function createWebhookKey($accept_language = 'es', $webhook_key_request = null, string $contentType = self::contentTypes['createWebhookKey'][0])
     {
@@ -160,12 +160,12 @@ class WebhookKeysApi
      * Create Webhook Key
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyRequest $webhook_key_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyRequest $webhook_key_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhookKey'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookKeyCreateResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookKeyCreateResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWebhookKeyWithHttpInfo($accept_language = 'es', $webhook_key_request = null, string $contentType = self::contentTypes['createWebhookKey'][0])
     {
@@ -208,11 +208,11 @@ class WebhookKeysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookKeyCreateResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookKeyCreateResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookKeyCreateResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookKeyCreateResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -230,16 +230,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookKeyCreateResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookKeyCreateResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -257,16 +257,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -284,13 +284,13 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookKeyCreateResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookKeyCreateResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -323,7 +323,7 @@ class WebhookKeysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookKeyCreateResponse',
+                        '\DigitalFemsa\Model\WebhookKeyCreateResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -331,7 +331,7 @@ class WebhookKeysApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -339,7 +339,7 @@ class WebhookKeysApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -355,7 +355,7 @@ class WebhookKeysApi
      * Create Webhook Key
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyRequest $webhook_key_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyRequest $webhook_key_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhookKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -377,7 +377,7 @@ class WebhookKeysApi
      * Create Webhook Key
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyRequest $webhook_key_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyRequest $webhook_key_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhookKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -385,7 +385,7 @@ class WebhookKeysApi
      */
     public function createWebhookKeyAsyncWithHttpInfo($accept_language = 'es', $webhook_key_request = null, string $contentType = self::contentTypes['createWebhookKey'][0])
     {
-        $returnType = '\Femsa\Model\WebhookKeyCreateResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookKeyCreateResponse';
         $request = $this->createWebhookKeyRequest($accept_language, $webhook_key_request, $contentType);
 
         return $this->client
@@ -428,7 +428,7 @@ class WebhookKeysApi
      * Create request for operation 'createWebhookKey'
      *
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyRequest $webhook_key_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyRequest $webhook_key_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhookKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -532,9 +532,9 @@ class WebhookKeysApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhookKey'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookKeyDeleteResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookKeyDeleteResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function deleteWebhookKey($id, $accept_language = 'es', string $contentType = self::contentTypes['deleteWebhookKey'][0])
     {
@@ -551,9 +551,9 @@ class WebhookKeysApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhookKey'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookKeyDeleteResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookKeyDeleteResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWebhookKeyWithHttpInfo($id, $accept_language = 'es', string $contentType = self::contentTypes['deleteWebhookKey'][0])
     {
@@ -596,11 +596,11 @@ class WebhookKeysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookKeyDeleteResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookKeyDeleteResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookKeyDeleteResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookKeyDeleteResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -618,16 +618,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookKeyDeleteResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookKeyDeleteResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -645,16 +645,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -672,16 +672,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -699,13 +699,13 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookKeyDeleteResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookKeyDeleteResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -738,7 +738,7 @@ class WebhookKeysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookKeyDeleteResponse',
+                        '\DigitalFemsa\Model\WebhookKeyDeleteResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -746,7 +746,7 @@ class WebhookKeysApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -754,7 +754,7 @@ class WebhookKeysApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -762,7 +762,7 @@ class WebhookKeysApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -808,7 +808,7 @@ class WebhookKeysApi
      */
     public function deleteWebhookKeyAsyncWithHttpInfo($id, $accept_language = 'es', string $contentType = self::contentTypes['deleteWebhookKey'][0])
     {
-        $returnType = '\Femsa\Model\WebhookKeyDeleteResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookKeyDeleteResponse';
         $request = $this->deleteWebhookKeyRequest($id, $accept_language, $contentType);
 
         return $this->client
@@ -963,9 +963,9 @@ class WebhookKeysApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhookKey'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookKeyResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookKeyResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getWebhookKey($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getWebhookKey'][0])
     {
@@ -983,9 +983,9 @@ class WebhookKeysApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhookKey'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookKeyResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookKeyResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhookKeyWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getWebhookKey'][0])
     {
@@ -1028,11 +1028,11 @@ class WebhookKeysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookKeyResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookKeyResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookKeyResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookKeyResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1050,16 +1050,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookKeyResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookKeyResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1077,16 +1077,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1104,16 +1104,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1131,13 +1131,13 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookKeyResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookKeyResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1170,7 +1170,7 @@ class WebhookKeysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookKeyResponse',
+                        '\DigitalFemsa\Model\WebhookKeyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1178,7 +1178,7 @@ class WebhookKeysApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1186,7 +1186,7 @@ class WebhookKeysApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1194,7 +1194,7 @@ class WebhookKeysApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1242,7 +1242,7 @@ class WebhookKeysApi
      */
     public function getWebhookKeyAsyncWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getWebhookKey'][0])
     {
-        $returnType = '\Femsa\Model\WebhookKeyResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookKeyResponse';
         $request = $this->getWebhookKeyRequest($id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1406,9 +1406,9 @@ class WebhookKeysApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhookKeys'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\GetWebhookKeysResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\GetWebhookKeysResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getWebhookKeys($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getWebhookKeys'][0])
     {
@@ -1429,9 +1429,9 @@ class WebhookKeysApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhookKeys'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\GetWebhookKeysResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\GetWebhookKeysResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhookKeysWithHttpInfo($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getWebhookKeys'][0])
     {
@@ -1474,11 +1474,11 @@ class WebhookKeysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\GetWebhookKeysResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\GetWebhookKeysResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\GetWebhookKeysResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\GetWebhookKeysResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1496,16 +1496,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\GetWebhookKeysResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\GetWebhookKeysResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1523,16 +1523,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1550,13 +1550,13 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\GetWebhookKeysResponse';
+            $returnType = '\DigitalFemsa\Model\GetWebhookKeysResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1589,7 +1589,7 @@ class WebhookKeysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\GetWebhookKeysResponse',
+                        '\DigitalFemsa\Model\GetWebhookKeysResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1597,7 +1597,7 @@ class WebhookKeysApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1605,7 +1605,7 @@ class WebhookKeysApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1659,7 +1659,7 @@ class WebhookKeysApi
      */
     public function getWebhookKeysAsyncWithHttpInfo($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getWebhookKeys'][0])
     {
-        $returnType = '\Femsa\Model\GetWebhookKeysResponse';
+        $returnType = '\DigitalFemsa\Model\GetWebhookKeysResponse';
         $request = $this->getWebhookKeysRequest($accept_language, $x_child_company_id, $limit, $search, $next, $previous, $contentType);
 
         return $this->client
@@ -1851,12 +1851,12 @@ class WebhookKeysApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request webhook_key_update_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request webhook_key_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhookKey'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookKeyResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookKeyResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function updateWebhookKey($id, $accept_language = 'es', $webhook_key_update_request = null, string $contentType = self::contentTypes['updateWebhookKey'][0])
     {
@@ -1871,12 +1871,12 @@ class WebhookKeysApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhookKey'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookKeyResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookKeyResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWebhookKeyWithHttpInfo($id, $accept_language = 'es', $webhook_key_update_request = null, string $contentType = self::contentTypes['updateWebhookKey'][0])
     {
@@ -1919,11 +1919,11 @@ class WebhookKeysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookKeyResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookKeyResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookKeyResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookKeyResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1941,16 +1941,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookKeyResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookKeyResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1968,16 +1968,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1995,16 +1995,16 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2022,13 +2022,13 @@ class WebhookKeysApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookKeyResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookKeyResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2061,7 +2061,7 @@ class WebhookKeysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookKeyResponse',
+                        '\DigitalFemsa\Model\WebhookKeyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2069,7 +2069,7 @@ class WebhookKeysApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2077,7 +2077,7 @@ class WebhookKeysApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2085,7 +2085,7 @@ class WebhookKeysApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2102,7 +2102,7 @@ class WebhookKeysApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhookKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2125,7 +2125,7 @@ class WebhookKeysApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhookKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -2133,7 +2133,7 @@ class WebhookKeysApi
      */
     public function updateWebhookKeyAsyncWithHttpInfo($id, $accept_language = 'es', $webhook_key_update_request = null, string $contentType = self::contentTypes['updateWebhookKey'][0])
     {
-        $returnType = '\Femsa\Model\WebhookKeyResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookKeyResponse';
         $request = $this->updateWebhookKeyRequest($id, $accept_language, $webhook_key_update_request, $contentType);
 
         return $this->client
@@ -2177,7 +2177,7 @@ class WebhookKeysApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
-     * @param  \Femsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request (optional)
+     * @param  \DigitalFemsa\Model\WebhookKeyUpdateRequest $webhook_key_update_request (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhookKey'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

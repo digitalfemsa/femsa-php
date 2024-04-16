@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CheckoutOrderTemplate Class Doc Comment
  *
  * @category Class
  * @description It maintains the attributes with which the order will be created when receiving a new payment.
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,8 +60,8 @@ class CheckoutOrderTemplate implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'currency' => 'string',
-        'customer_info' => '\Femsa\Model\CheckoutOrderTemplateCustomerInfo',
-        'line_items' => '\Femsa\Model\Product[]',
+        'customer_info' => '\DigitalFemsa\Model\CheckoutOrderTemplateCustomerInfo',
+        'line_items' => '\DigitalFemsa\Model\Product[]',
         'metadata' => 'array<string,mixed>'
     ];
 
@@ -360,7 +360,7 @@ class CheckoutOrderTemplate implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets customer_info
      *
-     * @return \Femsa\Model\CheckoutOrderTemplateCustomerInfo|null
+     * @return \DigitalFemsa\Model\CheckoutOrderTemplateCustomerInfo|null
      */
     public function getCustomerInfo()
     {
@@ -370,7 +370,7 @@ class CheckoutOrderTemplate implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets customer_info
      *
-     * @param \Femsa\Model\CheckoutOrderTemplateCustomerInfo|null $customer_info customer_info
+     * @param \DigitalFemsa\Model\CheckoutOrderTemplateCustomerInfo|null $customer_info customer_info
      *
      * @return self
      */
@@ -387,7 +387,7 @@ class CheckoutOrderTemplate implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets line_items
      *
-     * @return \Femsa\Model\Product[]
+     * @return \DigitalFemsa\Model\Product[]
      */
     public function getLineItems()
     {
@@ -397,7 +397,7 @@ class CheckoutOrderTemplate implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets line_items
      *
-     * @param \Femsa\Model\Product[] $line_items They are the products to buy. Each contains the \"unit price\" and \"quantity\" parameters that are used to calculate the total amount of the order.
+     * @param \DigitalFemsa\Model\Product[] $line_items They are the products to buy. Each contains the \"unit price\" and \"quantity\" parameters that are used to calculate the total amount of the order.
      *
      * @return self
      */

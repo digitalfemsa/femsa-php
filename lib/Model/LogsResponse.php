@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * LogsResponse Class Doc Comment
  *
  * @category Class
  * @description logs model
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class LogsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => 'string',
         'next_page_url' => 'string',
         'previous_page_url' => 'string',
-        'data' => '\Femsa\Model\LogsResponseData[]'
+        'data' => '\DigitalFemsa\Model\LogsResponseData[]'
     ];
 
     /**
@@ -444,7 +444,7 @@ class LogsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets data
      *
-     * @return \Femsa\Model\LogsResponseData[]|null
+     * @return \DigitalFemsa\Model\LogsResponseData[]|null
      */
     public function getData()
     {
@@ -454,7 +454,7 @@ class LogsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets data
      *
-     * @param \Femsa\Model\LogsResponseData[]|null $data set to page results.
+     * @param \DigitalFemsa\Model\LogsResponseData[]|null $data set to page results.
      *
      * @return self
      */

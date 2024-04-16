@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **phone** | **string** |  | [optional]
 **receiver** | **string** |  | [optional]
 **between_streets** | **string** |  | [optional]
-**address** | [**\Femsa\Model\CustomerShippingContactsResponseAddress**](CustomerShippingContactsResponseAddress.md) |  | [optional]
+**address** | [**\DigitalFemsa\Model\CustomerShippingContactsResponseAddress**](CustomerShippingContactsResponseAddress.md) |  | [optional]
 **parent_id** | **string** |  | [optional]
 **default** | **bool** |  | [optional]
 **id** | **string** |  | [optional]

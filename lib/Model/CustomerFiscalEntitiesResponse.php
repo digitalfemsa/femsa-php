@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CustomerFiscalEntitiesResponse Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CustomerFiscalEntitiesResponse implements ModelInterface, ArrayAccess, \Js
     protected static $openAPITypes = [
         'has_more' => 'bool',
         'object' => 'string',
-        'data' => '\Femsa\Model\CustomerFiscalEntitiesDataResponse[]'
+        'data' => '\DigitalFemsa\Model\CustomerFiscalEntitiesDataResponse[]'
     ];
 
     /**
@@ -367,7 +367,7 @@ class CustomerFiscalEntitiesResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets data
      *
-     * @return \Femsa\Model\CustomerFiscalEntitiesDataResponse[]|null
+     * @return \DigitalFemsa\Model\CustomerFiscalEntitiesDataResponse[]|null
      */
     public function getData()
     {
@@ -377,7 +377,7 @@ class CustomerFiscalEntitiesResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets data
      *
-     * @param \Femsa\Model\CustomerFiscalEntitiesDataResponse[]|null $data data
+     * @param \DigitalFemsa\Model\CustomerFiscalEntitiesDataResponse[]|null $data data
      *
      * @return self
      */

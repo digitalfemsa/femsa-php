@@ -1,4 +1,4 @@
-# Femsa\ShippingsApi
+# DigitalFemsa\ShippingsApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `ordersCreateShipping()`
 
 ```php
-ordersCreateShipping($id, $shipping_request, $accept_language, $x_child_company_id): \Femsa\Model\ShippingOrderResponse
+ordersCreateShipping($id, $shipping_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ShippingOrderResponse
 ```
 
 Create Shipping
@@ -27,17 +27,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ShippingsApi(
+$apiInstance = new DigitalFemsa\Api\ShippingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$shipping_request = new \Femsa\Model\ShippingRequest(); // \Femsa\Model\ShippingRequest | requested field for a shipping
+$shipping_request = new \DigitalFemsa\Model\ShippingRequest(); // \DigitalFemsa\Model\ShippingRequest | requested field for a shipping
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -54,13 +54,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **shipping_request** | [**\Femsa\Model\ShippingRequest**](../Model/ShippingRequest.md)| requested field for a shipping | |
+| **shipping_request** | [**\DigitalFemsa\Model\ShippingRequest**](../Model/ShippingRequest.md)| requested field for a shipping | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\ShippingOrderResponse**](../Model/ShippingOrderResponse.md)
+[**\DigitalFemsa\Model\ShippingOrderResponse**](../Model/ShippingOrderResponse.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ try {
 ## `ordersDeleteShipping()`
 
 ```php
-ordersDeleteShipping($id, $shipping_id, $accept_language, $x_child_company_id): \Femsa\Model\ShippingOrderResponse
+ordersDeleteShipping($id, $shipping_id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ShippingOrderResponse
 ```
 
 Delete Shipping
@@ -93,10 +93,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ShippingsApi(
+$apiInstance = new DigitalFemsa\Api\ShippingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\ShippingOrderResponse**](../Model/ShippingOrderResponse.md)
+[**\DigitalFemsa\Model\ShippingOrderResponse**](../Model/ShippingOrderResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `ordersUpdateShipping()`
 
 ```php
-ordersUpdateShipping($id, $shipping_id, $shipping_request, $accept_language, $x_child_company_id): \Femsa\Model\ShippingOrderResponse
+ordersUpdateShipping($id, $shipping_id, $shipping_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ShippingOrderResponse
 ```
 
 Update Shipping
@@ -159,10 +159,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ShippingsApi(
+$apiInstance = new DigitalFemsa\Api\ShippingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,7 +170,7 @@ $apiInstance = new Femsa\Api\ShippingsApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $shipping_id = ship_lin_2tQ974hSHcsdeSZHG; // string | identifier
-$shipping_request = new \Femsa\Model\ShippingRequest(); // \Femsa\Model\ShippingRequest | requested field for a shipping
+$shipping_request = new \DigitalFemsa\Model\ShippingRequest(); // \DigitalFemsa\Model\ShippingRequest | requested field for a shipping
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -188,13 +188,13 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **shipping_id** | **string**| identifier | |
-| **shipping_request** | [**\Femsa\Model\ShippingRequest**](../Model/ShippingRequest.md)| requested field for a shipping | |
+| **shipping_request** | [**\DigitalFemsa\Model\ShippingRequest**](../Model/ShippingRequest.md)| requested field for a shipping | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\ShippingOrderResponse**](../Model/ShippingOrderResponse.md)
+[**\DigitalFemsa\Model\ShippingOrderResponse**](../Model/ShippingOrderResponse.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CustomerResponseShippingContacts Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class CustomerResponseShippingContacts implements ModelInterface, ArrayAccess, \
     protected static $openAPITypes = [
         'has_more' => 'bool',
         'object' => 'string',
-        'data' => '\Femsa\Model\CustomerShippingContactsDataResponse[]'
+        'data' => '\DigitalFemsa\Model\CustomerShippingContactsDataResponse[]'
     ];
 
     /**
@@ -367,7 +367,7 @@ class CustomerResponseShippingContacts implements ModelInterface, ArrayAccess, \
     /**
      * Gets data
      *
-     * @return \Femsa\Model\CustomerShippingContactsDataResponse[]|null
+     * @return \DigitalFemsa\Model\CustomerShippingContactsDataResponse[]|null
      */
     public function getData()
     {
@@ -377,7 +377,7 @@ class CustomerResponseShippingContacts implements ModelInterface, ArrayAccess, \
     /**
      * Sets data
      *
-     * @param \Femsa\Model\CustomerShippingContactsDataResponse[]|null $data data
+     * @param \DigitalFemsa\Model\CustomerShippingContactsDataResponse[]|null $data data
      *
      * @return self
      */
