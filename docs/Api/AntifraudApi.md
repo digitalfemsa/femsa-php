@@ -1,4 +1,4 @@
-# Femsa\AntifraudApi
+# DigitalFemsa\AntifraudApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -15,7 +15,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `createRuleBlacklist()`
 
 ```php
-createRuleBlacklist($create_risk_rules_data, $accept_language): \Femsa\Model\BlacklistRuleResponse
+createRuleBlacklist($create_risk_rules_data, $accept_language): \DigitalFemsa\Model\BlacklistRuleResponse
 ```
 
 Create blacklisted rule
@@ -28,16 +28,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\AntifraudApi(
+$apiInstance = new DigitalFemsa\Api\AntifraudApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_risk_rules_data = new \Femsa\Model\CreateRiskRulesData(); // \Femsa\Model\CreateRiskRulesData | requested field for blacklist rule
+$create_risk_rules_data = new \DigitalFemsa\Model\CreateRiskRulesData(); // \DigitalFemsa\Model\CreateRiskRulesData | requested field for blacklist rule
 $accept_language = es; // string | Use for knowing which language to use
 
 try {
@@ -52,12 +52,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **create_risk_rules_data** | [**\Femsa\Model\CreateRiskRulesData**](../Model/CreateRiskRulesData.md)| requested field for blacklist rule | |
+| **create_risk_rules_data** | [**\DigitalFemsa\Model\CreateRiskRulesData**](../Model/CreateRiskRulesData.md)| requested field for blacklist rule | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 
 ### Return type
 
-[**\Femsa\Model\BlacklistRuleResponse**](../Model/BlacklistRuleResponse.md)
+[**\DigitalFemsa\Model\BlacklistRuleResponse**](../Model/BlacklistRuleResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `createRuleWhitelist()`
 
 ```php
-createRuleWhitelist($accept_language, $create_risk_rules_data): \Femsa\Model\WhitelistlistRuleResponse
+createRuleWhitelist($accept_language, $create_risk_rules_data): \DigitalFemsa\Model\WhitelistlistRuleResponse
 ```
 
 Create whitelisted rule
@@ -88,17 +88,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\AntifraudApi(
+$apiInstance = new DigitalFemsa\Api\AntifraudApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $accept_language = es; // string | Use for knowing which language to use
-$create_risk_rules_data = new \Femsa\Model\CreateRiskRulesData(); // \Femsa\Model\CreateRiskRulesData
+$create_risk_rules_data = new \DigitalFemsa\Model\CreateRiskRulesData(); // \DigitalFemsa\Model\CreateRiskRulesData
 
 try {
     $result = $apiInstance->createRuleWhitelist($accept_language, $create_risk_rules_data);
@@ -113,11 +113,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
-| **create_risk_rules_data** | [**\Femsa\Model\CreateRiskRulesData**](../Model/CreateRiskRulesData.md)|  | [optional] |
+| **create_risk_rules_data** | [**\DigitalFemsa\Model\CreateRiskRulesData**](../Model/CreateRiskRulesData.md)|  | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\WhitelistlistRuleResponse**](../Model/WhitelistlistRuleResponse.md)
+[**\DigitalFemsa\Model\WhitelistlistRuleResponse**](../Model/WhitelistlistRuleResponse.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ try {
 ## `deleteRuleBlacklist()`
 
 ```php
-deleteRuleBlacklist($id, $accept_language, $x_child_company_id): \Femsa\Model\DeletedBlacklistRuleResponse
+deleteRuleBlacklist($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\DeletedBlacklistRuleResponse
 ```
 
 Delete blacklisted rule
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\AntifraudApi(
+$apiInstance = new DigitalFemsa\Api\AntifraudApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +179,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\DeletedBlacklistRuleResponse**](../Model/DeletedBlacklistRuleResponse.md)
+[**\DigitalFemsa\Model\DeletedBlacklistRuleResponse**](../Model/DeletedBlacklistRuleResponse.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ try {
 ## `deleteRuleWhitelist()`
 
 ```php
-deleteRuleWhitelist($id, $accept_language, $x_child_company_id): \Femsa\Model\DeletedWhitelistRuleResponse
+deleteRuleWhitelist($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\DeletedWhitelistRuleResponse
 ```
 
 Delete whitelisted rule
@@ -210,10 +210,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\AntifraudApi(
+$apiInstance = new DigitalFemsa\Api\AntifraudApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -241,7 +241,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\DeletedWhitelistRuleResponse**](../Model/DeletedWhitelistRuleResponse.md)
+[**\DigitalFemsa\Model\DeletedWhitelistRuleResponse**](../Model/DeletedWhitelistRuleResponse.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ try {
 ## `getRuleBlacklist()`
 
 ```php
-getRuleBlacklist($accept_language): \Femsa\Model\RiskRulesList
+getRuleBlacklist($accept_language): \DigitalFemsa\Model\RiskRulesList
 ```
 
 Get list of blacklisted rules
@@ -274,10 +274,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\AntifraudApi(
+$apiInstance = new DigitalFemsa\Api\AntifraudApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -301,7 +301,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\RiskRulesList**](../Model/RiskRulesList.md)
+[**\DigitalFemsa\Model\RiskRulesList**](../Model/RiskRulesList.md)
 
 ### Authorization
 
@@ -319,7 +319,7 @@ try {
 ## `getRuleWhitelist()`
 
 ```php
-getRuleWhitelist($accept_language): \Femsa\Model\RiskRulesList
+getRuleWhitelist($accept_language): \DigitalFemsa\Model\RiskRulesList
 ```
 
 Get a list of whitelisted rules
@@ -334,10 +334,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\AntifraudApi(
+$apiInstance = new DigitalFemsa\Api\AntifraudApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -361,7 +361,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\RiskRulesList**](../Model/RiskRulesList.md)
+[**\DigitalFemsa\Model\RiskRulesList**](../Model/RiskRulesList.md)
 
 ### Authorization
 

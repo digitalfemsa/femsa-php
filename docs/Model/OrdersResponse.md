@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**\Femsa\Model\OrderResponse[]**](OrderResponse.md) |  |
+**data** | [**\DigitalFemsa\Model\OrderResponse[]**](OrderResponse.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

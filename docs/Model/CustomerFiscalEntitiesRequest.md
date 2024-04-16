@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**address** | [**\Femsa\Model\CustomerAddress**](CustomerAddress.md) |  |
+**address** | [**\DigitalFemsa\Model\CustomerAddress**](CustomerAddress.md) |  |
 **tax_id** | **string** |  | [optional]
 **email** | **string** |  | [optional]
 **phone** | **string** |  | [optional]

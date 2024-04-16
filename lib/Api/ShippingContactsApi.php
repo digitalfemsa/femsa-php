@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * ShippingContactsApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -135,14 +135,14 @@ class ShippingContactsApi
      * Create a shipping contacts
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerShippingContacts'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\CustomerShippingContactsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\CustomerShippingContactsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function createCustomerShippingContacts($id, $customer_shipping_contacts, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['createCustomerShippingContacts'][0])
     {
@@ -156,14 +156,14 @@ class ShippingContactsApi
      * Create a shipping contacts
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerShippingContacts'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\CustomerShippingContactsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\CustomerShippingContactsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomerShippingContactsWithHttpInfo($id, $customer_shipping_contacts, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['createCustomerShippingContacts'][0])
     {
@@ -206,11 +206,11 @@ class ShippingContactsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\CustomerShippingContactsResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\CustomerShippingContactsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\CustomerShippingContactsResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\CustomerShippingContactsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -228,16 +228,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\CustomerShippingContactsResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\CustomerShippingContactsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -255,16 +255,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -282,16 +282,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -309,16 +309,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -336,13 +336,13 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\CustomerShippingContactsResponse';
+            $returnType = '\DigitalFemsa\Model\CustomerShippingContactsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -375,7 +375,7 @@ class ShippingContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\CustomerShippingContactsResponse',
+                        '\DigitalFemsa\Model\CustomerShippingContactsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -383,7 +383,7 @@ class ShippingContactsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -391,7 +391,7 @@ class ShippingContactsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -399,7 +399,7 @@ class ShippingContactsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -407,7 +407,7 @@ class ShippingContactsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -423,7 +423,7 @@ class ShippingContactsApi
      * Create a shipping contacts
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerShippingContacts'] to see the possible values for this operation
@@ -447,7 +447,7 @@ class ShippingContactsApi
      * Create a shipping contacts
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerShippingContacts'] to see the possible values for this operation
@@ -457,7 +457,7 @@ class ShippingContactsApi
      */
     public function createCustomerShippingContactsAsyncWithHttpInfo($id, $customer_shipping_contacts, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['createCustomerShippingContacts'][0])
     {
-        $returnType = '\Femsa\Model\CustomerShippingContactsResponse';
+        $returnType = '\DigitalFemsa\Model\CustomerShippingContactsResponse';
         $request = $this->createCustomerShippingContactsRequest($id, $customer_shipping_contacts, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -500,7 +500,7 @@ class ShippingContactsApi
      * Create request for operation 'createCustomerShippingContacts'
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerShippingContacts $customer_shipping_contacts requested field for customer shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerShippingContacts'] to see the possible values for this operation
@@ -634,9 +634,9 @@ class ShippingContactsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCustomerShippingContacts'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\CustomerShippingContactsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\CustomerShippingContactsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function deleteCustomerShippingContacts($id, $shipping_contacts_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteCustomerShippingContacts'][0])
     {
@@ -655,9 +655,9 @@ class ShippingContactsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCustomerShippingContacts'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\CustomerShippingContactsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\CustomerShippingContactsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCustomerShippingContactsWithHttpInfo($id, $shipping_contacts_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteCustomerShippingContacts'][0])
     {
@@ -700,11 +700,11 @@ class ShippingContactsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\CustomerShippingContactsResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\CustomerShippingContactsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\CustomerShippingContactsResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\CustomerShippingContactsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -722,16 +722,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\CustomerShippingContactsResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\CustomerShippingContactsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -749,16 +749,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -776,16 +776,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -803,16 +803,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -830,13 +830,13 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\CustomerShippingContactsResponse';
+            $returnType = '\DigitalFemsa\Model\CustomerShippingContactsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -869,7 +869,7 @@ class ShippingContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\CustomerShippingContactsResponse',
+                        '\DigitalFemsa\Model\CustomerShippingContactsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -877,7 +877,7 @@ class ShippingContactsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -885,7 +885,7 @@ class ShippingContactsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -893,7 +893,7 @@ class ShippingContactsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -901,7 +901,7 @@ class ShippingContactsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -951,7 +951,7 @@ class ShippingContactsApi
      */
     public function deleteCustomerShippingContactsAsyncWithHttpInfo($id, $shipping_contacts_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteCustomerShippingContacts'][0])
     {
-        $returnType = '\Femsa\Model\CustomerShippingContactsResponse';
+        $returnType = '\DigitalFemsa\Model\CustomerShippingContactsResponse';
         $request = $this->deleteCustomerShippingContactsRequest($id, $shipping_contacts_id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1125,14 +1125,14 @@ class ShippingContactsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $shipping_contacts_id identifier (required)
-     * @param  \Femsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerShippingContacts'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\CustomerShippingContactsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\CustomerShippingContactsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function updateCustomerShippingContacts($id, $shipping_contacts_id, $customer_update_shipping_contacts, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateCustomerShippingContacts'][0])
     {
@@ -1147,14 +1147,14 @@ class ShippingContactsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $shipping_contacts_id identifier (required)
-     * @param  \Femsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerShippingContacts'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\CustomerShippingContactsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\CustomerShippingContactsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomerShippingContactsWithHttpInfo($id, $shipping_contacts_id, $customer_update_shipping_contacts, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateCustomerShippingContacts'][0])
     {
@@ -1197,11 +1197,11 @@ class ShippingContactsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\CustomerShippingContactsResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\CustomerShippingContactsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\CustomerShippingContactsResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\CustomerShippingContactsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1219,16 +1219,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\CustomerShippingContactsResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\CustomerShippingContactsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1246,16 +1246,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1273,16 +1273,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1300,16 +1300,16 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1327,13 +1327,13 @@ class ShippingContactsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\CustomerShippingContactsResponse';
+            $returnType = '\DigitalFemsa\Model\CustomerShippingContactsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1366,7 +1366,7 @@ class ShippingContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\CustomerShippingContactsResponse',
+                        '\DigitalFemsa\Model\CustomerShippingContactsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1374,7 +1374,7 @@ class ShippingContactsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1382,7 +1382,7 @@ class ShippingContactsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1390,7 +1390,7 @@ class ShippingContactsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1398,7 +1398,7 @@ class ShippingContactsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1415,7 +1415,7 @@ class ShippingContactsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $shipping_contacts_id identifier (required)
-     * @param  \Femsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerShippingContacts'] to see the possible values for this operation
@@ -1440,7 +1440,7 @@ class ShippingContactsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $shipping_contacts_id identifier (required)
-     * @param  \Femsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerShippingContacts'] to see the possible values for this operation
@@ -1450,7 +1450,7 @@ class ShippingContactsApi
      */
     public function updateCustomerShippingContactsAsyncWithHttpInfo($id, $shipping_contacts_id, $customer_update_shipping_contacts, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateCustomerShippingContacts'][0])
     {
-        $returnType = '\Femsa\Model\CustomerShippingContactsResponse';
+        $returnType = '\DigitalFemsa\Model\CustomerShippingContactsResponse';
         $request = $this->updateCustomerShippingContactsRequest($id, $shipping_contacts_id, $customer_update_shipping_contacts, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1494,7 +1494,7 @@ class ShippingContactsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $shipping_contacts_id identifier (required)
-     * @param  \Femsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
+     * @param  \DigitalFemsa\Model\CustomerUpdateShippingContacts $customer_update_shipping_contacts requested field for customer update shippings contacts (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerShippingContacts'] to see the possible values for this operation

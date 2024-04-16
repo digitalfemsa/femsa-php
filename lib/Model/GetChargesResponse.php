@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * GetChargesResponse Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class GetChargesResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'object' => 'string',
         'next_page_url' => 'string',
         'previous_page_url' => 'string',
-        'data' => '\Femsa\Model\ChargeResponse[]'
+        'data' => '\DigitalFemsa\Model\ChargeResponse[]'
     ];
 
     /**
@@ -449,7 +449,7 @@ class GetChargesResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets data
      *
-     * @return \Femsa\Model\ChargeResponse[]|null
+     * @return \DigitalFemsa\Model\ChargeResponse[]|null
      */
     public function getData()
     {
@@ -459,7 +459,7 @@ class GetChargesResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets data
      *
-     * @param \Femsa\Model\ChargeResponse[]|null $data data
+     * @param \DigitalFemsa\Model\ChargeResponse[]|null $data data
      *
      * @return self
      */

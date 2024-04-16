@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * Checkout Class Doc Comment
  *
  * @category Class
  * @description It is a sub-resource of the Order model that can be stipulated in order to configure its corresponding checkout
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class Checkout implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'needs_shipping_contact' => 'bool',
         'on_demand_enabled' => 'bool',
-        'order_template' => '\Femsa\Model\CheckoutOrderTemplate',
+        'order_template' => '\DigitalFemsa\Model\CheckoutOrderTemplate',
         'payments_limit_count' => 'int',
         'recurrent' => 'bool',
         'type' => 'string'
@@ -510,7 +510,7 @@ class Checkout implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets order_template
      *
-     * @return \Femsa\Model\CheckoutOrderTemplate
+     * @return \DigitalFemsa\Model\CheckoutOrderTemplate
      */
     public function getOrderTemplate()
     {
@@ -520,7 +520,7 @@ class Checkout implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets order_template
      *
-     * @param \Femsa\Model\CheckoutOrderTemplate $order_template order_template
+     * @param \DigitalFemsa\Model\CheckoutOrderTemplate $order_template order_template
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# Femsa\CustomersApi
+# DigitalFemsa\CustomersApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -16,7 +16,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `createCustomer()`
 
 ```php
-createCustomer($customer, $accept_language, $x_child_company_id): \Femsa\Model\CustomerResponse
+createCustomer($customer, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CustomerResponse
 ```
 
 Create customer
@@ -31,16 +31,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CustomersApi(
+$apiInstance = new DigitalFemsa\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$customer = new \Femsa\Model\Customer(); // \Femsa\Model\Customer | requested field for customer
+$customer = new \DigitalFemsa\Model\Customer(); // \DigitalFemsa\Model\Customer | requested field for customer
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -56,13 +56,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **customer** | [**\Femsa\Model\Customer**](../Model/Customer.md)| requested field for customer | |
+| **customer** | [**\DigitalFemsa\Model\Customer**](../Model/Customer.md)| requested field for customer | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CustomerResponse**](../Model/CustomerResponse.md)
+[**\DigitalFemsa\Model\CustomerResponse**](../Model/CustomerResponse.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ try {
 ## `createCustomerFiscalEntities()`
 
 ```php
-createCustomerFiscalEntities($id, $customer_fiscal_entities_request, $accept_language, $x_child_company_id): \Femsa\Model\CreateCustomerFiscalEntitiesResponse
+createCustomerFiscalEntities($id, $customer_fiscal_entities_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CreateCustomerFiscalEntitiesResponse
 ```
 
 Create Fiscal Entity
@@ -95,17 +95,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CustomersApi(
+$apiInstance = new DigitalFemsa\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$customer_fiscal_entities_request = new \Femsa\Model\CustomerFiscalEntitiesRequest(); // \Femsa\Model\CustomerFiscalEntitiesRequest | requested field for customer fiscal entities
+$customer_fiscal_entities_request = new \DigitalFemsa\Model\CustomerFiscalEntitiesRequest(); // \DigitalFemsa\Model\CustomerFiscalEntitiesRequest | requested field for customer fiscal entities
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -122,13 +122,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **customer_fiscal_entities_request** | [**\Femsa\Model\CustomerFiscalEntitiesRequest**](../Model/CustomerFiscalEntitiesRequest.md)| requested field for customer fiscal entities | |
+| **customer_fiscal_entities_request** | [**\DigitalFemsa\Model\CustomerFiscalEntitiesRequest**](../Model/CustomerFiscalEntitiesRequest.md)| requested field for customer fiscal entities | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CreateCustomerFiscalEntitiesResponse**](../Model/CreateCustomerFiscalEntitiesResponse.md)
+[**\DigitalFemsa\Model\CreateCustomerFiscalEntitiesResponse**](../Model/CreateCustomerFiscalEntitiesResponse.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ try {
 ## `deleteCustomerById()`
 
 ```php
-deleteCustomerById($id, $accept_language, $x_child_company_id): \Femsa\Model\CustomerResponse
+deleteCustomerById($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CustomerResponse
 ```
 
 Delete Customer
@@ -161,10 +161,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CustomersApi(
+$apiInstance = new DigitalFemsa\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -192,7 +192,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\CustomerResponse**](../Model/CustomerResponse.md)
+[**\DigitalFemsa\Model\CustomerResponse**](../Model/CustomerResponse.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ try {
 ## `getCustomerById()`
 
 ```php
-getCustomerById($id, $accept_language, $x_child_company_id): \Femsa\Model\CustomerResponse
+getCustomerById($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CustomerResponse
 ```
 
 Get Customer
@@ -225,10 +225,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CustomersApi(
+$apiInstance = new DigitalFemsa\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\CustomerResponse**](../Model/CustomerResponse.md)
+[**\DigitalFemsa\Model\CustomerResponse**](../Model/CustomerResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ try {
 ## `getCustomers()`
 
 ```php
-getCustomers($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\CustomersResponse
+getCustomers($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\CustomersResponse
 ```
 
 Get a list of customers
@@ -289,10 +289,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CustomersApi(
+$apiInstance = new DigitalFemsa\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -326,7 +326,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\CustomersResponse**](../Model/CustomersResponse.md)
+[**\DigitalFemsa\Model\CustomersResponse**](../Model/CustomersResponse.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ try {
 ## `updateCustomer()`
 
 ```php
-updateCustomer($id, $update_customer, $accept_language, $x_child_company_id): \Femsa\Model\CustomerResponse
+updateCustomer($id, $update_customer, $accept_language, $x_child_company_id): \DigitalFemsa\Model\CustomerResponse
 ```
 
 Update customer
@@ -359,17 +359,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CustomersApi(
+$apiInstance = new DigitalFemsa\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$update_customer = new \Femsa\Model\UpdateCustomer(); // \Femsa\Model\UpdateCustomer | requested field for customer
+$update_customer = new \DigitalFemsa\Model\UpdateCustomer(); // \DigitalFemsa\Model\UpdateCustomer | requested field for customer
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -386,13 +386,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **update_customer** | [**\Femsa\Model\UpdateCustomer**](../Model/UpdateCustomer.md)| requested field for customer | |
+| **update_customer** | [**\DigitalFemsa\Model\UpdateCustomer**](../Model/UpdateCustomer.md)| requested field for customer | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\CustomerResponse**](../Model/CustomerResponse.md)
+[**\DigitalFemsa\Model\CustomerResponse**](../Model/CustomerResponse.md)
 
 ### Authorization
 
@@ -410,7 +410,7 @@ try {
 ## `updateCustomerFiscalEntities()`
 
 ```php
-updateCustomerFiscalEntities($id, $fiscal_entities_id, $customer_update_fiscal_entities_request, $accept_language, $x_child_company_id): \Femsa\Model\UpdateCustomerFiscalEntitiesResponse
+updateCustomerFiscalEntities($id, $fiscal_entities_id, $customer_update_fiscal_entities_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\UpdateCustomerFiscalEntitiesResponse
 ```
 
 Update  Fiscal Entity
@@ -425,10 +425,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\CustomersApi(
+$apiInstance = new DigitalFemsa\Api\CustomersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -436,7 +436,7 @@ $apiInstance = new Femsa\Api\CustomersApi(
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
 $fiscal_entities_id = fis_ent_2tQ8HkkfbauaKP9Ho; // string | identifier
-$customer_update_fiscal_entities_request = new \Femsa\Model\CustomerUpdateFiscalEntitiesRequest(); // \Femsa\Model\CustomerUpdateFiscalEntitiesRequest | requested field for customer update fiscal entities
+$customer_update_fiscal_entities_request = new \DigitalFemsa\Model\CustomerUpdateFiscalEntitiesRequest(); // \DigitalFemsa\Model\CustomerUpdateFiscalEntitiesRequest | requested field for customer update fiscal entities
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -454,13 +454,13 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
 | **fiscal_entities_id** | **string**| identifier | |
-| **customer_update_fiscal_entities_request** | [**\Femsa\Model\CustomerUpdateFiscalEntitiesRequest**](../Model/CustomerUpdateFiscalEntitiesRequest.md)| requested field for customer update fiscal entities | |
+| **customer_update_fiscal_entities_request** | [**\DigitalFemsa\Model\CustomerUpdateFiscalEntitiesRequest**](../Model/CustomerUpdateFiscalEntitiesRequest.md)| requested field for customer update fiscal entities | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\UpdateCustomerFiscalEntitiesResponse**](../Model/UpdateCustomerFiscalEntitiesResponse.md)
+[**\DigitalFemsa\Model\UpdateCustomerFiscalEntitiesResponse**](../Model/UpdateCustomerFiscalEntitiesResponse.md)
 
 ### Authorization
 

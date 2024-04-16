@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * ChargeResponse Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class ChargeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'amount' => 'int',
-        'channel' => '\Femsa\Model\ChargeResponseChannel',
+        'channel' => '\DigitalFemsa\Model\ChargeResponseChannel',
         'created_at' => 'int',
         'currency' => 'string',
         'customer_id' => 'string',
@@ -72,9 +72,9 @@ class ChargeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => 'string',
         'order_id' => 'string',
         'paid_at' => 'int',
-        'payment_method' => '\Femsa\Model\ChargeResponsePaymentMethod',
+        'payment_method' => '\DigitalFemsa\Model\ChargeResponsePaymentMethod',
         'reference_id' => 'string',
-        'refunds' => '\Femsa\Model\ChargeResponseRefunds',
+        'refunds' => '\DigitalFemsa\Model\ChargeResponseRefunds',
         'status' => 'string'
     ];
 
@@ -439,7 +439,7 @@ class ChargeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets channel
      *
-     * @return \Femsa\Model\ChargeResponseChannel|null
+     * @return \DigitalFemsa\Model\ChargeResponseChannel|null
      */
     public function getChannel()
     {
@@ -449,7 +449,7 @@ class ChargeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets channel
      *
-     * @param \Femsa\Model\ChargeResponseChannel|null $channel channel
+     * @param \DigitalFemsa\Model\ChargeResponseChannel|null $channel channel
      *
      * @return self
      */
@@ -797,7 +797,7 @@ class ChargeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payment_method
      *
-     * @return \Femsa\Model\ChargeResponsePaymentMethod|null
+     * @return \DigitalFemsa\Model\ChargeResponsePaymentMethod|null
      */
     public function getPaymentMethod()
     {
@@ -807,7 +807,7 @@ class ChargeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payment_method
      *
-     * @param \Femsa\Model\ChargeResponsePaymentMethod|null $payment_method payment_method
+     * @param \DigitalFemsa\Model\ChargeResponsePaymentMethod|null $payment_method payment_method
      *
      * @return self
      */
@@ -858,7 +858,7 @@ class ChargeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets refunds
      *
-     * @return \Femsa\Model\ChargeResponseRefunds|null
+     * @return \DigitalFemsa\Model\ChargeResponseRefunds|null
      */
     public function getRefunds()
     {
@@ -868,7 +868,7 @@ class ChargeResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets refunds
      *
-     * @param \Femsa\Model\ChargeResponseRefunds|null $refunds refunds
+     * @param \DigitalFemsa\Model\ChargeResponseRefunds|null $refunds refunds
      *
      * @return self
      */

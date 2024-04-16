@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * EventResponse Class Doc Comment
  *
  * @category Class
  * @description event model
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class EventResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'livemode' => 'bool',
         'object' => 'string',
         'type' => 'string',
-        'webhook_logs' => '\Femsa\Model\WebhookLog[]',
+        'webhook_logs' => '\DigitalFemsa\Model\WebhookLog[]',
         'webhook_status' => 'string'
     ];
 
@@ -513,7 +513,7 @@ class EventResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets webhook_logs
      *
-     * @return \Femsa\Model\WebhookLog[]|null
+     * @return \DigitalFemsa\Model\WebhookLog[]|null
      */
     public function getWebhookLogs()
     {
@@ -523,7 +523,7 @@ class EventResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets webhook_logs
      *
-     * @param \Femsa\Model\WebhookLog[]|null $webhook_logs webhook_logs
+     * @param \DigitalFemsa\Model\WebhookLog[]|null $webhook_logs webhook_logs
      *
      * @return self
      */

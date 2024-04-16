@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * OrderUpdateRequest Class Doc Comment
  *
  * @category Class
  * @description a order
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,18 +59,18 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'charges' => '\Femsa\Model\ChargeRequest[]',
-        'checkout' => '\Femsa\Model\CheckoutRequest',
+        'charges' => '\DigitalFemsa\Model\ChargeRequest[]',
+        'checkout' => '\DigitalFemsa\Model\CheckoutRequest',
         'currency' => 'string',
-        'customer_info' => '\Femsa\Model\OrderUpdateRequestCustomerInfo',
-        'discount_lines' => '\Femsa\Model\OrderDiscountLinesRequest[]',
-        'fiscal_entity' => '\Femsa\Model\OrderUpdateFiscalEntityRequest',
-        'line_items' => '\Femsa\Model\Product[]',
+        'customer_info' => '\DigitalFemsa\Model\OrderUpdateRequestCustomerInfo',
+        'discount_lines' => '\DigitalFemsa\Model\OrderDiscountLinesRequest[]',
+        'fiscal_entity' => '\DigitalFemsa\Model\OrderUpdateFiscalEntityRequest',
+        'line_items' => '\DigitalFemsa\Model\Product[]',
         'metadata' => 'array<string,string>',
         'pre_authorize' => 'bool',
-        'shipping_contact' => '\Femsa\Model\CustomerShippingContacts',
-        'shipping_lines' => '\Femsa\Model\ShippingRequest[]',
-        'tax_lines' => '\Femsa\Model\OrderTaxRequest[]'
+        'shipping_contact' => '\DigitalFemsa\Model\CustomerShippingContacts',
+        'shipping_lines' => '\DigitalFemsa\Model\ShippingRequest[]',
+        'tax_lines' => '\DigitalFemsa\Model\OrderTaxRequest[]'
     ];
 
     /**
@@ -375,7 +375,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets charges
      *
-     * @return \Femsa\Model\ChargeRequest[]|null
+     * @return \DigitalFemsa\Model\ChargeRequest[]|null
      */
     public function getCharges()
     {
@@ -385,7 +385,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets charges
      *
-     * @param \Femsa\Model\ChargeRequest[]|null $charges charges
+     * @param \DigitalFemsa\Model\ChargeRequest[]|null $charges charges
      *
      * @return self
      */
@@ -402,7 +402,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets checkout
      *
-     * @return \Femsa\Model\CheckoutRequest|null
+     * @return \DigitalFemsa\Model\CheckoutRequest|null
      */
     public function getCheckout()
     {
@@ -412,7 +412,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets checkout
      *
-     * @param \Femsa\Model\CheckoutRequest|null $checkout checkout
+     * @param \DigitalFemsa\Model\CheckoutRequest|null $checkout checkout
      *
      * @return self
      */
@@ -460,7 +460,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets customer_info
      *
-     * @return \Femsa\Model\OrderUpdateRequestCustomerInfo|null
+     * @return \DigitalFemsa\Model\OrderUpdateRequestCustomerInfo|null
      */
     public function getCustomerInfo()
     {
@@ -470,7 +470,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets customer_info
      *
-     * @param \Femsa\Model\OrderUpdateRequestCustomerInfo|null $customer_info customer_info
+     * @param \DigitalFemsa\Model\OrderUpdateRequestCustomerInfo|null $customer_info customer_info
      *
      * @return self
      */
@@ -487,7 +487,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets discount_lines
      *
-     * @return \Femsa\Model\OrderDiscountLinesRequest[]|null
+     * @return \DigitalFemsa\Model\OrderDiscountLinesRequest[]|null
      */
     public function getDiscountLines()
     {
@@ -497,7 +497,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets discount_lines
      *
-     * @param \Femsa\Model\OrderDiscountLinesRequest[]|null $discount_lines List of [discounts](https://developers.femsa.com/v2.1.0/reference/orderscreatediscountline) that are applied to the order. You must have at least one discount.
+     * @param \DigitalFemsa\Model\OrderDiscountLinesRequest[]|null $discount_lines List of [discounts](https://developers.femsa.com/v2.1.0/reference/orderscreatediscountline) that are applied to the order. You must have at least one discount.
      *
      * @return self
      */
@@ -514,7 +514,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets fiscal_entity
      *
-     * @return \Femsa\Model\OrderUpdateFiscalEntityRequest|null
+     * @return \DigitalFemsa\Model\OrderUpdateFiscalEntityRequest|null
      */
     public function getFiscalEntity()
     {
@@ -524,7 +524,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets fiscal_entity
      *
-     * @param \Femsa\Model\OrderUpdateFiscalEntityRequest|null $fiscal_entity fiscal_entity
+     * @param \DigitalFemsa\Model\OrderUpdateFiscalEntityRequest|null $fiscal_entity fiscal_entity
      *
      * @return self
      */
@@ -541,7 +541,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets line_items
      *
-     * @return \Femsa\Model\Product[]|null
+     * @return \DigitalFemsa\Model\Product[]|null
      */
     public function getLineItems()
     {
@@ -551,7 +551,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets line_items
      *
-     * @param \Femsa\Model\Product[]|null $line_items List of [products](https://developers.femsa.com/v2.1.0/reference/orderscreateproduct) that are sold in the order. You must have at least one product.
+     * @param \DigitalFemsa\Model\Product[]|null $line_items List of [products](https://developers.femsa.com/v2.1.0/reference/orderscreateproduct) that are sold in the order. You must have at least one product.
      *
      * @return self
      */
@@ -622,7 +622,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets shipping_contact
      *
-     * @return \Femsa\Model\CustomerShippingContacts|null
+     * @return \DigitalFemsa\Model\CustomerShippingContacts|null
      */
     public function getShippingContact()
     {
@@ -632,7 +632,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets shipping_contact
      *
-     * @param \Femsa\Model\CustomerShippingContacts|null $shipping_contact shipping_contact
+     * @param \DigitalFemsa\Model\CustomerShippingContacts|null $shipping_contact shipping_contact
      *
      * @return self
      */
@@ -649,7 +649,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets shipping_lines
      *
-     * @return \Femsa\Model\ShippingRequest[]|null
+     * @return \DigitalFemsa\Model\ShippingRequest[]|null
      */
     public function getShippingLines()
     {
@@ -659,7 +659,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets shipping_lines
      *
-     * @param \Femsa\Model\ShippingRequest[]|null $shipping_lines List of [shipping costs](https://developers.femsa.com/v2.1.0/reference/orderscreateshipping). If the online store offers digital products.
+     * @param \DigitalFemsa\Model\ShippingRequest[]|null $shipping_lines List of [shipping costs](https://developers.femsa.com/v2.1.0/reference/orderscreateshipping). If the online store offers digital products.
      *
      * @return self
      */
@@ -676,7 +676,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets tax_lines
      *
-     * @return \Femsa\Model\OrderTaxRequest[]|null
+     * @return \DigitalFemsa\Model\OrderTaxRequest[]|null
      */
     public function getTaxLines()
     {
@@ -686,7 +686,7 @@ class OrderUpdateRequest implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets tax_lines
      *
-     * @param \Femsa\Model\OrderTaxRequest[]|null $tax_lines tax_lines
+     * @param \DigitalFemsa\Model\OrderTaxRequest[]|null $tax_lines tax_lines
      *
      * @return self
      */

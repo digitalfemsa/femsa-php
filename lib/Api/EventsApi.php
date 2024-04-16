@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * EventsApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -139,9 +139,9 @@ class EventsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEvent'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\EventResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\EventResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getEvent($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getEvent'][0])
     {
@@ -159,9 +159,9 @@ class EventsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEvent'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\EventResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\EventResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getEvent'][0])
     {
@@ -204,11 +204,11 @@ class EventsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\EventResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\EventResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\EventResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\EventResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -226,16 +226,16 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\EventResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\EventResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -253,16 +253,16 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -280,16 +280,16 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -307,13 +307,13 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\EventResponse';
+            $returnType = '\DigitalFemsa\Model\EventResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -346,7 +346,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\EventResponse',
+                        '\DigitalFemsa\Model\EventResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -354,7 +354,7 @@ class EventsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -362,7 +362,7 @@ class EventsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -370,7 +370,7 @@ class EventsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -418,7 +418,7 @@ class EventsApi
      */
     public function getEventAsyncWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getEvent'][0])
     {
-        $returnType = '\Femsa\Model\EventResponse';
+        $returnType = '\DigitalFemsa\Model\EventResponse';
         $request = $this->getEventRequest($id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -582,9 +582,9 @@ class EventsApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEvents'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\GetEventsResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\GetEventsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getEvents($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getEvents'][0])
     {
@@ -605,9 +605,9 @@ class EventsApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEvents'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\GetEventsResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\GetEventsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getEventsWithHttpInfo($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getEvents'][0])
     {
@@ -650,11 +650,11 @@ class EventsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\GetEventsResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\GetEventsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\GetEventsResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\GetEventsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -672,16 +672,16 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\GetEventsResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\GetEventsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -699,16 +699,16 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -726,13 +726,13 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\GetEventsResponse';
+            $returnType = '\DigitalFemsa\Model\GetEventsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -765,7 +765,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\GetEventsResponse',
+                        '\DigitalFemsa\Model\GetEventsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -773,7 +773,7 @@ class EventsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -781,7 +781,7 @@ class EventsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -835,7 +835,7 @@ class EventsApi
      */
     public function getEventsAsyncWithHttpInfo($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getEvents'][0])
     {
-        $returnType = '\Femsa\Model\GetEventsResponse';
+        $returnType = '\DigitalFemsa\Model\GetEventsResponse';
         $request = $this->getEventsRequest($accept_language, $x_child_company_id, $limit, $search, $next, $previous, $contentType);
 
         return $this->client
@@ -1030,9 +1030,9 @@ class EventsApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendEvent'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\EventsResendResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\EventsResendResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function resendEvent($event_id, $webhook_log_id, $accept_language = 'es', string $contentType = self::contentTypes['resendEvent'][0])
     {
@@ -1050,9 +1050,9 @@ class EventsApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resendEvent'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\EventsResendResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\EventsResendResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function resendEventWithHttpInfo($event_id, $webhook_log_id, $accept_language = 'es', string $contentType = self::contentTypes['resendEvent'][0])
     {
@@ -1095,11 +1095,11 @@ class EventsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\EventsResendResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\EventsResendResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\EventsResendResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\EventsResendResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1117,16 +1117,16 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\EventsResendResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\EventsResendResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1144,16 +1144,16 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1171,16 +1171,16 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1198,13 +1198,13 @@ class EventsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\EventsResendResponse';
+            $returnType = '\DigitalFemsa\Model\EventsResendResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1237,7 +1237,7 @@ class EventsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\EventsResendResponse',
+                        '\DigitalFemsa\Model\EventsResendResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1245,7 +1245,7 @@ class EventsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1253,7 +1253,7 @@ class EventsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1261,7 +1261,7 @@ class EventsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1309,7 +1309,7 @@ class EventsApi
      */
     public function resendEventAsyncWithHttpInfo($event_id, $webhook_log_id, $accept_language = 'es', string $contentType = self::contentTypes['resendEvent'][0])
     {
-        $returnType = '\Femsa\Model\EventsResendResponse';
+        $returnType = '\DigitalFemsa\Model\EventsResendResponse';
         $request = $this->resendEventRequest($event_id, $webhook_log_id, $accept_language, $contentType);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CompanyFiscalInfoResponse Class Doc Comment
  *
  * @category Class
  * @description Company fiscal info model
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,7 +65,7 @@ class CompanyFiscalInfoResponse implements ModelInterface, ArrayAccess, \JsonSer
         'business_type' => 'string',
         'phone' => 'string',
         'physical_person_business_type' => 'string',
-        'address' => '\Femsa\Model\CompanyFiscalInfoAddressResponse'
+        'address' => '\DigitalFemsa\Model\CompanyFiscalInfoAddressResponse'
     ];
 
     /**
@@ -530,7 +530,7 @@ class CompanyFiscalInfoResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets address
      *
-     * @return \Femsa\Model\CompanyFiscalInfoAddressResponse|null
+     * @return \DigitalFemsa\Model\CompanyFiscalInfoAddressResponse|null
      */
     public function getAddress()
     {
@@ -540,7 +540,7 @@ class CompanyFiscalInfoResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets address
      *
-     * @param \Femsa\Model\CompanyFiscalInfoAddressResponse|null $address address
+     * @param \DigitalFemsa\Model\CompanyFiscalInfoAddressResponse|null $address address
      *
      * @return self
      */

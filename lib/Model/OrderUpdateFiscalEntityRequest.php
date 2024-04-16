@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * OrderUpdateFiscalEntityRequest Class Doc Comment
  *
  * @category Class
  * @description Fiscal entity of the order, Currently it is a purely informative field
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class OrderUpdateFiscalEntityRequest implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => '\Femsa\Model\FiscalEntityAddress',
+        'address' => '\DigitalFemsa\Model\FiscalEntityAddress',
         'email' => 'string',
         'name' => 'string',
         'metadata' => 'array<string,mixed>',
@@ -336,7 +336,7 @@ class OrderUpdateFiscalEntityRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets address
      *
-     * @return \Femsa\Model\FiscalEntityAddress
+     * @return \DigitalFemsa\Model\FiscalEntityAddress
      */
     public function getAddress()
     {
@@ -346,7 +346,7 @@ class OrderUpdateFiscalEntityRequest implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets address
      *
-     * @param \Femsa\Model\FiscalEntityAddress $address address
+     * @param \DigitalFemsa\Model\FiscalEntityAddress $address address
      *
      * @return self
      */

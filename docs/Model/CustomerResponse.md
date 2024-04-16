@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**antifraud_info** | [**\Femsa\Model\CustomerAntifraudInfoResponse**](CustomerAntifraudInfoResponse.md) |  | [optional]
+**antifraud_info** | [**\DigitalFemsa\Model\CustomerAntifraudInfoResponse**](CustomerAntifraudInfoResponse.md) |  | [optional]
 **corporate** | **bool** | true if the customer is a company | [optional]
 **created_at** | **int** | Creation date of the object |
 **custom_reference** | **string** | Custom reference | [optional]
@@ -12,14 +12,14 @@ Name | Type | Description | Notes
 **default_shipping_contact_id** | **string** |  | [optional]
 **default_payment_source_id** | **string** |  | [optional]
 **email** | **string** |  | [optional]
-**fiscal_entities** | [**\Femsa\Model\CustomerFiscalEntitiesResponse**](CustomerFiscalEntitiesResponse.md) |  | [optional]
+**fiscal_entities** | [**\DigitalFemsa\Model\CustomerFiscalEntitiesResponse**](CustomerFiscalEntitiesResponse.md) |  | [optional]
 **id** | **string** | Customer&#39;s ID |
 **livemode** | **bool** | true if the object exists in live mode or the value false if the object exists in test mode |
 **name** | **string** | Customer&#39;s name |
 **metadata** | **array<string,mixed>** |  | [optional]
 **object** | **string** |  |
-**payment_sources** | [**\Femsa\Model\CustomerPaymentMethodsResponse**](CustomerPaymentMethodsResponse.md) |  | [optional]
+**payment_sources** | [**\DigitalFemsa\Model\CustomerPaymentMethodsResponse**](CustomerPaymentMethodsResponse.md) |  | [optional]
 **phone** | **string** | Customer&#39;s phone number | [optional]
-**shipping_contacts** | [**\Femsa\Model\CustomerResponseShippingContacts**](CustomerResponseShippingContacts.md) |  | [optional]
+**shipping_contacts** | [**\DigitalFemsa\Model\CustomerResponseShippingContacts**](CustomerResponseShippingContacts.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

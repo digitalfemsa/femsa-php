@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CustomerUpdateFiscalEntitiesRequest Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class CustomerUpdateFiscalEntitiesRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'address' => '\Femsa\Model\CustomerAddress',
+        'address' => '\DigitalFemsa\Model\CustomerAddress',
         'tax_id' => 'string',
         'email' => 'string',
         'phone' => 'string',
@@ -328,7 +328,7 @@ class CustomerUpdateFiscalEntitiesRequest implements ModelInterface, ArrayAccess
     /**
      * Gets address
      *
-     * @return \Femsa\Model\CustomerAddress|null
+     * @return \DigitalFemsa\Model\CustomerAddress|null
      */
     public function getAddress()
     {
@@ -338,7 +338,7 @@ class CustomerUpdateFiscalEntitiesRequest implements ModelInterface, ArrayAccess
     /**
      * Sets address
      *
-     * @param \Femsa\Model\CustomerAddress|null $address address
+     * @param \DigitalFemsa\Model\CustomerAddress|null $address address
      *
      * @return self
      */

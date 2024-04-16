@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**details** | [**\Femsa\Model\DetailsError[]**](DetailsError.md) |  | [optional]
+**details** | [**\DigitalFemsa\Model\DetailsError[]**](DetailsError.md) |  | [optional]
 **log_id** | **string** | log id | [optional]
 **type** | **string** |  | [optional]
 **object** | **string** |  | [optional]

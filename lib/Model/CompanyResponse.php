@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CompanyResponse Class Doc Comment
  *
  * @category Class
  * @description Company model
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -65,8 +65,8 @@ class CompanyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'object' => 'string',
         'parent_company_id' => 'string',
         'use_parent_fiscal_data' => 'bool',
-        'payout_destination' => '\Femsa\Model\CompanyPayoutDestinationResponse',
-        'fiscal_info' => '\Femsa\Model\CompanyFiscalInfoResponse'
+        'payout_destination' => '\DigitalFemsa\Model\CompanyPayoutDestinationResponse',
+        'fiscal_info' => '\DigitalFemsa\Model\CompanyFiscalInfoResponse'
     ];
 
     /**
@@ -537,7 +537,7 @@ class CompanyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets payout_destination
      *
-     * @return \Femsa\Model\CompanyPayoutDestinationResponse|null
+     * @return \DigitalFemsa\Model\CompanyPayoutDestinationResponse|null
      */
     public function getPayoutDestination()
     {
@@ -547,7 +547,7 @@ class CompanyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets payout_destination
      *
-     * @param \Femsa\Model\CompanyPayoutDestinationResponse|null $payout_destination payout_destination
+     * @param \DigitalFemsa\Model\CompanyPayoutDestinationResponse|null $payout_destination payout_destination
      *
      * @return self
      */
@@ -564,7 +564,7 @@ class CompanyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fiscal_info
      *
-     * @return \Femsa\Model\CompanyFiscalInfoResponse|null
+     * @return \DigitalFemsa\Model\CompanyFiscalInfoResponse|null
      */
     public function getFiscalInfo()
     {
@@ -574,7 +574,7 @@ class CompanyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fiscal_info
      *
-     * @param \Femsa\Model\CompanyFiscalInfoResponse|null $fiscal_info fiscal_info
+     * @param \DigitalFemsa\Model\CompanyFiscalInfoResponse|null $fiscal_info fiscal_info
      *
      * @return self
      */

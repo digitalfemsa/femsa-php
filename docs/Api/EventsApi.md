@@ -1,4 +1,4 @@
-# Femsa\EventsApi
+# DigitalFemsa\EventsApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `getEvent()`
 
 ```php
-getEvent($id, $accept_language, $x_child_company_id): \Femsa\Model\EventResponse
+getEvent($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\EventResponse
 ```
 
 Get Event
@@ -27,10 +27,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\EventsApi(
+$apiInstance = new DigitalFemsa\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\EventResponse**](../Model/EventResponse.md)
+[**\DigitalFemsa\Model\EventResponse**](../Model/EventResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ try {
 ## `getEvents()`
 
 ```php
-getEvents($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\GetEventsResponse
+getEvents($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\GetEventsResponse
 ```
 
 Get list of Events
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\EventsApi(
+$apiInstance = new DigitalFemsa\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -126,7 +126,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetEventsResponse**](../Model/GetEventsResponse.md)
+[**\DigitalFemsa\Model\GetEventsResponse**](../Model/GetEventsResponse.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ try {
 ## `resendEvent()`
 
 ```php
-resendEvent($event_id, $webhook_log_id, $accept_language): \Femsa\Model\EventsResendResponse
+resendEvent($event_id, $webhook_log_id, $accept_language): \DigitalFemsa\Model\EventsResendResponse
 ```
 
 Resend Event
@@ -159,10 +159,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\EventsApi(
+$apiInstance = new DigitalFemsa\Api\EventsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -190,7 +190,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\EventsResendResponse**](../Model/EventsResendResponse.md)
+[**\DigitalFemsa\Model\EventsResendResponse**](../Model/EventsResendResponse.md)
 
 ### Authorization
 

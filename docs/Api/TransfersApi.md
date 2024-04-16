@@ -1,4 +1,4 @@
-# Femsa\TransfersApi
+# DigitalFemsa\TransfersApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `getTransfer()`
 
 ```php
-getTransfer($id, $accept_language, $x_child_company_id): \Femsa\Model\TransferResponse
+getTransfer($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\TransferResponse
 ```
 
 Get Transfer
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\TransfersApi(
+$apiInstance = new DigitalFemsa\Api\TransfersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\TransferResponse**](../Model/TransferResponse.md)
+[**\DigitalFemsa\Model\TransferResponse**](../Model/TransferResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `getTransfers()`
 
 ```php
-getTransfers($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\GetTransfersResponse
+getTransfers($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\GetTransfersResponse
 ```
 
 Get a list of transfers
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\TransfersApi(
+$apiInstance = new DigitalFemsa\Api\TransfersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetTransfersResponse**](../Model/GetTransfersResponse.md)
+[**\DigitalFemsa\Model\GetTransfersResponse**](../Model/GetTransfersResponse.md)
 
 ### Authorization
 

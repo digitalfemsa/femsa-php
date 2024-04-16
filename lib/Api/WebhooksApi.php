@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * WebhooksApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -143,13 +143,13 @@ class WebhooksApi
      *
      * Create Webhook
      *
-     * @param  \Femsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function createWebhook($webhook_request, $accept_language = 'es', string $contentType = self::contentTypes['createWebhook'][0])
     {
@@ -162,13 +162,13 @@ class WebhooksApi
      *
      * Create Webhook
      *
-     * @param  \Femsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWebhookWithHttpInfo($webhook_request, $accept_language = 'es', string $contentType = self::contentTypes['createWebhook'][0])
     {
@@ -211,11 +211,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -233,16 +233,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -260,16 +260,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -287,13 +287,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -326,7 +326,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookResponse',
+                        '\DigitalFemsa\Model\WebhookResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -334,7 +334,7 @@ class WebhooksApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -342,7 +342,7 @@ class WebhooksApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -357,7 +357,7 @@ class WebhooksApi
      *
      * Create Webhook
      *
-     * @param  \Femsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhook'] to see the possible values for this operation
      *
@@ -379,7 +379,7 @@ class WebhooksApi
      *
      * Create Webhook
      *
-     * @param  \Femsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhook'] to see the possible values for this operation
      *
@@ -388,7 +388,7 @@ class WebhooksApi
      */
     public function createWebhookAsyncWithHttpInfo($webhook_request, $accept_language = 'es', string $contentType = self::contentTypes['createWebhook'][0])
     {
-        $returnType = '\Femsa\Model\WebhookResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookResponse';
         $request = $this->createWebhookRequest($webhook_request, $accept_language, $contentType);
 
         return $this->client
@@ -430,7 +430,7 @@ class WebhooksApi
     /**
      * Create request for operation 'createWebhook'
      *
-     * @param  \Femsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookRequest $webhook_request requested field for webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createWebhook'] to see the possible values for this operation
      *
@@ -541,9 +541,9 @@ class WebhooksApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function deleteWebhook($id, $accept_language = 'es', string $contentType = self::contentTypes['deleteWebhook'][0])
     {
@@ -560,9 +560,9 @@ class WebhooksApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWebhookWithHttpInfo($id, $accept_language = 'es', string $contentType = self::contentTypes['deleteWebhook'][0])
     {
@@ -605,11 +605,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -627,16 +627,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -654,16 +654,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -681,16 +681,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -708,13 +708,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -747,7 +747,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookResponse',
+                        '\DigitalFemsa\Model\WebhookResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -755,7 +755,7 @@ class WebhooksApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -763,7 +763,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -771,7 +771,7 @@ class WebhooksApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -817,7 +817,7 @@ class WebhooksApi
      */
     public function deleteWebhookAsyncWithHttpInfo($id, $accept_language = 'es', string $contentType = self::contentTypes['deleteWebhook'][0])
     {
-        $returnType = '\Femsa\Model\WebhookResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookResponse';
         $request = $this->deleteWebhookRequest($id, $accept_language, $contentType);
 
         return $this->client
@@ -972,9 +972,9 @@ class WebhooksApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getWebhook($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getWebhook'][0])
     {
@@ -992,9 +992,9 @@ class WebhooksApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhookWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getWebhook'][0])
     {
@@ -1037,11 +1037,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1059,16 +1059,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1086,16 +1086,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1113,16 +1113,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1140,13 +1140,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1179,7 +1179,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookResponse',
+                        '\DigitalFemsa\Model\WebhookResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1187,7 +1187,7 @@ class WebhooksApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1195,7 +1195,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1203,7 +1203,7 @@ class WebhooksApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1251,7 +1251,7 @@ class WebhooksApi
      */
     public function getWebhookAsyncWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getWebhook'][0])
     {
-        $returnType = '\Femsa\Model\WebhookResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookResponse';
         $request = $this->getWebhookRequest($id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1415,9 +1415,9 @@ class WebhooksApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhooks'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\GetWebhooksResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\GetWebhooksResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getWebhooks($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getWebhooks'][0])
     {
@@ -1438,9 +1438,9 @@ class WebhooksApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getWebhooks'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\GetWebhooksResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\GetWebhooksResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebhooksWithHttpInfo($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getWebhooks'][0])
     {
@@ -1483,11 +1483,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\GetWebhooksResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\GetWebhooksResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\GetWebhooksResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\GetWebhooksResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1505,16 +1505,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\GetWebhooksResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\GetWebhooksResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1532,16 +1532,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1559,13 +1559,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\GetWebhooksResponse';
+            $returnType = '\DigitalFemsa\Model\GetWebhooksResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1598,7 +1598,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\GetWebhooksResponse',
+                        '\DigitalFemsa\Model\GetWebhooksResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1606,7 +1606,7 @@ class WebhooksApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1614,7 +1614,7 @@ class WebhooksApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1668,7 +1668,7 @@ class WebhooksApi
      */
     public function getWebhooksAsyncWithHttpInfo($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getWebhooks'][0])
     {
-        $returnType = '\Femsa\Model\GetWebhooksResponse';
+        $returnType = '\DigitalFemsa\Model\GetWebhooksResponse';
         $request = $this->getWebhooksRequest($accept_language, $x_child_company_id, $limit, $search, $next, $previous, $contentType);
 
         return $this->client
@@ -1862,9 +1862,9 @@ class WebhooksApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['testWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function testWebhook($id, $accept_language = 'es', string $contentType = self::contentTypes['testWebhook'][0])
     {
@@ -1881,9 +1881,9 @@ class WebhooksApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['testWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function testWebhookWithHttpInfo($id, $accept_language = 'es', string $contentType = self::contentTypes['testWebhook'][0])
     {
@@ -1926,11 +1926,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1948,16 +1948,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1975,16 +1975,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2002,16 +2002,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2029,13 +2029,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2068,7 +2068,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookResponse',
+                        '\DigitalFemsa\Model\WebhookResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2076,7 +2076,7 @@ class WebhooksApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2084,7 +2084,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2092,7 +2092,7 @@ class WebhooksApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2138,7 +2138,7 @@ class WebhooksApi
      */
     public function testWebhookAsyncWithHttpInfo($id, $accept_language = 'es', string $contentType = self::contentTypes['testWebhook'][0])
     {
-        $returnType = '\Femsa\Model\WebhookResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookResponse';
         $request = $this->testWebhookRequest($id, $accept_language, $contentType);
 
         return $this->client
@@ -2289,14 +2289,14 @@ class WebhooksApi
      * Update Webhook
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function updateWebhook($id, $webhook_update_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateWebhook'][0])
     {
@@ -2310,14 +2310,14 @@ class WebhooksApi
      * Update Webhook
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhook'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\WebhookResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\WebhookResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWebhookWithHttpInfo($id, $webhook_update_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateWebhook'][0])
     {
@@ -2360,11 +2360,11 @@ class WebhooksApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\WebhookResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\WebhookResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\WebhookResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\WebhookResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2382,16 +2382,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\WebhookResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\WebhookResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2409,16 +2409,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2436,16 +2436,16 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -2463,13 +2463,13 @@ class WebhooksApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\WebhookResponse';
+            $returnType = '\DigitalFemsa\Model\WebhookResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2502,7 +2502,7 @@ class WebhooksApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\WebhookResponse',
+                        '\DigitalFemsa\Model\WebhookResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2510,7 +2510,7 @@ class WebhooksApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2518,7 +2518,7 @@ class WebhooksApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2526,7 +2526,7 @@ class WebhooksApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2542,7 +2542,7 @@ class WebhooksApi
      * Update Webhook
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhook'] to see the possible values for this operation
@@ -2566,7 +2566,7 @@ class WebhooksApi
      * Update Webhook
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhook'] to see the possible values for this operation
@@ -2576,7 +2576,7 @@ class WebhooksApi
      */
     public function updateWebhookAsyncWithHttpInfo($id, $webhook_update_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateWebhook'][0])
     {
-        $returnType = '\Femsa\Model\WebhookResponse';
+        $returnType = '\DigitalFemsa\Model\WebhookResponse';
         $request = $this->updateWebhookRequest($id, $webhook_update_request, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -2619,7 +2619,7 @@ class WebhooksApi
      * Create request for operation 'updateWebhook'
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
+     * @param  \DigitalFemsa\Model\WebhookUpdateRequest $webhook_update_request requested fields in order to update a webhook (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateWebhook'] to see the possible values for this operation

@@ -1,4 +1,4 @@
-# Femsa\ChargesApi
+# DigitalFemsa\ChargesApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -12,7 +12,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `getCharges()`
 
 ```php
-getCharges($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \Femsa\Model\GetChargesResponse
+getCharges($accept_language, $x_child_company_id, $limit, $search, $next, $previous): \DigitalFemsa\Model\GetChargesResponse
 ```
 
 Get A List of Charges
@@ -25,10 +25,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ChargesApi(
+$apiInstance = new DigitalFemsa\Api\ChargesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -62,7 +62,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetChargesResponse**](../Model/GetChargesResponse.md)
+[**\DigitalFemsa\Model\GetChargesResponse**](../Model/GetChargesResponse.md)
 
 ### Authorization
 
@@ -80,7 +80,7 @@ try {
 ## `ordersCreateCharge()`
 
 ```php
-ordersCreateCharge($id, $charge_request, $accept_language, $x_child_company_id): \Femsa\Model\ChargeOrderResponse
+ordersCreateCharge($id, $charge_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ChargeOrderResponse
 ```
 
 Create charge
@@ -95,17 +95,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ChargesApi(
+$apiInstance = new DigitalFemsa\Api\ChargesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$charge_request = new \Femsa\Model\ChargeRequest(); // \Femsa\Model\ChargeRequest | requested field for a charge
+$charge_request = new \DigitalFemsa\Model\ChargeRequest(); // \DigitalFemsa\Model\ChargeRequest | requested field for a charge
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -122,13 +122,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **charge_request** | [**\Femsa\Model\ChargeRequest**](../Model/ChargeRequest.md)| requested field for a charge | |
+| **charge_request** | [**\DigitalFemsa\Model\ChargeRequest**](../Model/ChargeRequest.md)| requested field for a charge | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\ChargeOrderResponse**](../Model/ChargeOrderResponse.md)
+[**\DigitalFemsa\Model\ChargeOrderResponse**](../Model/ChargeOrderResponse.md)
 
 ### Authorization
 
@@ -146,7 +146,7 @@ try {
 ## `updateCharge()`
 
 ```php
-updateCharge($id, $charge_update_request, $accept_language, $x_child_company_id): \Femsa\Model\ChargeResponse
+updateCharge($id, $charge_update_request, $accept_language, $x_child_company_id): \DigitalFemsa\Model\ChargeResponse
 ```
 
 Update a charge
@@ -159,17 +159,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\ChargesApi(
+$apiInstance = new DigitalFemsa\Api\ChargesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = 6307a60c41de27127515a575; // string | Identifier of the resource
-$charge_update_request = new \Femsa\Model\ChargeUpdateRequest(); // \Femsa\Model\ChargeUpdateRequest | requested field for update a charge
+$charge_update_request = new \DigitalFemsa\Model\ChargeUpdateRequest(); // \DigitalFemsa\Model\ChargeUpdateRequest | requested field for update a charge
 $accept_language = es; // string | Use for knowing which language to use
 $x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
@@ -186,13 +186,13 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Identifier of the resource | |
-| **charge_update_request** | [**\Femsa\Model\ChargeUpdateRequest**](../Model/ChargeUpdateRequest.md)| requested field for update a charge | |
+| **charge_update_request** | [**\DigitalFemsa\Model\ChargeUpdateRequest**](../Model/ChargeUpdateRequest.md)| requested field for update a charge | |
 | **accept_language** | **string**| Use for knowing which language to use | [optional] [default to &#39;es&#39;] |
 | **x_child_company_id** | **string**| In the case of a holding company, the company id of the child company to which will process the request. | [optional] |
 
 ### Return type
 
-[**\Femsa\Model\ChargeResponse**](../Model/ChargeResponse.md)
+[**\DigitalFemsa\Model\ChargeResponse**](../Model/ChargeResponse.md)
 
 ### Authorization
 

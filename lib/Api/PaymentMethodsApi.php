@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * PaymentMethodsApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -138,14 +138,14 @@ class PaymentMethodsApi
      * Create Payment Method
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerPaymentMethods'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\CreateCustomerPaymentMethodsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function createCustomerPaymentMethods($id, $create_customer_payment_methods_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['createCustomerPaymentMethods'][0])
     {
@@ -159,14 +159,14 @@ class PaymentMethodsApi
      * Create Payment Method
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerPaymentMethods'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\CreateCustomerPaymentMethodsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCustomerPaymentMethodsWithHttpInfo($id, $create_customer_payment_methods_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['createCustomerPaymentMethods'][0])
     {
@@ -209,11 +209,11 @@ class PaymentMethodsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\CreateCustomerPaymentMethodsResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\CreateCustomerPaymentMethodsResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -231,16 +231,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\CreateCustomerPaymentMethodsResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -258,16 +258,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -285,16 +285,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -312,16 +312,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -339,13 +339,13 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\CreateCustomerPaymentMethodsResponse';
+            $returnType = '\DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -378,7 +378,7 @@ class PaymentMethodsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\CreateCustomerPaymentMethodsResponse',
+                        '\DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -386,7 +386,7 @@ class PaymentMethodsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -394,7 +394,7 @@ class PaymentMethodsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -402,7 +402,7 @@ class PaymentMethodsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -410,7 +410,7 @@ class PaymentMethodsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -426,7 +426,7 @@ class PaymentMethodsApi
      * Create Payment Method
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerPaymentMethods'] to see the possible values for this operation
@@ -450,7 +450,7 @@ class PaymentMethodsApi
      * Create Payment Method
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerPaymentMethods'] to see the possible values for this operation
@@ -460,7 +460,7 @@ class PaymentMethodsApi
      */
     public function createCustomerPaymentMethodsAsyncWithHttpInfo($id, $create_customer_payment_methods_request, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['createCustomerPaymentMethods'][0])
     {
-        $returnType = '\Femsa\Model\CreateCustomerPaymentMethodsResponse';
+        $returnType = '\DigitalFemsa\Model\CreateCustomerPaymentMethodsResponse';
         $request = $this->createCustomerPaymentMethodsRequest($id, $create_customer_payment_methods_request, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -503,7 +503,7 @@ class PaymentMethodsApi
      * Create request for operation 'createCustomerPaymentMethods'
      *
      * @param  string $id Identifier of the resource (required)
-     * @param  \Femsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\CreateCustomerPaymentMethodsRequest $create_customer_payment_methods_request requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createCustomerPaymentMethods'] to see the possible values for this operation
@@ -637,9 +637,9 @@ class PaymentMethodsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCustomerPaymentMethods'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\UpdateCustomerPaymentMethodsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function deleteCustomerPaymentMethods($id, $payment_method_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteCustomerPaymentMethods'][0])
     {
@@ -658,9 +658,9 @@ class PaymentMethodsApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteCustomerPaymentMethods'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\UpdateCustomerPaymentMethodsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteCustomerPaymentMethodsWithHttpInfo($id, $payment_method_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteCustomerPaymentMethods'][0])
     {
@@ -703,11 +703,11 @@ class PaymentMethodsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\UpdateCustomerPaymentMethodsResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\UpdateCustomerPaymentMethodsResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -725,16 +725,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\UpdateCustomerPaymentMethodsResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -752,16 +752,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -779,16 +779,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -806,16 +806,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -833,13 +833,13 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\UpdateCustomerPaymentMethodsResponse';
+            $returnType = '\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -872,7 +872,7 @@ class PaymentMethodsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\UpdateCustomerPaymentMethodsResponse',
+                        '\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -880,7 +880,7 @@ class PaymentMethodsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -888,7 +888,7 @@ class PaymentMethodsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -896,7 +896,7 @@ class PaymentMethodsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -904,7 +904,7 @@ class PaymentMethodsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -954,7 +954,7 @@ class PaymentMethodsApi
      */
     public function deleteCustomerPaymentMethodsAsyncWithHttpInfo($id, $payment_method_id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['deleteCustomerPaymentMethods'][0])
     {
-        $returnType = '\Femsa\Model\UpdateCustomerPaymentMethodsResponse';
+        $returnType = '\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse';
         $request = $this->deleteCustomerPaymentMethodsRequest($id, $payment_method_id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -1135,9 +1135,9 @@ class PaymentMethodsApi
      * @param  string $search General order search, e.g. by mail, reference etc. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomerPaymentMethods'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\GetPaymentMethodResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\GetPaymentMethodResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getCustomerPaymentMethods($id, $accept_language = 'es', $x_child_company_id = null, $limit = 20, $next = null, $previous = null, $search = null, string $contentType = self::contentTypes['getCustomerPaymentMethods'][0])
     {
@@ -1159,9 +1159,9 @@ class PaymentMethodsApi
      * @param  string $search General order search, e.g. by mail, reference etc. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCustomerPaymentMethods'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\GetPaymentMethodResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\GetPaymentMethodResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerPaymentMethodsWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, $limit = 20, $next = null, $previous = null, $search = null, string $contentType = self::contentTypes['getCustomerPaymentMethods'][0])
     {
@@ -1204,11 +1204,11 @@ class PaymentMethodsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\GetPaymentMethodResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\GetPaymentMethodResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\GetPaymentMethodResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\GetPaymentMethodResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1226,16 +1226,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\GetPaymentMethodResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\GetPaymentMethodResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1253,16 +1253,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1280,16 +1280,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1307,13 +1307,13 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\GetPaymentMethodResponse';
+            $returnType = '\DigitalFemsa\Model\GetPaymentMethodResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1346,7 +1346,7 @@ class PaymentMethodsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\GetPaymentMethodResponse',
+                        '\DigitalFemsa\Model\GetPaymentMethodResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1354,7 +1354,7 @@ class PaymentMethodsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1362,7 +1362,7 @@ class PaymentMethodsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1370,7 +1370,7 @@ class PaymentMethodsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1426,7 +1426,7 @@ class PaymentMethodsApi
      */
     public function getCustomerPaymentMethodsAsyncWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, $limit = 20, $next = null, $previous = null, $search = null, string $contentType = self::contentTypes['getCustomerPaymentMethods'][0])
     {
-        $returnType = '\Femsa\Model\GetPaymentMethodResponse';
+        $returnType = '\DigitalFemsa\Model\GetPaymentMethodResponse';
         $request = $this->getCustomerPaymentMethodsRequest($id, $accept_language, $x_child_company_id, $limit, $next, $previous, $search, $contentType);
 
         return $this->client
@@ -1634,14 +1634,14 @@ class PaymentMethodsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $payment_method_id Identifier of the payment method (required)
-     * @param  \Femsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerPaymentMethods'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\UpdateCustomerPaymentMethodsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function updateCustomerPaymentMethods($id, $payment_method_id, $update_payment_methods, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateCustomerPaymentMethods'][0])
     {
@@ -1656,14 +1656,14 @@ class PaymentMethodsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $payment_method_id Identifier of the payment method (required)
-     * @param  \Femsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerPaymentMethods'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\UpdateCustomerPaymentMethodsResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCustomerPaymentMethodsWithHttpInfo($id, $payment_method_id, $update_payment_methods, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateCustomerPaymentMethods'][0])
     {
@@ -1706,11 +1706,11 @@ class PaymentMethodsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\UpdateCustomerPaymentMethodsResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\UpdateCustomerPaymentMethodsResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1728,16 +1728,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\UpdateCustomerPaymentMethodsResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1755,16 +1755,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1782,16 +1782,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 422:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1809,16 +1809,16 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1836,13 +1836,13 @@ class PaymentMethodsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\UpdateCustomerPaymentMethodsResponse';
+            $returnType = '\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1875,7 +1875,7 @@ class PaymentMethodsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\UpdateCustomerPaymentMethodsResponse',
+                        '\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1883,7 +1883,7 @@ class PaymentMethodsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1891,7 +1891,7 @@ class PaymentMethodsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1899,7 +1899,7 @@ class PaymentMethodsApi
                 case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1907,7 +1907,7 @@ class PaymentMethodsApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1924,7 +1924,7 @@ class PaymentMethodsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $payment_method_id Identifier of the payment method (required)
-     * @param  \Femsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerPaymentMethods'] to see the possible values for this operation
@@ -1949,7 +1949,7 @@ class PaymentMethodsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $payment_method_id Identifier of the payment method (required)
-     * @param  \Femsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerPaymentMethods'] to see the possible values for this operation
@@ -1959,7 +1959,7 @@ class PaymentMethodsApi
      */
     public function updateCustomerPaymentMethodsAsyncWithHttpInfo($id, $payment_method_id, $update_payment_methods, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['updateCustomerPaymentMethods'][0])
     {
-        $returnType = '\Femsa\Model\UpdateCustomerPaymentMethodsResponse';
+        $returnType = '\DigitalFemsa\Model\UpdateCustomerPaymentMethodsResponse';
         $request = $this->updateCustomerPaymentMethodsRequest($id, $payment_method_id, $update_payment_methods, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -2003,7 +2003,7 @@ class PaymentMethodsApi
      *
      * @param  string $id Identifier of the resource (required)
      * @param  string $payment_method_id Identifier of the payment method (required)
-     * @param  \Femsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
+     * @param  \DigitalFemsa\Model\UpdatePaymentMethods $update_payment_methods requested field for customer payment methods (required)
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCustomerPaymentMethods'] to see the possible values for this operation

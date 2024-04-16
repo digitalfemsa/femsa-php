@@ -1,4 +1,4 @@
-# Femsa\TransactionsApi
+# DigitalFemsa\TransactionsApi
 
 All URIs are relative to https://api.digitalfemsa.io, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api.digitalfemsa.io, except if the operation de
 ## `getTransaction()`
 
 ```php
-getTransaction($id, $accept_language, $x_child_company_id): \Femsa\Model\TransactionResponse
+getTransaction($id, $accept_language, $x_child_company_id): \DigitalFemsa\Model\TransactionResponse
 ```
 
 Get transaction
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\TransactionsApi(
+$apiInstance = new DigitalFemsa\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\TransactionResponse**](../Model/TransactionResponse.md)
+[**\DigitalFemsa\Model\TransactionResponse**](../Model/TransactionResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `getTransactions()`
 
 ```php
-getTransactions($accept_language, $x_child_company_id, $limit, $next, $previous, $id, $charge_id, $type, $currency): \Femsa\Model\GetTransactionsResponse
+getTransactions($accept_language, $x_child_company_id, $limit, $next, $previous, $id, $charge_id, $type, $currency): \DigitalFemsa\Model\GetTransactionsResponse
 ```
 
 Get List transactions
@@ -90,10 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: bearerAuth
-$config = Femsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Femsa\Api\TransactionsApi(
+$apiInstance = new DigitalFemsa\Api\TransactionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,7 +133,7 @@ try {
 
 ### Return type
 
-[**\Femsa\Model\GetTransactionsResponse**](../Model/GetTransactionsResponse.md)
+[**\DigitalFemsa\Model\GetTransactionsResponse**](../Model/GetTransactionsResponse.md)
 
 ### Authorization
 

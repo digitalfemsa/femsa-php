@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * TransfersApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -136,9 +136,9 @@ class TransfersApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransfer'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\TransferResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\TransferResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getTransfer($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getTransfer'][0])
     {
@@ -156,9 +156,9 @@ class TransfersApi
      * @param  string $x_child_company_id In the case of a holding company, the company id of the child company to which will process the request. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransfer'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\TransferResponse|\Femsa\Model\Error|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\TransferResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransferWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getTransfer'][0])
     {
@@ -201,11 +201,11 @@ class TransfersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\TransferResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\TransferResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\TransferResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\TransferResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -223,16 +223,16 @@ class TransfersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\TransferResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\TransferResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -250,16 +250,16 @@ class TransfersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 404:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -277,16 +277,16 @@ class TransfersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -304,13 +304,13 @@ class TransfersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\TransferResponse';
+            $returnType = '\DigitalFemsa\Model\TransferResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -343,7 +343,7 @@ class TransfersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\TransferResponse',
+                        '\DigitalFemsa\Model\TransferResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -351,7 +351,7 @@ class TransfersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -359,7 +359,7 @@ class TransfersApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -367,7 +367,7 @@ class TransfersApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -415,7 +415,7 @@ class TransfersApi
      */
     public function getTransferAsyncWithHttpInfo($id, $accept_language = 'es', $x_child_company_id = null, string $contentType = self::contentTypes['getTransfer'][0])
     {
-        $returnType = '\Femsa\Model\TransferResponse';
+        $returnType = '\DigitalFemsa\Model\TransferResponse';
         $request = $this->getTransferRequest($id, $accept_language, $x_child_company_id, $contentType);
 
         return $this->client
@@ -579,9 +579,9 @@ class TransfersApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransfers'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\GetTransfersResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\GetTransfersResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getTransfers($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getTransfers'][0])
     {
@@ -602,9 +602,9 @@ class TransfersApi
      * @param  string $previous previous page (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getTransfers'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\GetTransfersResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\GetTransfersResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTransfersWithHttpInfo($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getTransfers'][0])
     {
@@ -647,11 +647,11 @@ class TransfersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\GetTransfersResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\GetTransfersResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\GetTransfersResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\GetTransfersResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -669,16 +669,16 @@ class TransfersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\GetTransfersResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\GetTransfersResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -696,16 +696,16 @@ class TransfersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -723,13 +723,13 @@ class TransfersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\GetTransfersResponse';
+            $returnType = '\DigitalFemsa\Model\GetTransfersResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -762,7 +762,7 @@ class TransfersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\GetTransfersResponse',
+                        '\DigitalFemsa\Model\GetTransfersResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -770,7 +770,7 @@ class TransfersApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -778,7 +778,7 @@ class TransfersApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -832,7 +832,7 @@ class TransfersApi
      */
     public function getTransfersAsyncWithHttpInfo($accept_language = 'es', $x_child_company_id = null, $limit = 20, $search = null, $next = null, $previous = null, string $contentType = self::contentTypes['getTransfers'][0])
     {
-        $returnType = '\Femsa\Model\GetTransfersResponse';
+        $returnType = '\DigitalFemsa\Model\GetTransfersResponse';
         $request = $this->getTransfersRequest($accept_language, $x_child_company_id, $limit, $search, $next, $previous, $contentType);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * GetWebhookKeysResponse Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class GetWebhookKeysResponse implements ModelInterface, ArrayAccess, \JsonSerial
         'object' => 'string',
         'next_page_url' => 'string',
         'previous_page_url' => 'string',
-        'data' => '\Femsa\Model\WebhookKeyResponse[]'
+        'data' => '\DigitalFemsa\Model\WebhookKeyResponse[]'
     ];
 
     /**
@@ -449,7 +449,7 @@ class GetWebhookKeysResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets data
      *
-     * @return \Femsa\Model\WebhookKeyResponse[]|null
+     * @return \DigitalFemsa\Model\WebhookKeyResponse[]|null
      */
     public function getData()
     {
@@ -459,7 +459,7 @@ class GetWebhookKeysResponse implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets data
      *
-     * @param \Femsa\Model\WebhookKeyResponse[]|null $data data
+     * @param \DigitalFemsa\Model\WebhookKeyResponse[]|null $data data
      *
      * @return self
      */

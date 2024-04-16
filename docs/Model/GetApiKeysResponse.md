@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **previous_page_url** | **string** | Url of the previous page. | [optional]
 **has_more** | **bool** | Indicates if there are more pages to be requested |
 **object** | **string** | Object type, in this case is list |
-**data** | [**\Femsa\Model\ApiKeyResponse[]**](ApiKeyResponse.md) |  | [optional]
+**data** | [**\DigitalFemsa\Model\ApiKeyResponse[]**](ApiKeyResponse.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

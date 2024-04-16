@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Api;
+namespace DigitalFemsa\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -35,16 +35,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\HeaderSelector;
-use Femsa\ObjectSerializer;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\HeaderSelector;
+use DigitalFemsa\ObjectSerializer;
 
 /**
  * BalancesApi Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -131,9 +131,9 @@ class BalancesApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getBalance'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Femsa\Model\BalanceResponse|\Femsa\Model\Error|\Femsa\Model\Error
+     * @return \DigitalFemsa\Model\BalanceResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error
      */
     public function getBalance($accept_language = 'es', string $contentType = self::contentTypes['getBalance'][0])
     {
@@ -149,9 +149,9 @@ class BalancesApi
      * @param  string $accept_language Use for knowing which language to use (optional, default to 'es')
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getBalance'] to see the possible values for this operation
      *
-     * @throws \Femsa\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \DigitalFemsa\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Femsa\Model\BalanceResponse|\Femsa\Model\Error|\Femsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \DigitalFemsa\Model\BalanceResponse|\DigitalFemsa\Model\Error|\DigitalFemsa\Model\Error, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBalanceWithHttpInfo($accept_language = 'es', string $contentType = self::contentTypes['getBalance'][0])
     {
@@ -194,11 +194,11 @@ class BalancesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Femsa\Model\BalanceResponse' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\BalanceResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\BalanceResponse' !== 'string') {
+                        if ('\DigitalFemsa\Model\BalanceResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -216,16 +216,16 @@ class BalancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\BalanceResponse', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\BalanceResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 401:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -243,16 +243,16 @@ class BalancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
                 case 500:
-                    if ('\Femsa\Model\Error' === '\SplFileObject') {
+                    if ('\DigitalFemsa\Model\Error' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Femsa\Model\Error' !== 'string') {
+                        if ('\DigitalFemsa\Model\Error' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -270,13 +270,13 @@ class BalancesApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Femsa\Model\Error', []),
+                        ObjectSerializer::deserialize($content, '\DigitalFemsa\Model\Error', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\Femsa\Model\BalanceResponse';
+            $returnType = '\DigitalFemsa\Model\BalanceResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -309,7 +309,7 @@ class BalancesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\BalanceResponse',
+                        '\DigitalFemsa\Model\BalanceResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -317,7 +317,7 @@ class BalancesApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -325,7 +325,7 @@ class BalancesApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Femsa\Model\Error',
+                        '\DigitalFemsa\Model\Error',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -369,7 +369,7 @@ class BalancesApi
      */
     public function getBalanceAsyncWithHttpInfo($accept_language = 'es', string $contentType = self::contentTypes['getBalance'][0])
     {
-        $returnType = '\Femsa\Model\BalanceResponse';
+        $returnType = '\DigitalFemsa\Model\BalanceResponse';
         $request = $this->getBalanceRequest($accept_language, $contentType);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * OrderResponse Class Doc Comment
  *
  * @category Class
  * @description order response
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,24 +61,24 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'amount' => 'int',
         'amount_refunded' => 'int',
-        'channel' => '\Femsa\Model\ChargeResponseChannel',
-        'charges' => '\Femsa\Model\OrderResponseCharges',
-        'checkout' => '\Femsa\Model\OrderResponseCheckout',
+        'channel' => '\DigitalFemsa\Model\ChargeResponseChannel',
+        'charges' => '\DigitalFemsa\Model\OrderResponseCharges',
+        'checkout' => '\DigitalFemsa\Model\OrderResponseCheckout',
         'created_at' => 'int',
         'currency' => 'string',
-        'customer_info' => '\Femsa\Model\OrderResponseCustomerInfo',
-        'discount_lines' => '\Femsa\Model\OrderResponseDiscountLines',
-        'fiscal_entity' => '\Femsa\Model\OrderFiscalEntityResponse',
+        'customer_info' => '\DigitalFemsa\Model\OrderResponseCustomerInfo',
+        'discount_lines' => '\DigitalFemsa\Model\OrderResponseDiscountLines',
+        'fiscal_entity' => '\DigitalFemsa\Model\OrderFiscalEntityResponse',
         'id' => 'string',
         'is_refundable' => 'bool',
-        'line_items' => '\Femsa\Model\OrderResponseProducts',
+        'line_items' => '\DigitalFemsa\Model\OrderResponseProducts',
         'livemode' => 'bool',
         'metadata' => 'array<string,mixed>',
-        'next_action' => '\Femsa\Model\OrderNextActionResponse',
+        'next_action' => '\DigitalFemsa\Model\OrderNextActionResponse',
         'object' => 'string',
         'payment_status' => 'string',
         'processing_mode' => 'string',
-        'shipping_contact' => '\Femsa\Model\OrderResponseShippingContact',
+        'shipping_contact' => '\DigitalFemsa\Model\OrderResponseShippingContact',
         'updated_at' => 'int'
     ];
 
@@ -492,7 +492,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets channel
      *
-     * @return \Femsa\Model\ChargeResponseChannel|null
+     * @return \DigitalFemsa\Model\ChargeResponseChannel|null
      */
     public function getChannel()
     {
@@ -502,7 +502,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets channel
      *
-     * @param \Femsa\Model\ChargeResponseChannel|null $channel channel
+     * @param \DigitalFemsa\Model\ChargeResponseChannel|null $channel channel
      *
      * @return self
      */
@@ -519,7 +519,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets charges
      *
-     * @return \Femsa\Model\OrderResponseCharges|null
+     * @return \DigitalFemsa\Model\OrderResponseCharges|null
      */
     public function getCharges()
     {
@@ -529,7 +529,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets charges
      *
-     * @param \Femsa\Model\OrderResponseCharges|null $charges charges
+     * @param \DigitalFemsa\Model\OrderResponseCharges|null $charges charges
      *
      * @return self
      */
@@ -546,7 +546,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets checkout
      *
-     * @return \Femsa\Model\OrderResponseCheckout|null
+     * @return \DigitalFemsa\Model\OrderResponseCheckout|null
      */
     public function getCheckout()
     {
@@ -556,7 +556,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets checkout
      *
-     * @param \Femsa\Model\OrderResponseCheckout|null $checkout checkout
+     * @param \DigitalFemsa\Model\OrderResponseCheckout|null $checkout checkout
      *
      * @return self
      */
@@ -627,7 +627,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets customer_info
      *
-     * @return \Femsa\Model\OrderResponseCustomerInfo|null
+     * @return \DigitalFemsa\Model\OrderResponseCustomerInfo|null
      */
     public function getCustomerInfo()
     {
@@ -637,7 +637,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets customer_info
      *
-     * @param \Femsa\Model\OrderResponseCustomerInfo|null $customer_info customer_info
+     * @param \DigitalFemsa\Model\OrderResponseCustomerInfo|null $customer_info customer_info
      *
      * @return self
      */
@@ -654,7 +654,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets discount_lines
      *
-     * @return \Femsa\Model\OrderResponseDiscountLines|null
+     * @return \DigitalFemsa\Model\OrderResponseDiscountLines|null
      */
     public function getDiscountLines()
     {
@@ -664,7 +664,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets discount_lines
      *
-     * @param \Femsa\Model\OrderResponseDiscountLines|null $discount_lines discount_lines
+     * @param \DigitalFemsa\Model\OrderResponseDiscountLines|null $discount_lines discount_lines
      *
      * @return self
      */
@@ -681,7 +681,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets fiscal_entity
      *
-     * @return \Femsa\Model\OrderFiscalEntityResponse|null
+     * @return \DigitalFemsa\Model\OrderFiscalEntityResponse|null
      */
     public function getFiscalEntity()
     {
@@ -691,7 +691,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets fiscal_entity
      *
-     * @param \Femsa\Model\OrderFiscalEntityResponse|null $fiscal_entity fiscal_entity
+     * @param \DigitalFemsa\Model\OrderFiscalEntityResponse|null $fiscal_entity fiscal_entity
      *
      * @return self
      */
@@ -769,7 +769,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets line_items
      *
-     * @return \Femsa\Model\OrderResponseProducts|null
+     * @return \DigitalFemsa\Model\OrderResponseProducts|null
      */
     public function getLineItems()
     {
@@ -779,7 +779,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets line_items
      *
-     * @param \Femsa\Model\OrderResponseProducts|null $line_items line_items
+     * @param \DigitalFemsa\Model\OrderResponseProducts|null $line_items line_items
      *
      * @return self
      */
@@ -854,7 +854,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets next_action
      *
-     * @return \Femsa\Model\OrderNextActionResponse|null
+     * @return \DigitalFemsa\Model\OrderNextActionResponse|null
      */
     public function getNextAction()
     {
@@ -864,7 +864,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets next_action
      *
-     * @param \Femsa\Model\OrderNextActionResponse|null $next_action next_action
+     * @param \DigitalFemsa\Model\OrderNextActionResponse|null $next_action next_action
      *
      * @return self
      */
@@ -962,7 +962,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets shipping_contact
      *
-     * @return \Femsa\Model\OrderResponseShippingContact|null
+     * @return \DigitalFemsa\Model\OrderResponseShippingContact|null
      */
     public function getShippingContact()
     {
@@ -972,7 +972,7 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets shipping_contact
      *
-     * @param \Femsa\Model\OrderResponseShippingContact|null $shipping_contact shipping_contact
+     * @param \DigitalFemsa\Model\OrderResponseShippingContact|null $shipping_contact shipping_contact
      *
      * @return self
      */

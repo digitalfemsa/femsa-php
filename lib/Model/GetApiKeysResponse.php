@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * GetApiKeysResponse Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class GetApiKeysResponse implements ModelInterface, ArrayAccess, \JsonSerializab
         'previous_page_url' => 'string',
         'has_more' => 'bool',
         'object' => 'string',
-        'data' => '\Femsa\Model\ApiKeyResponse[]'
+        'data' => '\DigitalFemsa\Model\ApiKeyResponse[]'
     ];
 
     /**
@@ -449,7 +449,7 @@ class GetApiKeysResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets data
      *
-     * @return \Femsa\Model\ApiKeyResponse[]|null
+     * @return \DigitalFemsa\Model\ApiKeyResponse[]|null
      */
     public function getData()
     {
@@ -459,7 +459,7 @@ class GetApiKeysResponse implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets data
      *
-     * @param \Femsa\Model\ApiKeyResponse[]|null $data data
+     * @param \DigitalFemsa\Model\ApiKeyResponse[]|null $data data
      *
      * @return self
      */

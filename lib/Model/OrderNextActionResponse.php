@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * OrderNextActionResponse Class Doc Comment
  *
  * @category Class
  * @description contains the following attributes that will guide to continue the flow
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class OrderNextActionResponse implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
-        'redirect_to_url' => '\Femsa\Model\OrderNextActionResponseRedirectToUrl',
+        'redirect_to_url' => '\DigitalFemsa\Model\OrderNextActionResponseRedirectToUrl',
         'type' => 'string'
     ];
 
@@ -301,7 +301,7 @@ class OrderNextActionResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets redirect_to_url
      *
-     * @return \Femsa\Model\OrderNextActionResponseRedirectToUrl|null
+     * @return \DigitalFemsa\Model\OrderNextActionResponseRedirectToUrl|null
      */
     public function getRedirectToUrl()
     {
@@ -311,7 +311,7 @@ class OrderNextActionResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets redirect_to_url
      *
-     * @param \Femsa\Model\OrderNextActionResponseRedirectToUrl|null $redirect_to_url redirect_to_url
+     * @param \DigitalFemsa\Model\OrderNextActionResponseRedirectToUrl|null $redirect_to_url redirect_to_url
      *
      * @return self
      */

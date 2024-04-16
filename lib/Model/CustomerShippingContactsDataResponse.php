@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Femsa\Model;
+namespace DigitalFemsa\Model;
 
 use \ArrayAccess;
-use \Femsa\ObjectSerializer;
+use \DigitalFemsa\ObjectSerializer;
 
 /**
  * CustomerShippingContactsDataResponse Class Doc Comment
  *
  * @category Class
- * @package  Femsa
+ * @package  DigitalFemsa
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,7 +61,7 @@ class CustomerShippingContactsDataResponse implements ModelInterface, ArrayAcces
         'phone' => 'string',
         'receiver' => 'string',
         'between_streets' => 'string',
-        'address' => '\Femsa\Model\CustomerShippingContactsAddress',
+        'address' => '\DigitalFemsa\Model\CustomerShippingContactsAddress',
         'parent_id' => 'string',
         'default' => 'bool',
         'deleted' => 'bool',
@@ -460,7 +460,7 @@ class CustomerShippingContactsDataResponse implements ModelInterface, ArrayAcces
     /**
      * Gets address
      *
-     * @return \Femsa\Model\CustomerShippingContactsAddress
+     * @return \DigitalFemsa\Model\CustomerShippingContactsAddress
      */
     public function getAddress()
     {
@@ -470,7 +470,7 @@ class CustomerShippingContactsDataResponse implements ModelInterface, ArrayAcces
     /**
      * Sets address
      *
-     * @param \Femsa\Model\CustomerShippingContactsAddress $address address
+     * @param \DigitalFemsa\Model\CustomerShippingContactsAddress $address address
      *
      * @return self
      */
