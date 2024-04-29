@@ -28,11 +28,11 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\OrdersApi;
-use \Femsa\Configuration;
-use Femsa\Model\OrderRefundRequest;
-use Femsa\Model\OrderRequest;
-use Femsa\Model\OrderUpdateRequest;
+use DigitalFemsa\Api\OrdersApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\OrderRefundRequest;
+use DigitalFemsa\Model\OrderRequest;
+use DigitalFemsa\Model\OrderUpdateRequest;
 use PHPUnit\Framework\TestCase;
 
 /**

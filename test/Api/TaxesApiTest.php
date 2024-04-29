@@ -28,10 +28,10 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\TaxesApi;
-use \Femsa\Configuration;
-use Femsa\Model\OrderTaxRequest;
-use Femsa\Model\UpdateOrderTaxRequest;
+use DigitalFemsa\Api\TaxesApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\OrderTaxRequest;
+use DigitalFemsa\Model\UpdateOrderTaxRequest;
 use PHPUnit\Framework\TestCase;
 
 /**

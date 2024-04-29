@@ -28,11 +28,11 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\PaymentLinkApi;
-use \Femsa\Configuration;
-use Femsa\Model\Checkout;
-use Femsa\Model\EmailCheckoutRequest;
-use Femsa\Model\SmsCheckoutRequest;
+use DigitalFemsa\Api\PaymentLinkApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\Checkout;
+use DigitalFemsa\Model\EmailCheckoutRequest;
+use DigitalFemsa\Model\SmsCheckoutRequest;
 use PHPUnit\Framework\TestCase;
 
 /**

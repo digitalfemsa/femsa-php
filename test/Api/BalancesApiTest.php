@@ -28,9 +28,6 @@
 
 namespace Femsa\Test\Api;
 
-use \Femsa\Configuration;
-use \Femsa\ApiException;
-use \Femsa\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**

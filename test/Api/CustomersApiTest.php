@@ -28,12 +28,12 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\CustomersApi;
-use \Femsa\Configuration;
-use Femsa\Model\Customer;
-use Femsa\Model\CustomerFiscalEntitiesRequest;
-use Femsa\Model\CustomerUpdateFiscalEntitiesRequest;
-use Femsa\Model\UpdateCustomer;
+use DigitalFemsa\Api\CustomersApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\Customer;
+use DigitalFemsa\Model\CustomerFiscalEntitiesRequest;
+use DigitalFemsa\Model\CustomerUpdateFiscalEntitiesRequest;
+use DigitalFemsa\Model\UpdateCustomer;
 use PHPUnit\Framework\TestCase;
 
 /**

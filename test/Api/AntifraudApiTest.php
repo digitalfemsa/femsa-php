@@ -28,9 +28,9 @@
 
 namespace Femsa\Test\Api;
 
-use \Femsa\Api\AntifraudApi;
-use \Femsa\Configuration;
-use Femsa\Model\CreateRiskRulesData;
+use DigitalFemsa\Api\AntifraudApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\CreateRiskRulesData;
 use PHPUnit\Framework\TestCase;
 
 /**

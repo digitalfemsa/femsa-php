@@ -28,8 +28,8 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\TransactionsApi;
-use \Femsa\Configuration;
+use DigitalFemsa\Api\TransactionsApi;
+use DigitalFemsa\Configuration;
 use PHPUnit\Framework\TestCase;
 
 /**

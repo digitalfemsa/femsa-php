@@ -28,9 +28,9 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\ShippingsApi;
-use \Femsa\Configuration;
-use Femsa\Model\ShippingRequest;
+use DigitalFemsa\Api\ShippingsApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\ShippingRequest;
 use PHPUnit\Framework\TestCase;
 
 /**

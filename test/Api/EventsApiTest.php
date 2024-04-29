@@ -28,8 +28,8 @@
 
 namespace Femsa\Test\Api;
 
-use \Femsa\Api\EventsApi;
-use \Femsa\Configuration;
+use DigitalFemsa\Api\EventsApi;
+use DigitalFemsa\Configuration;
 use PHPUnit\Framework\TestCase;
 
 /**
