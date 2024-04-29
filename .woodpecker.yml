@@ -1,0 +1,51 @@
+when:
+  - event: [pull_request, push]
+    branch:
+      - ${CI_REPO_DEFAULT_BRANCH}
+      - main
+      - master
+steps:
+  - name: build_image
+    image: woodpeckerci/plugin-docker-buildx
+    settings:
+      logins:
+        - registry: 348781328318.dkr.ecr.us-east-1.amazonaws.com
+          aws_region: us-east-1
+          aws_access_key_id:
+            from_secret: aws_access_key_id
+          aws_secret_access_key:
+            from_secret: aws_secret_access_key
+      dockerfile: Dockerfile
+      platforms: linux/amd64
+      ecr_create_repository: "true"
+      tags:
+        - "${CI_PIPELINE_NUMBER}"
+      repo: 348781328318.dkr.ecr.us-east-1.amazonaws.com/${CI_REPO}
+      debug: true
+      build_args:
+        - GP_TOKEN
+        - GP_USER
+    secrets: [GP_TOKEN, GP_USER, aws_access_key_id, aws_secret_access_key]
+    environment:
+      DOCKER_BUILDKIT: "1"
+  - name: unit test
+    image: 348781328318.dkr.ecr.us-east-1.amazonaws.com/${CI_REPO}:${CI_PIPELINE_NUMBER}
+    depends_on:
+      - build_image
+    environment:
+      DOCKER_BUILDKIT: "1"
+      BASE_PATH" : "http://mockoon:3000"
+
+
+    commands:
+      - composer install
+      - make php-test
+services:
+  - name: mockoon
+    image: mockoon/cli
+    commands:
+      - mockoon-cli start -d https://raw.githubusercontent.com/digitalfemsa/openapi/main/mocks/femsa.json -p 3000
+    ports:
+      - 3000
+
+
