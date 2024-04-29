@@ -43,7 +43,7 @@ services:
     privileged: true
     image: mockoon/cli:latest
     commands:
-      - -d https://raw.githubusercontent.com/digitalfemsa/openapi/main/mocks/femsa.json -p 3000
+      - mockoon-cli start -d https://raw.githubusercontent.com/digitalfemsa/openapi/main/mocks/femsa.json -p 3000
     ports:
       - 3000
 
