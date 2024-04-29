@@ -28,11 +28,11 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\WebhooksApi;
-use Femsa\ApiException;
-use Femsa\Configuration;
-use Femsa\Model\WebhookRequest;
-use Femsa\Model\WebhookUpdateRequest;
+use DigitalFemsa\Api\WebhooksApi;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\WebhookRequest;
+use DigitalFemsa\Model\WebhookUpdateRequest;
 use PHPUnit\Framework\TestCase;
 
 /**

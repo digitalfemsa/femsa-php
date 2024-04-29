@@ -28,10 +28,10 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\PaymentMethodsApi;
-use \Femsa\Configuration;
-use Femsa\Model\CreateCustomerPaymentMethodsRequest;
-use Femsa\Model\UpdatePaymentMethods;
+use DigitalFemsa\Api\PaymentMethodsApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\CreateCustomerPaymentMethodsRequest;
+use DigitalFemsa\Model\UpdatePaymentMethods;
 use PHPUnit\Framework\TestCase;
 
 /**

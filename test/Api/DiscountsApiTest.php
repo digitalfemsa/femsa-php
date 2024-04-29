@@ -28,10 +28,10 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\DiscountsApi;
-use \Femsa\Configuration;
-use Femsa\Model\OrderDiscountLinesRequest;
-use Femsa\Model\UpdateOrderDiscountLinesRequest;
+use DigitalFemsa\Api\DiscountsApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\OrderDiscountLinesRequest;
+use DigitalFemsa\Model\UpdateOrderDiscountLinesRequest;
 use PHPUnit\Framework\TestCase;
 
 /**

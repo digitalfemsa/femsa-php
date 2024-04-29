@@ -28,10 +28,10 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\ProductsApi;
-use \Femsa\Configuration;
-use Femsa\Model\Product;
-use Femsa\Model\UpdateProduct;
+use DigitalFemsa\Api\ProductsApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\Product;
+use DigitalFemsa\Model\UpdateProduct;
 use PHPUnit\Framework\TestCase;
 
 /**

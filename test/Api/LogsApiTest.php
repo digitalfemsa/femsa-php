@@ -28,8 +28,8 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\LogsApi;
-use \Femsa\Configuration;
+use DigitalFemsa\Api\LogsApi;
+use DigitalFemsa\Configuration;
 use PHPUnit\Framework\TestCase;
 
 /**

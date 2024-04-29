@@ -28,10 +28,10 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\ShippingContactsApi;
-use \Femsa\Configuration;
-use Femsa\Model\CustomerShippingContacts;
-use Femsa\Model\CustomerUpdateShippingContacts;
+use DigitalFemsa\Api\ShippingContactsApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\CustomerShippingContacts;
+use DigitalFemsa\Model\CustomerUpdateShippingContacts;
 use PHPUnit\Framework\TestCase;
 
 /**

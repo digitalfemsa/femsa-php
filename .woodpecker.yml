@@ -35,8 +35,6 @@ steps:
     environment:
       DOCKER_BUILDKIT: "1"
       BASE_PATH" : "http://mockoon:3000"
-
-
     commands:
       - composer install
       - make php-test

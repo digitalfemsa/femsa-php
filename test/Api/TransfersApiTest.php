@@ -28,9 +28,9 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\TransfersApi;
-use Femsa\ApiException;
-use Femsa\Configuration;
+use DigitalFemsa\Api\TransfersApi;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
 use PHPUnit\Framework\TestCase;
 
 /**

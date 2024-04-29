@@ -28,10 +28,10 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\ApiKeysApi;
-use \Femsa\Configuration;
-use Femsa\Model\ApiKeyRequest;
-use Femsa\Model\ApiKeyUpdateRequest;
+use DigitalFemsa\Api\ApiKeysApi;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\ApiKeyRequest;
+use DigitalFemsa\Model\ApiKeyUpdateRequest;
 use PHPUnit\Framework\TestCase;
 
 /**

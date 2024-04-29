@@ -28,11 +28,11 @@
 
 namespace Femsa\Test\Api;
 
-use Femsa\Api\ChargesApi;
-use Femsa\ApiException;
-use \Femsa\Configuration;
-use Femsa\Model\ChargeRequest;
-use Femsa\Model\ChargeUpdateRequest;
+use DigitalFemsa\Api\ChargesApi;
+use DigitalFemsa\ApiException;
+use DigitalFemsa\Configuration;
+use DigitalFemsa\Model\ChargeRequest;
+use DigitalFemsa\Model\ChargeUpdateRequest;
 use PHPUnit\Framework\TestCase;
 
 /**
