@@ -40,8 +40,8 @@ steps:
       - make php-test
 services:
   - name: mockoon
-    privileged: true
-    image: mockoon/cli:latest
+    privileged: false
+    image: mockoon/cli
     commands:
       - mockoon-cli start -d https://raw.githubusercontent.com/digitalfemsa/openapi/main/mocks/femsa.json -p 3000
     ports:
