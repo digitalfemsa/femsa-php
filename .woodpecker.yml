@@ -41,9 +41,9 @@ steps:
 services:
   - name: mockoon
     privileged: true
-    image: mockoon/cli:6.0.0
+    image: mockoon/cli:latest
     commands:
-      - mockoon-cli start -d https://raw.githubusercontent.com/digitalfemsa/openapi/main/mocks/femsa.json -p 3000
+      - -d https://raw.githubusercontent.com/digitalfemsa/openapi/main/mocks/femsa.json -p 3000
     ports:
       - 3000
 
