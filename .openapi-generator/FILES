@@ -6,7 +6,6 @@ LICENSE
 README.md
 VERSION
 composer.json
-docs/Api/AntifraudApi.md
 docs/Api/ApiKeysApi.md
 docs/Api/BalancesApi.md
 docs/Api/ChargesApi.md
@@ -33,7 +32,6 @@ docs/Model/ApiKeyResponseOnDelete.md
 docs/Model/ApiKeyUpdateRequest.md
 docs/Model/BalanceCommonField.md
 docs/Model/BalanceResponse.md
-docs/Model/BlacklistRuleResponse.md
 docs/Model/ChargeOrderResponse.md
 docs/Model/ChargeOrderResponsePaymentMethod.md
 docs/Model/ChargeRequest.md
@@ -58,7 +56,6 @@ docs/Model/CompanyResponse.md
 docs/Model/CreateCustomerFiscalEntitiesResponse.md
 docs/Model/CreateCustomerPaymentMethodsRequest.md
 docs/Model/CreateCustomerPaymentMethodsResponse.md
-docs/Model/CreateRiskRulesData.md
 docs/Model/Customer.md
 docs/Model/CustomerAddress.md
 docs/Model/CustomerAntifraudInfo.md
@@ -84,8 +81,6 @@ docs/Model/CustomerUpdateFiscalEntitiesRequest.md
 docs/Model/CustomerUpdateShippingContacts.md
 docs/Model/CustomersResponse.md
 docs/Model/DeleteApiKeysResponse.md
-docs/Model/DeletedBlacklistRuleResponse.md
-docs/Model/DeletedWhitelistRuleResponse.md
 docs/Model/Details.md
 docs/Model/DetailsError.md
 docs/Model/DiscountLinesDataResponse.md
@@ -143,8 +138,6 @@ docs/Model/PaymentMethodResponse.md
 docs/Model/Product.md
 docs/Model/ProductDataResponse.md
 docs/Model/ProductOrderResponse.md
-docs/Model/RiskRulesData.md
-docs/Model/RiskRulesList.md
 docs/Model/ShippingOrderResponse.md
 docs/Model/ShippingRequest.md
 docs/Model/SmsCheckoutRequest.md
@@ -171,8 +164,6 @@ docs/Model/WebhookLog.md
 docs/Model/WebhookRequest.md
 docs/Model/WebhookResponse.md
 docs/Model/WebhookUpdateRequest.md
-docs/Model/WhitelistlistRuleResponse.md
-lib/Api/AntifraudApi.php
 lib/Api/ApiKeysApi.php
 lib/Api/BalancesApi.php
 lib/Api/ChargesApi.php
@@ -202,7 +193,6 @@ lib/Model/ApiKeyResponseOnDelete.php
 lib/Model/ApiKeyUpdateRequest.php
 lib/Model/BalanceCommonField.php
 lib/Model/BalanceResponse.php
-lib/Model/BlacklistRuleResponse.php
 lib/Model/ChargeOrderResponse.php
 lib/Model/ChargeOrderResponsePaymentMethod.php
 lib/Model/ChargeRequest.php
@@ -227,7 +217,6 @@ lib/Model/CompanyResponse.php
 lib/Model/CreateCustomerFiscalEntitiesResponse.php
 lib/Model/CreateCustomerPaymentMethodsRequest.php
 lib/Model/CreateCustomerPaymentMethodsResponse.php
-lib/Model/CreateRiskRulesData.php
 lib/Model/Customer.php
 lib/Model/CustomerAddress.php
 lib/Model/CustomerAntifraudInfo.php
@@ -253,8 +242,6 @@ lib/Model/CustomerUpdateFiscalEntitiesRequest.php
 lib/Model/CustomerUpdateShippingContacts.php
 lib/Model/CustomersResponse.php
 lib/Model/DeleteApiKeysResponse.php
-lib/Model/DeletedBlacklistRuleResponse.php
-lib/Model/DeletedWhitelistRuleResponse.php
 lib/Model/Details.php
 lib/Model/DetailsError.php
 lib/Model/DiscountLinesDataResponse.php
@@ -313,8 +300,6 @@ lib/Model/PaymentMethodResponse.php
 lib/Model/Product.php
 lib/Model/ProductDataResponse.php
 lib/Model/ProductOrderResponse.php
-lib/Model/RiskRulesData.php
-lib/Model/RiskRulesList.php
 lib/Model/ShippingOrderResponse.php
 lib/Model/ShippingRequest.php
 lib/Model/SmsCheckoutRequest.php
@@ -341,7 +326,5 @@ lib/Model/WebhookLog.php
 lib/Model/WebhookRequest.php
 lib/Model/WebhookResponse.php
 lib/Model/WebhookUpdateRequest.php
-lib/Model/WhitelistlistRuleResponse.php
 lib/ObjectSerializer.php
-lib/ssl_data/ca_bundle.crt
 phpunit.xml.dist

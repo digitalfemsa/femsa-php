@@ -18,6 +18,7 @@ clover.xml
 
 # Ignore IDE's configuration files
 .idea
+.vscode
 
 # Ignore PHP CS Fixer local config and cache
 .php_cs

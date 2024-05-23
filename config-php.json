@@ -16,9 +16,6 @@
     "VERSION.mustache" : {
       "templateType": "SupportingFiles",
       "destinationFilename": "VERSION"
-    },
-    "/local/ssl_data/ca_bundle.crt": {
-      "destinationFilename": "lib/ssl_data/ca_bundle.crt"
     }
   },
   "gitUserId": "digitalfemsa",

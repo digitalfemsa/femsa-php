@@ -1485,7 +1485,6 @@ class EventsApi
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }
         }
-        $options[RequestOptions::SSL_KEY] = dirname(__DIR__, 1) . '/ssl_data/ca_bundle.crt';
 
         return $options;
     }
