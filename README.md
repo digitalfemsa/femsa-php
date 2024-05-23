@@ -54,20 +54,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = DigitalFemsa\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new DigitalFemsa\Api\AntifraudApi(
+$apiInstance = new DigitalFemsa\Api\ApiKeysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_risk_rules_data = new \DigitalFemsa\Model\CreateRiskRulesData(); // \DigitalFemsa\Model\CreateRiskRulesData | requested field for blacklist rule
+$api_key_request = new \DigitalFemsa\Model\ApiKeyRequest(); // \DigitalFemsa\Model\ApiKeyRequest | requested field for a api keys
 $accept_language = es; // string | Use for knowing which language to use
+$x_child_company_id = 6441b6376b60c3a638da80af; // string | In the case of a holding company, the company id of the child company to which will process the request.
 
 try {
-    $result = $apiInstance->createRuleBlacklist($create_risk_rules_data, $accept_language);
+    $result = $apiInstance->createApiKey($api_key_request, $accept_language, $x_child_company_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AntifraudApi->createRuleBlacklist: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ApiKeysApi->createApiKey: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -78,12 +79,6 @@ All URIs are relative to *https://api.digitalfemsa.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AntifraudApi* | [**createRuleBlacklist**](docs/Api/AntifraudApi.md#createruleblacklist) | **POST** /antifraud/blacklists | Create blacklisted rule
-*AntifraudApi* | [**createRuleWhitelist**](docs/Api/AntifraudApi.md#createrulewhitelist) | **POST** /antifraud/whitelists | Create whitelisted rule
-*AntifraudApi* | [**deleteRuleBlacklist**](docs/Api/AntifraudApi.md#deleteruleblacklist) | **DELETE** /antifraud/blacklists/{id} | Delete blacklisted rule
-*AntifraudApi* | [**deleteRuleWhitelist**](docs/Api/AntifraudApi.md#deleterulewhitelist) | **DELETE** /antifraud/whitelists/{id} | Delete whitelisted rule
-*AntifraudApi* | [**getRuleBlacklist**](docs/Api/AntifraudApi.md#getruleblacklist) | **GET** /antifraud/blacklists | Get list of blacklisted rules
-*AntifraudApi* | [**getRuleWhitelist**](docs/Api/AntifraudApi.md#getrulewhitelist) | **GET** /antifraud/whitelists | Get a list of whitelisted rules
 *ApiKeysApi* | [**createApiKey**](docs/Api/ApiKeysApi.md#createapikey) | **POST** /api_keys | Create Api Key
 *ApiKeysApi* | [**deleteApiKey**](docs/Api/ApiKeysApi.md#deleteapikey) | **DELETE** /api_keys/{id} | Delete Api Key
 *ApiKeysApi* | [**getApiKey**](docs/Api/ApiKeysApi.md#getapikey) | **GET** /api_keys/{id} | Get Api Key
@@ -167,7 +162,6 @@ Class | Method | HTTP request | Description
 - [ApiKeyUpdateRequest](docs/Model/ApiKeyUpdateRequest.md)
 - [BalanceCommonField](docs/Model/BalanceCommonField.md)
 - [BalanceResponse](docs/Model/BalanceResponse.md)
-- [BlacklistRuleResponse](docs/Model/BlacklistRuleResponse.md)
 - [ChargeOrderResponse](docs/Model/ChargeOrderResponse.md)
 - [ChargeOrderResponsePaymentMethod](docs/Model/ChargeOrderResponsePaymentMethod.md)
 - [ChargeRequest](docs/Model/ChargeRequest.md)
@@ -192,7 +186,6 @@ Class | Method | HTTP request | Description
 - [CreateCustomerFiscalEntitiesResponse](docs/Model/CreateCustomerFiscalEntitiesResponse.md)
 - [CreateCustomerPaymentMethodsRequest](docs/Model/CreateCustomerPaymentMethodsRequest.md)
 - [CreateCustomerPaymentMethodsResponse](docs/Model/CreateCustomerPaymentMethodsResponse.md)
-- [CreateRiskRulesData](docs/Model/CreateRiskRulesData.md)
 - [Customer](docs/Model/Customer.md)
 - [CustomerAddress](docs/Model/CustomerAddress.md)
 - [CustomerAntifraudInfo](docs/Model/CustomerAntifraudInfo.md)
@@ -218,8 +211,6 @@ Class | Method | HTTP request | Description
 - [CustomerUpdateShippingContacts](docs/Model/CustomerUpdateShippingContacts.md)
 - [CustomersResponse](docs/Model/CustomersResponse.md)
 - [DeleteApiKeysResponse](docs/Model/DeleteApiKeysResponse.md)
-- [DeletedBlacklistRuleResponse](docs/Model/DeletedBlacklistRuleResponse.md)
-- [DeletedWhitelistRuleResponse](docs/Model/DeletedWhitelistRuleResponse.md)
 - [Details](docs/Model/Details.md)
 - [DetailsError](docs/Model/DetailsError.md)
 - [DiscountLinesDataResponse](docs/Model/DiscountLinesDataResponse.md)
@@ -277,8 +268,6 @@ Class | Method | HTTP request | Description
 - [Product](docs/Model/Product.md)
 - [ProductDataResponse](docs/Model/ProductDataResponse.md)
 - [ProductOrderResponse](docs/Model/ProductOrderResponse.md)
-- [RiskRulesData](docs/Model/RiskRulesData.md)
-- [RiskRulesList](docs/Model/RiskRulesList.md)
 - [ShippingOrderResponse](docs/Model/ShippingOrderResponse.md)
 - [ShippingRequest](docs/Model/ShippingRequest.md)
 - [SmsCheckoutRequest](docs/Model/SmsCheckoutRequest.md)
@@ -305,7 +294,6 @@ Class | Method | HTTP request | Description
 - [WebhookRequest](docs/Model/WebhookRequest.md)
 - [WebhookResponse](docs/Model/WebhookResponse.md)
 - [WebhookUpdateRequest](docs/Model/WebhookUpdateRequest.md)
-- [WhitelistlistRuleResponse](docs/Model/WhitelistlistRuleResponse.md)
 
 ## Authorization
 
