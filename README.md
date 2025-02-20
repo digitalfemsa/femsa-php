@@ -241,8 +241,6 @@ Class | Method | HTTP request | Description
 - [OrderFiscalEntityAddressResponse](docs/Model/OrderFiscalEntityAddressResponse.md)
 - [OrderFiscalEntityRequest](docs/Model/OrderFiscalEntityRequest.md)
 - [OrderFiscalEntityResponse](docs/Model/OrderFiscalEntityResponse.md)
-- [OrderNextActionResponse](docs/Model/OrderNextActionResponse.md)
-- [OrderNextActionResponseRedirectToUrl](docs/Model/OrderNextActionResponseRedirectToUrl.md)
 - [OrderRefundRequest](docs/Model/OrderRefundRequest.md)
 - [OrderRequest](docs/Model/OrderRequest.md)
 - [OrderRequestCustomerInfo](docs/Model/OrderRequestCustomerInfo.md)

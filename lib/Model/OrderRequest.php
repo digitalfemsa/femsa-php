@@ -69,7 +69,6 @@ class OrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'metadata' => 'array<string,mixed>',
         'needs_shipping_contact' => 'bool',
         'processing_mode' => 'string',
-        'return_url' => 'string',
         'shipping_contact' => '\DigitalFemsa\Model\CustomerShippingContacts',
         'shipping_lines' => '\DigitalFemsa\Model\ShippingRequest[]',
         'tax_lines' => '\DigitalFemsa\Model\OrderTaxRequest[]'
@@ -93,7 +92,6 @@ class OrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'metadata' => null,
         'needs_shipping_contact' => null,
         'processing_mode' => null,
-        'return_url' => 'uri',
         'shipping_contact' => null,
         'shipping_lines' => null,
         'tax_lines' => null
@@ -115,7 +113,6 @@ class OrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'metadata' => false,
         'needs_shipping_contact' => false,
         'processing_mode' => false,
-        'return_url' => false,
         'shipping_contact' => false,
         'shipping_lines' => false,
         'tax_lines' => false
@@ -217,7 +214,6 @@ class OrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'metadata' => 'metadata',
         'needs_shipping_contact' => 'needs_shipping_contact',
         'processing_mode' => 'processing_mode',
-        'return_url' => 'return_url',
         'shipping_contact' => 'shipping_contact',
         'shipping_lines' => 'shipping_lines',
         'tax_lines' => 'tax_lines'
@@ -239,7 +235,6 @@ class OrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'metadata' => 'setMetadata',
         'needs_shipping_contact' => 'setNeedsShippingContact',
         'processing_mode' => 'setProcessingMode',
-        'return_url' => 'setReturnUrl',
         'shipping_contact' => 'setShippingContact',
         'shipping_lines' => 'setShippingLines',
         'tax_lines' => 'setTaxLines'
@@ -261,7 +256,6 @@ class OrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         'metadata' => 'getMetadata',
         'needs_shipping_contact' => 'getNeedsShippingContact',
         'processing_mode' => 'getProcessingMode',
-        'return_url' => 'getReturnUrl',
         'shipping_contact' => 'getShippingContact',
         'shipping_lines' => 'getShippingLines',
         'tax_lines' => 'getTaxLines'
@@ -334,7 +328,6 @@ class OrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('metadata', $data ?? [], null);
         $this->setIfExists('needs_shipping_contact', $data ?? [], null);
         $this->setIfExists('processing_mode', $data ?? [], null);
-        $this->setIfExists('return_url', $data ?? [], null);
         $this->setIfExists('shipping_contact', $data ?? [], null);
         $this->setIfExists('shipping_lines', $data ?? [], null);
         $this->setIfExists('tax_lines', $data ?? [], null);
@@ -673,33 +666,6 @@ class OrderRequest implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable processing_mode cannot be null');
         }
         $this->container['processing_mode'] = $processing_mode;
-
-        return $this;
-    }
-
-    /**
-     * Gets return_url
-     *
-     * @return string|null
-     */
-    public function getReturnUrl()
-    {
-        return $this->container['return_url'];
-    }
-
-    /**
-     * Sets return_url
-     *
-     * @param string|null $return_url Indicates the redirection callback upon completion of the 3DS2 flow.
-     *
-     * @return self
-     */
-    public function setReturnUrl($return_url)
-    {
-        if (is_null($return_url)) {
-            throw new \InvalidArgumentException('non-nullable return_url cannot be null');
-        }
-        $this->container['return_url'] = $return_url;
 
         return $this;
     }
