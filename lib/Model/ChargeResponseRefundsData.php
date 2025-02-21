@@ -64,7 +64,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'expires_at' => 'int',
         'id' => 'string',
         'object' => 'string',
-        'status' => 'string'
+        'status' => 'string',
+        'payout_id' => 'string'
     ];
 
     /**
@@ -81,7 +82,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'expires_at' => 'int64',
         'id' => null,
         'object' => null,
-        'status' => null
+        'status' => null,
+        'payout_id' => null
     ];
 
     /**
@@ -96,7 +98,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'expires_at' => false,
         'id' => false,
         'object' => false,
-        'status' => false
+        'status' => false,
+        'payout_id' => false
     ];
 
     /**
@@ -191,7 +194,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'expires_at' => 'expires_at',
         'id' => 'id',
         'object' => 'object',
-        'status' => 'status'
+        'status' => 'status',
+        'payout_id' => 'payout_id'
     ];
 
     /**
@@ -206,7 +210,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'expires_at' => 'setExpiresAt',
         'id' => 'setId',
         'object' => 'setObject',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'payout_id' => 'setPayoutId'
     ];
 
     /**
@@ -221,7 +226,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'expires_at' => 'getExpiresAt',
         'id' => 'getId',
         'object' => 'getObject',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'payout_id' => 'getPayoutId'
     ];
 
     /**
@@ -288,6 +294,7 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('object', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('payout_id', $data ?? [], null);
     }
 
     /**
@@ -529,6 +536,33 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable status cannot be null');
         }
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets payout_id
+     *
+     * @return string|null
+     */
+    public function getPayoutId()
+    {
+        return $this->container['payout_id'];
+    }
+
+    /**
+     * Sets payout_id
+     *
+     * @param string|null $payout_id payout_id
+     *
+     * @return self
+     */
+    public function setPayoutId($payout_id)
+    {
+        if (is_null($payout_id)) {
+            throw new \InvalidArgumentException('non-nullable payout_id cannot be null');
+        }
+        $this->container['payout_id'] = $payout_id;
 
         return $this;
     }

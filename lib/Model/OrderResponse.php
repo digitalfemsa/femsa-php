@@ -74,7 +74,6 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'line_items' => '\DigitalFemsa\Model\OrderResponseProducts',
         'livemode' => 'bool',
         'metadata' => 'array<string,mixed>',
-        'next_action' => '\DigitalFemsa\Model\OrderNextActionResponse',
         'object' => 'string',
         'payment_status' => 'string',
         'processing_mode' => 'string',
@@ -105,7 +104,6 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'line_items' => null,
         'livemode' => null,
         'metadata' => null,
-        'next_action' => null,
         'object' => null,
         'payment_status' => null,
         'processing_mode' => null,
@@ -134,7 +132,6 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'line_items' => false,
         'livemode' => false,
         'metadata' => false,
-        'next_action' => false,
         'object' => false,
         'payment_status' => false,
         'processing_mode' => false,
@@ -243,7 +240,6 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'line_items' => 'line_items',
         'livemode' => 'livemode',
         'metadata' => 'metadata',
-        'next_action' => 'next_action',
         'object' => 'object',
         'payment_status' => 'payment_status',
         'processing_mode' => 'processing_mode',
@@ -272,7 +268,6 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'line_items' => 'setLineItems',
         'livemode' => 'setLivemode',
         'metadata' => 'setMetadata',
-        'next_action' => 'setNextAction',
         'object' => 'setObject',
         'payment_status' => 'setPaymentStatus',
         'processing_mode' => 'setProcessingMode',
@@ -301,7 +296,6 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         'line_items' => 'getLineItems',
         'livemode' => 'getLivemode',
         'metadata' => 'getMetadata',
-        'next_action' => 'getNextAction',
         'object' => 'getObject',
         'payment_status' => 'getPaymentStatus',
         'processing_mode' => 'getProcessingMode',
@@ -381,7 +375,6 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('line_items', $data ?? [], null);
         $this->setIfExists('livemode', $data ?? [], null);
         $this->setIfExists('metadata', $data ?? [], null);
-        $this->setIfExists('next_action', $data ?? [], null);
         $this->setIfExists('object', $data ?? [], null);
         $this->setIfExists('payment_status', $data ?? [], null);
         $this->setIfExists('processing_mode', $data ?? [], null);
@@ -847,33 +840,6 @@ class OrderResponse implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('invalid value for $metadata when calling OrderResponse., number of items must be less than or equal to 100.');
         }
         $this->container['metadata'] = $metadata;
-
-        return $this;
-    }
-
-    /**
-     * Gets next_action
-     *
-     * @return \DigitalFemsa\Model\OrderNextActionResponse|null
-     */
-    public function getNextAction()
-    {
-        return $this->container['next_action'];
-    }
-
-    /**
-     * Sets next_action
-     *
-     * @param \DigitalFemsa\Model\OrderNextActionResponse|null $next_action next_action
-     *
-     * @return self
-     */
-    public function setNextAction($next_action)
-    {
-        if (is_null($next_action)) {
-            throw new \InvalidArgumentException('non-nullable next_action cannot be null');
-        }
-        $this->container['next_action'] = $next_action;
 
         return $this;
     }
