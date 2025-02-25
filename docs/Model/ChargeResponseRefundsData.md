@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **object** | **string** |  |
 **status** | **string** | refund status | [optional]
 **payout_id** | **string** |  | [optional]
+**reference** | **string** | payout reference for oxxo stores | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

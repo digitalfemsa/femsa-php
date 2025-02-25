@@ -65,7 +65,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'id' => 'string',
         'object' => 'string',
         'status' => 'string',
-        'payout_id' => 'string'
+        'payout_id' => 'string',
+        'reference' => 'string'
     ];
 
     /**
@@ -83,7 +84,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'id' => null,
         'object' => null,
         'status' => null,
-        'payout_id' => null
+        'payout_id' => null,
+        'reference' => null
     ];
 
     /**
@@ -99,7 +101,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'id' => false,
         'object' => false,
         'status' => false,
-        'payout_id' => false
+        'payout_id' => false,
+        'reference' => false
     ];
 
     /**
@@ -195,7 +198,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'id' => 'id',
         'object' => 'object',
         'status' => 'status',
-        'payout_id' => 'payout_id'
+        'payout_id' => 'payout_id',
+        'reference' => 'reference'
     ];
 
     /**
@@ -211,7 +215,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'id' => 'setId',
         'object' => 'setObject',
         'status' => 'setStatus',
-        'payout_id' => 'setPayoutId'
+        'payout_id' => 'setPayoutId',
+        'reference' => 'setReference'
     ];
 
     /**
@@ -227,7 +232,8 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         'id' => 'getId',
         'object' => 'getObject',
         'status' => 'getStatus',
-        'payout_id' => 'getPayoutId'
+        'payout_id' => 'getPayoutId',
+        'reference' => 'getReference'
     ];
 
     /**
@@ -295,6 +301,7 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
         $this->setIfExists('object', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('payout_id', $data ?? [], null);
+        $this->setIfExists('reference', $data ?? [], null);
     }
 
     /**
@@ -563,6 +570,33 @@ class ChargeResponseRefundsData implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable payout_id cannot be null');
         }
         $this->container['payout_id'] = $payout_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets reference
+     *
+     * @return string|null
+     */
+    public function getReference()
+    {
+        return $this->container['reference'];
+    }
+
+    /**
+     * Sets reference
+     *
+     * @param string|null $reference payout reference for oxxo stores
+     *
+     * @return self
+     */
+    public function setReference($reference)
+    {
+        if (is_null($reference)) {
+            throw new \InvalidArgumentException('non-nullable reference cannot be null');
+        }
+        $this->container['reference'] = $reference;
 
         return $this;
     }
